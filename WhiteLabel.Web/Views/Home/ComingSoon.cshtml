@@ -1,0 +1,77 @@
+﻿@using WhiteLabel.Web.Views
+<script src="~/Content/plugins/countdown/jquery.countdown.min.js"></script>
+<style>
+    .countdown li span {
+       line-height: 74px;
+    }
+
+    .countdown li:before {
+        background: none;
+    }
+
+    .page-content-alt {
+        padding: 20px 0 10px;
+    }
+
+    #newsletter-form {
+        position: relative;
+        max-width: 640px;
+        margin: 0 auto;
+    }
+</style>
+
+
+<section class="page-content">
+    <div class="grid-row">
+        <!-- countdown -->
+        <div class="countdown">
+            <div id="countdown"></div>
+            <p>A better way to connect with others and share a hobby.</p>
+        </div>
+        <!--/ countdown -->
+    </div>
+</section>
+<section class="page-content-alt">
+    <div class="grid-row">
+        <div class="subscription">
+            <h3>Be one of our first beta users!</h3>
+            <div id="newsletter-form">
+                <input type="email" id="email" name="email" placeholder="E-mail">
+                <button id="submitEmail" class="button button-xsmall">I want to be a beta user!</button>
+                <div id="signup_server_responce"></div>
+                <div id="thankyou" style="margin-top: 10px; color: green; display: none;"><i class="soc-icon soc-icon-small fa fa-check"></i><span style="font-size: 18px;line-height: 30px;">Thank you. We will be in touch.</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    $(document).ready(function () {
+        $('#submitEmail').on('click', function () {
+            var betaUser = { email: $('#email').val() };
+            $('#email').val('');
+
+            $.ajax({
+                url: '/api/user',
+                type: 'POST',
+                contentType: "application/json",
+                data: JSON.stringify(betaUser),
+                success: function (data) {
+                    $('#thankyou').show();
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    $('#thankyou').show();
+                },
+            });
+        });
+        
+
+        var date = new Date();
+        date = new Date(date.getFullYear(), date.getMonth(), date.getDate() + 120);
+        $('#countdown').countdown({
+            until: date,
+            format: 'DHMS',
+            layout: '<ul><li><span>{dnn}</span>{dl}</li><li><span>{hnn}</span>{hl}</li><li><span>{mnn}</span>{ml}</li><li><span>{snn}</span>{sl}</li></ul>'
+        });
+    });
+</script>

@@ -1,0 +1,131 @@
+﻿#container-header{
+    margin-bottom: 10px;
+}
+
+#header {
+     @media(min-width: @screen-desktop) {
+        
+    }
+    
+    width: 100%; 
+}
+
+header, #header {
+    min-height: 70px;
+    height: 70px;  
+    background-color: #fff;
+}
+
+#header h3.city {
+    display: inline-block;
+    color:@brand-primary;
+    margin-top: 0;
+    margin-bottom: 0;
+    @media(min-width: @screen-desktop) {
+        margin-top: @defaultSpacing;
+    }    
+}
+
+#header #rightheader {
+    .make-md-column(10);  
+    .center-block();    
+    background-color: white;
+    height: 100%;     
+    @media(min-width: @screen-desktop) {        
+        text-align: center;           
+    }
+}
+
+#header .citycontainer {
+    .make-md-column(10);
+    height: 100%;
+}
+
+#header .citycontainer i {
+    color: @orange;
+    @media(min-width: @screen-desktop) {
+        vertical-align: text-top;
+    }
+}
+
+#loginbuttonscontainer{
+     padding: 0;    
+     background-color: white; 
+     @media(min-width: @screen-desktop) {
+        padding-top: @defaultSpacing / 2;
+        height: 100%;
+    }
+}
+#loginOptions li {
+    float: left;
+    padding-right: 10px;
+}
+
+#loginOptions button {
+    padding: 0;
+    border: none;
+}
+
+#header a#logo {
+    color: #fff;
+}
+
+
+/* Social Icon */
+#social-icons {
+	position:absolute;
+	right:30px;
+	top: -6px;
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+#social-icons li {
+	float:left;
+	margin:0 0 0 5px;	
+}
+#social-icons li a {
+	display:table;
+	border:2px solid #666666;	
+	color: #666666;
+	font-size:18px;
+	padding: 8px;
+	border-radius:99px;
+	-moz-border-radius:99px;
+	-webkit-border-radius:99px;
+}
+#social-icons li a i {
+	display: table;
+    height: 15px;
+    text-align: center;
+    width: 17px;
+	line-height: 100%;	
+}
+
+.social-icon.google_plus.color {
+    background-position: -39px 0;
+    width: 35px;
+    height: 35px;
+}
+
+.social-icon.facbook.color {
+    background-position: -156px 0;
+    width: 35px;
+    height: 35px;
+}
+
+* .social-icon {
+    display: inline-block;
+    background: url(/Content/themes/crevision/images/icons/icons/social-icons.png) no-repeat;
+    vertical-align: middle;
+    margin: 0;
+}
+
+#authLinks a {
+    padding-left: @defaultSpacing;
+}
+
+#pageActions li {
+    float: left;
+    margin-right: @defaultSpacing;
+}

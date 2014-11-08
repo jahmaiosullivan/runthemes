@@ -1,0 +1,56 @@
+﻿@using WhiteLabel.Web.Views
+<div id="leftSide" class="expanded">
+    <nav class="leftNav scrollable bigNav">
+        <div class="search">
+            <span class="searchIcon icon-magnifier"></span>
+            <input type="text" placeholder="Search for houses, apartments...">
+            <div class="clearfix"></div>
+        </div>
+        <ul>
+            <li>
+                <a href="@Url.Action("Create","Apt")"><span class="navIcon icon-plus"></span><span class="navLabel">New Property</span></a>
+            </li>
+            <li class="hasSub hasSubActive">
+                <a href="#">
+                    <span class="navIcon icon-drop"></span>
+                    <span class="navLabel">Locations</span>
+                </a>
+                <ul class="watching bigList">
+                    <li><a href="#">Safeway Capitol Hill <span class="fa fa-circle-o c-red icon-right"></span></a></li>
+                    <li><a href="#">Canon Capitol Hill <span class="fa fa-circle-o c-green icon-right"></span></a></li>
+                    <li><a href="#">Car Wash in some place <span class="fa fa-circle-o c-blue icon-right"></span></a></li>
+                </ul>
+            </li>
+            <li class="hasSub hasSubActive">
+                <a href="#">
+                    <span class="navIcon icon-drop"></span>
+                    <span class="navLabel">Apt Bookmarks</span>
+                </a>
+                <ul class="watching bigList">
+                    <li><a href="#">Red <span class="fa fa-circle-o c-red icon-right"></span></a></li>
+                    <li><a href="#">Green <span class="fa fa-circle-o c-green icon-right"></span></a></li>
+                    <li><a href="#">Blue <span class="fa fa-circle-o c-blue icon-right"></span></a></li>
+                    <li><a href="#">Yellow <span class="fa fa-circle-o c-yellow icon-right"></span></a></li>
+                    <li><a href="#">Magenta <span class="fa fa-circle-o c-magenta icon-right"></span></a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div class="leftUserWraper dropup">
+        <a href="#" class="avatarAction dropdown-toggle" data-toggle="dropdown">
+            <img class="avatar" src="/images/avatar-1.png" alt="avatar"><span class="counter">5</span>
+            <div class="userBottom pull-left">
+                <span class="bottomUserName">John Smith</span> <span class="fa fa-angle-up pull-right arrowUp"></span>
+            </div>
+            <div class="clearfix"></div>
+        </a>
+        <ul class="dropdown-menu" role="menu">
+            <li><a href="#"><span class="icon-settings"></span>Settings</a></li>
+            <li><a href="profile.html"><span class="icon-user"></span>Profile</a></li>
+            <li><a href="#"><span class="icon-bell"></span>Notifications <span class="badge pull-right bg-red">5</span></a></li>
+            <li class="divider"></li>
+            <li><a href="#"><span class="icon-power"></span>Logout</a></li>
+        </ul>
+    </div>
+</div>
+<div class="closeLeftSide"></div>

@@ -1,0 +1,245 @@
+﻿@using AptRadius.Web.ViewModels
+@using WhiteLabel.Web.ViewModels
+@using WhiteLabel.Web.ViewModels.Extensions
+@using WhiteLabel.Web.Views
+@{
+    Layout = "~/Views/Shared/_TwoColumnLayout.cshtml";
+}
+
+@section styles {
+    <link href="~/Content/themes/reales/css/simple-line-icons.css" rel="stylesheet">
+    <link href="~/Content/themes/reales/css/fileinput.min.css" rel="stylesheet">
+}
+
+    
+    <div id="content" class="mob-max">
+        <div class="rightContainer">
+            <h1>List a New Property</h1>
+            @using (Html.BeginForm("Create", "Apartment", FormMethod.Post, new {@id = "new-property-form", novalidate = "novalidate"}))
+            {
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                        <div class="form-group">
+                            <label>Title</label>
+                            <input id="title" name="title" type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                        <div class="form-group">
+                            <label>Price</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">$</div>
+                                <input id="price" name="price" class="form-control" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea id="description" name="description" class="form-control" rows="4"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Address <span id="latitude" class="label label-default"></span> <span id="longitude" class="label label-default"></span></label>
+                    <input id="address" name="address" class="form-control" type="text" placeholder="Enter a Location" autocomplete="off">
+                    <p class="help-block">You can drag the marker to property position</p>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                        <div class="form-group">
+                            <label>Bedrooms</label>
+                            <input id="bedrooms" name="bedrooms" type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                        <div class="form-group">
+                            <label>Bathrooms</label>
+                            <input id="bathrooms" name="bathrooms" type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                        <div class="form-group">
+                            <label>Area</label>
+                            <div class="input-group">
+                                <input id="area" name="area" class="form-control" type="text">
+                                <div class="input-group-addon">Sq Ft</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="form-group">
+                            <label>Images</label>
+                            <input id="imagesupload" type="file" class="file" name="files[]" multiple data-show-upload="false" data-show-caption="false" data-show-remove="false" accept="image/jpeg,image/png" data-browse-class="btn btn-o btn-default" data-browse-label="Browse Images">
+                            <p class="help-block">You can select multiple images at once</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                        <div class="form-group">
+                            <label>Amenities</label>
+                            <div class="checkbox custom-checkbox">
+                                <label><input id="hasGarage" name="chk_amenities" type="checkbox"><span class="fa fa-check"></span> Garage</label>
+                            </div>
+                            <div class="checkbox custom-checkbox">
+                                <label><input id="hasAirConditioning" name="chk_amenities" type="checkbox"><span class="fa fa-check"></span> Air Conditioning</label>
+                            </div>
+                            <div class="checkbox custom-checkbox">
+                                <label><input id="hasBalcony" name="chk_amenities" type="checkbox"><span class="fa fa-check"></span> Balcony</label>
+                            </div>
+                            <div class="checkbox custom-checkbox">
+                                <label><input id="hasFireplace" name="chk_amenities" type="checkbox"><span class="fa fa-check"></span> Fireplace</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                        <div class="form-group">
+                            <label>&nbsp;</label>
+                            <div class="checkbox custom-checkbox">
+                                <label><input id="hasPool" name="chk_amenities" type="checkbox"><span class="fa fa-check"></span> Outdoor Pool</label>
+                            </div>
+                            <div class="checkbox custom-checkbox">
+                                <label><input id="hasInternet" name="chk_amenities" type="checkbox"><span class="fa fa-check"></span> Internet</label>
+                            </div>
+                            <div class="checkbox custom-checkbox">
+                                <label><input id="hasHeating" name="chk_amenities" type="checkbox"><span class="fa fa-check"></span> Heating</label>
+                            </div>
+                            <div class="checkbox custom-checkbox">
+                                <label><input id="hasTvCable" name="chk_amenities" type="checkbox"><span class="fa fa-check"></span> TV Cable</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button id="btnCreateProperty" class="submit btn btn-green btn-lg" type="submit">Add Property</button>
+                </div>
+            }
+        </div>
+    </div>
+    <div id="mapView" class="mob-min">
+        <div class="mapPlaceholder">
+            <span class="fa fa-spin fa-spinner"></span> Loading map...
+        </div>
+    </div>
+
+@section scripts {
+    <script src="~/Content/themes/reales/js/json2.js"></script>
+    <script src="~/Content/themes/reales/js/underscore.js"></script>
+    <script src="~/Content/themes/reales/js/moment-2.5.1.js"></script>
+    <script src="~/Content/themes/reales/js/clndr.js"></script>
+    <script src="~/Content/themes/reales/js/fileinput.min.js"></script>
+    <script src="~/Content/themes/reales/js/calendar.js"></script>
+    
+    <script>
+        var selectedImages = [];
+        $(document).ready(function () {
+            wireValidation('@Html.TokenHeaderValue()');
+
+            $('#price').inputmask("decimal");
+            $('#area').inputmask("integer");
+            
+            $('#imagesupload').fileupload({
+                autoUpload: true,
+                paramName: "files",
+                url: '/file/ajaxupload',
+                disableImageResize: /Android(?!.*Chrome)|Opera/
+                    .test(window.navigator.userAgent),
+                maxFileSize: 5000000,
+                acceptFileTypes: /(\.|\/)(gif|jpe?g|png)$/i,
+                change: function (e, data) {
+                    $('.files').empty();
+                },
+                done: function (e, data) {
+                    $.each(data.result, function (index, file) {
+                        selectedImages.push(file);
+                    });
+                }
+            });
+        });
+
+        function wireValidation(headerToken)
+        {
+            $("#new-property-form").validate({
+                rules: {
+                    title: {
+                        required: true,
+                        minlength: 4
+                    },
+                    price: {
+                        required: true,
+                        minlength: 3,
+                        maxlength: 10
+                    },
+                    address: {
+                        required: true
+                    },
+                    area: {
+                        required: true
+                    },
+                    bedrooms: {
+                        required: true
+                    },
+                    bathrooms: {
+                        required: true
+                    }
+                },
+                messages: {
+                    title: {
+                        required: "Please enter the name of your property"
+                    },
+                    price: {
+                        required: "Please enter the monthly rent of your property"
+                    },
+                    address: {
+                        required: "Please enter the address of your property"
+                    },
+                    area: {
+                        required: "Please enter the square footage of your property"
+                    },
+                    bedrooms: {
+                        required: "Please enter the number of bedrooms"
+                    },
+                    bathrooms: {
+                        required: "Please enter the number of bathrooms"
+                    }
+                },
+                submitHandler: function (form) {
+                    var newProperty = {
+                        Title: $('#title').val(),
+                        Price: $('#price').val(),
+                        Description: $('#description').val(),
+                        Address: $('#address').val(),
+                        Bedrooms: $('#bedrooms').val(),
+                        Bathrooms: $('#bathrooms').val(),
+                        Images: selectedImages.join(","),
+                        HasGarage: $('#hasGarage').is(':checked'),
+                        HasAirConditioning: $('#hasAirConditioning').is(':checked'),
+                        HasBalcony: $('#hasBalcony').is(':checked'),
+                        HasPool: $('#hasPool').is(':checked'),
+                        HasInternet: $('#hasInternet').is(':checked'),
+                        HasHeating: $('#hasHeating').is(':checked'),
+                        HasTvCable: $('#hasTvCable').is(':checked'),
+                        HasFireplace: $('#hasFireplace').is(':checked')
+                    };
+
+                    $.ajax({
+                        beforeSend: function (request) {
+                            request.setRequestHeader("RequestVerificationToken", headerToken);
+                        },
+                        url: '/api/apartments/create',
+                        type: 'POST',
+                        data: JSON.stringify(newProperty),
+                        dataType: "json",
+                        contentType: "application/json; charset=utf-8",
+                        success: function (item) {
+                            alert('success');
+                        },
+                        error: function (jqXHR, textStatus, errorThrown) { }
+                    });
+                }
+            });
+
+        }
+    </script>
+}

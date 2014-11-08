@@ -1,0 +1,285 @@
+﻿@using WhiteLabel.Web.ViewModels
+@model ApartmentViewModel
+@{
+    Layout = "~/Views/Shared/_TwoColumnLayout.cshtml";
+}
+
+    <!-- Content -->
+        <div id="mapView" class="mob-min">
+            <div class="mapPlaceholder">
+                <span class="fa fa-spin fa-spinner"></span> Loading map...
+            </div>
+        </div>
+        <div id="content" class="mob-max">
+            <div class="singleTop">
+                <div id="carouselFull" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselFull" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselFull" data-slide-to="1"></li>
+                        <li data-target="#carouselFull" data-slide-to="2"></li>
+                        <li data-target="#carouselFull" data-slide-to="3"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <!-- ko foreach: images -->
+                        <div class="item" data-bind="css: $index() == 0 ? 'active' : ''">
+                            <img data-bind="attr: {src: $data }" alt="apartment image" />
+                            <div class="container">
+                                <div class="carousel-caption"></div>
+                            </div>
+                        </div>
+                        <!-- /ko -->
+                    </div>
+                    <a class="left carousel-control" href="#carouselFull" role="button" data-slide="prev"><span class="fa fa-chevron-left"></span></a>
+                    <a class="right carousel-control" href="#carouselFull" role="button" data-slide="next"><span class="fa fa-chevron-right"></span></a>
+                </div>
+                <div class="summary">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                            <div class="summaryItem">
+                                <h1 class="pageTitle"><span data-bind="text: title"></span>  <span class="label label-success">Available</span></h1>
+                                <div class="address"><span class="icon-pointer"></span><span data-bind="text: address"></span></div>
+                                <ul class="rating">
+                                    @for (int i = 0; i < (int)Math.Floor(Model.Rating); i++)
+                                    {
+                                        <li><a href="#"><span class="fa fa-star"></span></a></li>
+                                    }
+                                    @for (int i = 0; i < 5 - (int)Math.Floor(Model.Rating); i++)
+                                    {
+                                        <li><a href="#"><span class="fa fa-star-o"></span></a></li>
+                                    }
+                                    <li>(<span data-bind="text: ratingCount"></span>)</li>
+                                </ul>
+                                <ul class="stats">
+                                    <li><span class="icon-eye"></span> 200 bookmarks</li>
+                                    <li><span class="icon-bubble"></span> 13 comments</li>
+                                </ul>
+                                <div class="clearfix"></div>
+                                <ul class="features">
+                                    <li><span class="fa fa-moon-o"></span><div><span data-bind="text: bedrooms"></span> Bedrooms</div></li>
+                                    <li><span class="icon-drop"></span><div><span data-bind="text: bathrooms"></span> Bathrooms</div></li>
+                                    <li><span class="icon-frame"></span><div><span data-bind="text: area"></span> Sq Ft</div></li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                            <div class="agentAvatar summaryItem">
+                                <div class="clearfix"></div>
+                                <img class="avatar agentAvatarImg" data-bind="attr: {src: agent.avatarThumbnailUrl }" alt="avatar">
+                                <div class="agentName" data-bind="text: agent.displayName"></div>
+                                <a data-toggle="modal" href="#contactAgent" class="btn btn-lg btn-round btn-green contactBtn">Contact Agent</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="description">
+                <h3>Description</h3>
+                <p data-bind="text: description"></p>
+            </div>
+            <div class="share">
+                <h3>Share on Social Networks</h3>
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 shareItem">
+                        <a href="#" class="btn btn-sm btn-round btn-o btn-facebook"><span class="fa fa-facebook"></span> Facebook</a>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 shareItem">
+                        <a href="#" class="btn btn-sm btn-round btn-o btn-twitter"><span class="fa fa-twitter"></span> Twitter</a>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 shareItem">
+                        <a href="#" class="btn btn-sm btn-round btn-o btn-google"><span class="fa fa-google-plus"></span> Google+</a>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 shareItem">
+                        <a href="#" class="btn btn-sm btn-round btn-o btn-pinterest"><span class="fa fa-pinterest"></span> Pinterest</a>
+                    </div>
+                </div>
+            </div>
+            <div class="amenities">
+                <h3>Amenities</h3>
+                <div class="row">
+                    @if (Model.HasGarage)
+                    {
+                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem"><span class="fa fa-car"></span> Garage</div>
+                    }
+                    @if (Model.HasPool)
+                    {
+                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem"><span class="fa fa-tint"></span> Outdoor Pool</div>
+                    }
+                    @if (Model.HasAirConditioning)
+                    {
+                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem"><span class="fa fa-asterisk"></span> Air Conditioning</div>
+                    }
+                    @if (Model.HasHeating)
+                    {
+                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem"><span class="fa fa-sun-o"></span> Heating</div>
+                    }
+                    @if (Model.HasFireplace)
+                    {
+                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem"><span class="fa fa-fire"></span> Fireplace</div>
+                    }
+                    @if (Model.HasBalcony)
+                    {
+                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem"><span class="fa fa-arrows-v"></span> Balcony</div>
+                    }
+                    @if (Model.HasTvCable)
+                    {
+                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem"><span class="fa fa-desktop"></span> TV Cable</div>
+                    }
+                </div>
+            </div>
+            <div class="comments">
+                <h3><span>4</span> Comments</h3>
+                <div class="comment">
+                    <div class="commentAvatar">
+                        <img class="avatar" src="/images/avatar-3.png" alt="avatar">
+                        <div class="commentArrow"><span class="fa fa-caret-left"></span></div>
+                    </div>
+                    <div class="commentContent">
+                        <div class="commentName">Rust Cohle</div>
+                        <div class="commentBody">
+                            It is a long established fact that a reader will be distracted by the readable content
+                        </div>
+                        <div class="commentActions">
+                            <div class="commentTime"><span class="icon-clock"></span> 1 day ago</div>
+                            <ul>
+                                <li><a href="#"><span class="icon-action-undo"></span></a></li>
+                                <li><a href="#"><span class="icon-like"></span> 13</a></li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="comment reply">
+                    <div class="commentAvatar">
+                        <img class="avatar" src="/images/avatar-1.png" alt="avatar">
+                        <div class="commentArrow"><span class="fa fa-caret-left"></span></div>
+                    </div>
+                    <div class="commentContent">
+                        <div class="commentName">John Smith</div>
+                        <div class="commentBody">
+                            Comment posted by me. I have the power to remove it.
+                        </div>
+                        <div class="commentActions">
+                            <div class="commentTime"><span class="icon-clock"></span> 2 hours ago</div>
+                            <ul>
+                                <li><a href="#"><span class="fa fa-trash-o"></span></a></li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="comment">
+                    <div class="commentAvatar">
+                        <img class="avatar" src="/images/avatar-5.png" alt="avatar">
+                        <div class="commentArrow"><span class="fa fa-caret-left"></span></div>
+                    </div>
+                    <div class="commentContent">
+                        <div class="commentName">Alex Rogers</div>
+                        <div class="commentBody">
+                            Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit
+                        </div>
+                        <div class="commentActions">
+                            <div class="commentTime"><span class="icon-clock"></span> 20 minutes ago</div>
+                            <ul>
+                                <li><a href="#"><span class="icon-action-undo"></span></a></li>
+                                <li><a href="#"><span class="icon-like"></span> 13</a></li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="comment">
+                    <div class="commentAvatar">
+                        <img class="avatar" src="/images/avatar-2.png" alt="avatar">
+                        <div class="commentArrow"><span class="fa fa-caret-left"></span></div>
+                    </div>
+                    <div class="commentContent">
+                        <div class="commentName">Jane Smith</div>
+                        <div class="commentBody">
+                            Lorem ipsum dolor sit amet, consecteter adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+                        </div>
+                        <div class="commentActions">
+                            <div class="commentTime"><span class="icon-clock"></span> 5 minutes ago</div>
+                            <ul>
+                                <li><a href="#"><span class="icon-action-undo"></span></a></li>
+                                <li><a href="#"><span class="icon-like"></span> 13</a></li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+        <div class="commentsFormWrapper">
+            <div class="cfAvatar">
+                <img class="avatar" src="/images/avatar-1.png" alt="avatar">
+            </div>
+            <form class="commentsForm">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Write a comment...">
+                    <span class="input-group-btn"><a class="btn btn-green">Post</a></span>
+                </div>
+            </form>
+            <div class="clearfix"></div>
+        </div>
+        
+
+    @ContactAgentModal()
+
+
+@helper ContactAgentModal()
+{
+    <div class="modal fade" id="contactAgent" role="dialog" aria-labelledby="contactLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title" id="contactLabel">Contact Agent</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="contactForm">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 cfItem">
+                                <input type="text" placeholder="Name" class="form-control">
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 cfItem">
+                                <input type="text" placeholder="Email" class="form-control">
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cfItem">
+                                <input type="text" placeholder="Subject" class="form-control">
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cfItem">
+                                <textarea placeholder="Message" rows="3" class="form-control"></textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" data-dismiss="modal" class="btn btn-round btn-o btn-gray">Close</a>
+                    <a href="#" class="btn btn-round btn-green">Send message</a>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+    
+@section scripts {
+    <script>
+        var viewModel;
+        $(document).ready(function () {
+            Initialize(@Html.Raw(Model.ToJson()), '@Html.Raw(CurrentUser != null ? Guid.Parse(CurrentUser.Id) : Guid.Empty)');
+            AptRadius.Location.setPlaceOnMap(viewModel.address());
+            
+        });
+
+        function Initialize(jsonString, currentUserId) {
+            viewModel = ko.mapping.fromJS(jsonString); 
+            ko.applyBindings(viewModel);
+        }
+    </script>
+}

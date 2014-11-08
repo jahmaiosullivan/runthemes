@@ -1,0 +1,26 @@
+﻿<header class="page-header-top">
+   
+</header>
+
+<header id="page-header-bottom" class="page-header-bottom">
+    <div class="grid-row">
+        <div class="col-md-3">
+            <!-- logo -->
+            <a href="/" class="logo">
+                <img src="/Images/logo_small.png" alt="" width="232" height="47">
+            </a>
+        </div>
+        <div class="col-md-6" style="text-align: center; ">
+            <h1 id="pagetitle">@ViewBag.PageTitle</h1>
+            <div>@ViewBag.Location</div>
+        </div>
+        @if (IsAuthenticated)
+        {
+            <div class="col-md-3">
+                @Html.Partial("_LoginPartial")
+            </div>
+        }
+    </div>
+</header>
+<!--/ page header bottom -->
+<div id="page-header-bottom-holder" class="page-header-bottom-holder"></div>

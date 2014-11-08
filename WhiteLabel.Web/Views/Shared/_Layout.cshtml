@@ -1,0 +1,65 @@
+﻿@using WhiteLabel.Web.Views
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+    <html lang="en"> 
+<!--<![endif]-->
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width">
+        <meta name="description" content="">
+        <title>AptRadius - @ViewBag.Title</title>
+
+        <link href="~/Content/themes/reales/css/font-awesome.css" rel="stylesheet">
+        <link href="~/Content/themes/reales/css/simple-line-icons.css" rel="stylesheet">
+        <link href="~/Content/themes/reales/css/jquery-ui.css" rel="stylesheet">
+        <link href="~/Content/themes/reales/css/datepicker.css" rel="stylesheet">
+        <link href="~/Content/themes/reales/css/bootstrap.css" rel="stylesheet">
+        <link href="~/Content/themes/reales/css/app-blue.css" rel="stylesheet">
+        @RenderSection("styles", required: false)
+        
+        <!-- Favicons -->
+        <link rel="shortcut icon" href="/Images/crevision/favicon/favicon.ico">
+        <link rel="apple-touch-icon" href="/Images/crevision/favicon/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/Images/crevision/favicon/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/Images/crevision/favicon/apple-touch-icon-114x114.png">
+    </head>
+    <body class="notransition">
+        <div class="page">
+            @RenderBody()
+        </div>
+        <script src="~/Content/themes/reales/js/jquery-2.1.1.min.js"></script>
+        <script src="~/Content/themes/reales/js/jquery-ui.min.js"></script>
+        <script src="~/Content/plugins/jquery-file-upload/js/jquery.fileupload.js"></script>
+        <script src="~/Content/plugins/jquery-file-upload/js/jquery.iframe-transport.js"></script>
+        <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+        <script src="~/Content/themes/reales/js/jquery-ui-touch-punch.js"></script>
+        <script src="~/Content/themes/reales/js/jquery.placeholder.js"></script>
+        <script src="~/Content/themes/reales/js/bootstrap.js"></script>
+        <script src="~/Content/themes/reales/js/jquery.touchSwipe.min.js"></script>
+        <script src="~/Content/themes/reales/js/jquery.slimscroll.min.js"></script>
+        <script src="~/Content/themes/reales/js/jquery.visible.js"></script>
+        <script src="http://maps.googleapis.com/maps/api/js?sensor=true&amp;libraries=geometry&amp;libraries=places" type="text/javascript"></script>
+        <script src="~/Content/themes/reales/js/infobox.js"></script>
+        <script src="~/Content/themes/reales/js/jquery.tagsinput.min.js"></script>
+        <script src="~/Content/themes/reales/js/bootstrap-datepicker.js"></script>
+        <script src="~/Content/themes/reales/js/app.js" type="text/javascript"></script>
+        <script src="~/Scripts/knockout-3.0.0.js"></script>
+        <script src="~/Scripts/knockout.mapping-latest.js"></script>
+        <script type="text/javascript" src="~/Content/plugins/jquery-inputmask/jquery.inputmask.bundle.min.js"></script>
+        <script src="~/Scripts/main.js"></script>
+        <script>
+            HobbyClue.KnockoutExtensions.Initialize();
+        </script>
+        <!--[if lt IE 9]>
+        <script src="~/Content/plugins/html5.js"></script>
+    <![endif]-->
+        <!--[if (gte IE 6)&(lte IE 8)]>
+        <script src="~/Scripts/selectivizr-min.js?ac34d5"></script>
+    <![endif]-->
+        @RenderSection("scripts", required: false)
+    </body>
+</html>

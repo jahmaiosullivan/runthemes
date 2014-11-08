@@ -1,0 +1,227 @@
+﻿html {}
+.container {
+    width: 980px;
+}
+.row{
+    margin: 0;
+}
+body {
+	color:#333;
+	font-family: 'Roboto','Segoe UI', arial, sans-serif;
+    font-size: 13px;
+	-webkit-backface-visibility: hidden;
+}
+
+a, a:visited, a:hover {
+    text-decoration: none;
+}
+
+a:hover {
+    color: @orange;
+}
+
+#maincontent {
+    .make-md-column(10);
+    @media(min-width: @screen-desktop) {
+        width: 88%;
+        margin-left: 12%;
+        min-height: 600px;
+    }    
+}
+
+.noimage {
+    width: 260px;
+    height: 260px;
+    padding: 4px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+
+.input-group {
+    width: 100%;
+}
+
+.pac-container {
+    z-index: 1100 !important;
+}
+
+ul#Tags {
+    background: #fafafa;
+    border: 1px solid rgba(0,0,0,.05);
+}
+
+ul.tagit li.tagit-new:last-child  {
+    width: 30px;
+}
+
+.modal-footer {
+    margin: 1em;
+    padding: 0;
+}
+
+h3 {
+   font-size:1.4em;
+}
+
+/**** Errors */
+.customerror {
+    display: none;
+}
+
+button {
+    .btn;
+}
+
+.actionbutton {
+    background-color: @orange;
+    color: @white;    
+}
+
+.modal-content, button {
+    .radius(0);
+}
+
+.modalClose {
+    position: absolute;
+    top: 1%;
+    right: 3%;
+    cursor: pointer;
+}
+
+
+
+
+/*  Tablet  */
+@media (min-width:767px){
+
+  /* Column clear fix */
+  .fourcolumntable .col-lg-1:nth-child(12n+1),
+  .fourcolumntable .col-lg-2:nth-child(6n+1),
+  .fourcolumntable .col-lg-3:nth-child(4n+1),
+  .fourcolumntable .col-lg-4:nth-child(3n+1),
+  .fourcolumntable .col-lg-6:nth-child(2n+1),
+  .fourcolumntable .col-md-1:nth-child(12n+1),
+  .fourcolumntable .col-md-2:nth-child(6n+1),
+  .fourcolumntable .col-md-3:nth-child(4n+1),
+  .fourcolumntable .col-md-4:nth-child(3n+1),
+  .fourcolumntable .col-md-6:nth-child(2n+1){
+    clear: none;
+  }
+  .fourcolumntable .col-sm-1:nth-child(12n+1),
+  .fourcolumntable .col-sm-2:nth-child(6n+1),
+  .fourcolumntable .col-sm-3:nth-child(4n+1),
+  .fourcolumntable .col-sm-4:nth-child(3n+1),
+  .fourcolumntable .col-sm-6:nth-child(2n+1){
+    clear: left;
+  }
+}
+
+
+/*  Medium Desktop  */
+@media (min-width:992px){
+
+    
+    .fourcolumntable .column{
+        .make-md-column(4);
+    }
+
+  /* Column clear fix */
+  .fourcolumntable .col-lg-1:nth-child(12n+1),
+  .fourcolumntable .col-lg-2:nth-child(6n+1),
+  .fourcolumntable .col-lg-3:nth-child(4n+1),
+  .fourcolumntable .col-lg-4:nth-child(3n+1),
+  .fourcolumntable .col-lg-6:nth-child(2n+1),
+  .fourcolumntable .col-sm-1:nth-child(12n+1),
+  .fourcolumntable .col-sm-2:nth-child(6n+1),
+  .fourcolumntable .col-sm-3:nth-child(4n+1),
+  .fourcolumntable .col-sm-4:nth-child(3n+1),
+  .fourcolumntable .col-sm-6:nth-child(2n+1){
+    clear: none;
+  }
+  .fourcolumntable .col-md-1:nth-child(12n+1),
+  .fourcolumntable .col-md-2:nth-child(6n+1),
+  .fourcolumntable .col-md-3:nth-child(4n+1),
+  .fourcolumntable .col-md-4:nth-child(3n+1),
+  .fourcolumntable .col-md-6:nth-child(2n+1){
+    clear: left;
+  }
+}
+
+
+/*  Large Desktop  */
+@media (min-width:1200px){
+
+    
+    .fourcolumntable .column{
+        .make-lg-column(3);
+    }
+
+  /* Column clear fix */
+  .fourcolumntable .col-md-1:nth-child(12n+1),
+  .fourcolumntable .col-md-2:nth-child(6n+1),
+  .fourcolumntable .col-md-3:nth-child(4n+1),
+  .fourcolumntable .col-md-4:nth-child(3n+1),
+  .fourcolumntable .col-md-6:nth-child(2n+1),
+  .fourcolumntable .col-sm-1:nth-child(12n+1),
+  .fourcolumntable .col-sm-2:nth-child(6n+1),
+  .fourcolumntable .col-sm-3:nth-child(4n+1),
+  .fourcolumntable .col-sm-4:nth-child(3n+1),
+  .fourcolumntable .col-sm-6:nth-child(2n+1){
+    clear: none;
+  }
+  .fourcolumntable .col-lg-1:nth-child(12n+1),
+  .fourcolumntable .col-lg-2:nth-child(6n+1),
+  .fourcolumntable .col-lg-3:nth-child(4n+1),
+  .fourcolumntable .col-lg-4:nth-child(3n+1),
+  .fourcolumntable .col-lg-6:nth-child(2n+1){
+    clear: left;
+  }
+}
+
+
+.tagcheck {
+    color: @light-grey;
+    cursor: pointer;
+}
+
+.tagcheck:hover, .tagcheck.selected, .selected .tagcheck {
+    color: @green;
+}
+
+.modal-header {
+    padding-left: @defaultSpacing * 1.5;
+    padding-right: @defaultSpacing * 1.5;
+}
+
+.sublist {
+    margin-left: 20px;
+}
+
+.sublist, .sublist i {
+    font-size: 0.9em;
+}
+
+.fixed-bottom {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 3px;
+}
+.bg-inverse-faded {
+    background: rgba(66,66,66,0.5) !important;
+}
+.margin-none {
+    margin: 0 !important;
+}
+.innerAll {
+    padding: 14px;
+    position: relative;
+}
+
+.text-white {
+    color: #fff;
+}
+
+i {
+    margin-right: 5px;
+}
