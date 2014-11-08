@@ -1,9 +1,8 @@
 ﻿using System.Web.Mvc;
-using WhiteLabel.Web.Controllers.Attributes;
+using WhiteLabel.Web.Controllers;
 
-namespace WhiteLabel.Web.Controllers
+namespace RunThemes.Web.Controllers
 {
-    [UnauthorizedRedirectToComingSoon]
     public class HomeController : CommonControllerBase
     {
         public ActionResult Index()
