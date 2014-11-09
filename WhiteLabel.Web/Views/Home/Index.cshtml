@@ -1,5 +1,4 @@
-﻿@using System.Runtime.Remoting.Messaging
-@{
+﻿@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -20,26 +19,24 @@
                     <div class="col-lg-12">
                         <div class="text-heading large-head2 bold">
                             <h1>Features</h1>
-                            <span>Don’t let the confusing code lines draw you back!</span>
                         </div>
-                    </div><!--end:col-->
-                
-                    @Feature("Parallax Sections", "ONE supports parallax background on every page section depending on cursor movement, and it also works on mobile devices.", "magic")
-                    @Feature("Based on Twitter Bootstrap", "We used sleek, intuitive and powerful font-end framework Twitter Bootstrap to create an excellent experience for users.", "twitter")
-                    @Feature("More than 400 font-awesome", "ONE integrated with beautiful scalable vector icons from font awesome, you can easily include them in your posts.", "flag")
-                    @Feature("600+ Google web fonts", "Access the massive Google Fonts library and take control of your theme’s typography to create your unique style.", "google")
+                    </div>
+                    @Feature("Authentication Enabled", "Authenticate with Facebook, Twitter, Google or simply through your database.", "magic")
+                    @Feature("Modularized template code", "Template markup in all the right places. Shared markup in _Layout pages. Page markup at page level.", "twitter")
+                    @Feature("Unit tests", "Complete suite of both server-side and Javascript unit tests. Powered by SinonJs, Qunit, XUnit and Moq for ASP.NET MVC projects.", "flag")
+                    @Feature("Database ORM Enabled", "SQL Server database ready powered by Dapper ORM. Simple to extend or replace with your favorite ORM.", "google")
                 </div><!--end:row-->
                 <div class="row">
-                    @Feature("5 under construction options", "We provide 5 under construction styles to match your taste; your site is still exciting even it hasn’t published.", "history")
-                    @Feature("E-commerce ready", "ONE enables you to turn your simple website into a fully functional E-Commerce store right out of the box.", "shopping-cart")
-                    @Feature("Slider revolution included", "We have included Slider Revolution into theme files so you can save <strong>12$</strong> for the license of beautiful slides.", "refresh")
-                    @Feature("Flexible header style", "You can easily switch the header to light/dark color or flexible use vertical/horizontal header to enjoy.", "header")
+                    @Feature("Dependency Injection", "Powered by Structuremap or Unity for ASP.NET MVC projects. Makes it a breeze to replace any technology we provide with your own.", "history")
+                    @Feature("DotLESS and Bundling support", "DotLess integrated to make extending our css a breeze. All css in less and css format.", "shopping-cart")
+                    @Feature("Azure ready", "Ships with an azure project. Configure it with your own azure account and deploy in minites.", "refresh")
+                    @Feature("Debugging tools in place", "RouteDebugger, MiniProfiler, Glimpse already integrated for ASP.NET MVC projects.", "android")
                 </div><!--end:row-->
                 <div class="row">
-                    @Feature("Multiple pre-build pages", "With One, you can build your personal portfolio, cooperate website, e-market right away just by few clicks.", "puzzle-piece")
-                    @Feature("validate Html5 &amp; CSS3", "One lets you validate HTML5 &amp; CSS3 markup on your entire sites with a single click, simple and independent.", "html5")
-                    @Feature("Responsive &amp; retina display", "You can rest assured that every pixel will respond as perfectly it should no matter what your visitors are.", "mobile")
-                    @Feature("Multiple Background styles", "There’s no limitation of background anymore, you can add either video or slide to your site background.", "android")
+                    @Feature("Responsive HTML5 and CSS3 templates", "All templates are responsive html5 and css3 templates. Ready to go out of the box.", "html5")
+                    @Feature("Latest and Greatest Frameworks", "Using ASP.NET MVC5, KnockoutJS, JQuery for asp.net MVC projects", "html5")
+                    @Feature("All template features wired in", "For instance, if you find a template on our site with a blogging system, it's already fully coded.", "html5")
+                    @Feature("Full support", "30 days of support out of the box or sign up for our 1 year support package to cover everything including the kitchen sink.", "header")
                 </div><!--end:row-->
             </div><!--end:container-->
         </section> <!--end:features-->
@@ -237,7 +234,7 @@
             <div style="text-align: center;" >
                 <img src="/images/logo-white.png"><br>
                 <h1>MvcThemes</h1>
-                <h2>The union of templates and code</h2>
+                <h2>The union of templates and ASP.NET MVC</h2>
             </div>
         </div>
     </section> <!--hero-->
