@@ -3,7 +3,15 @@
   <Role name="RunThemes.Web">
     <Instances count="1" />
     <ConfigurationSettings>
-      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=hobbycluevirto;AccountKey=XUqScDgA9tg36MBfgIre0jJndGwX3EFGeg5pXaVoRmmWbbGd4PUYiMmNuTtro5d7oMFB0Md2AQHo6PoHtRmiyA==" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="Jahmai" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEHEtJu160oitRpwx3yUus0QwDQYJKoZIhvcNAQEBBQAEggEAMExwJME8ST6UifQ8wWWNeX9f4rj+ycMobPCMc9bsbwQR9csix7Z8vMloJSq2oXR49wUxGJibLaw838ZcqhrpuhZZVkd53eSie2Mqc1KmqBhorHQqEku2bqeqZ7fh/Y4v5q0ZdR/CnQk9gvKt3BYkR9GyEMQ4PSNmPmJgfOH4p1JDI4kiQKq1oJbW5T6eX9F9XQlS+RbwmGJzOMnaUXHD2Gbk8fTrV8KhOx8eYMcQn7/ct5m2C1DssP+nQWq1cQHxheJZs+w8LeryR/aIQh/+hciCmCArjYUvR0ac2mqVPoxsI+GBtPpCRdMz8fLvAYJKX9R6Njt2IFU194IBDOEFNjAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECBvwmboMulOJgBA16pz4qyuapNIkParphkav" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2015-11-09T23:59:59.0000000-08:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
     </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="28521A7C72828F895CBBAE2ABA3D6DA048C72C9B" thumbprintAlgorithm="sha1" />
+    </Certificates>
   </Role>
 </ServiceConfiguration>
