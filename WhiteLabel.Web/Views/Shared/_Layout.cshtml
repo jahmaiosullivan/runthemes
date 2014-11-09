@@ -57,20 +57,7 @@
     <body>
         @RenderBody()
         <footer>
-            <div class="copyright">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-5 col-md-5 col-sm-12">Copyright 2014 - One template by <a href="http://woorockets.com/" target="_blank">woorockets.com</a>.  Powered by <a href="http://demo.woorockets.com/html/one/#">Html5 &amp; Css3</a></div>
-                        <div class="col-lg-7 col-md-7 col-sm-12 clearfix">
-                            <div class="socials" style="float:right">
-                                <a href="http://demo.woorockets.com/html/one/#" class="facebook">		<i class="fa fa-facebook"></i> 		<span>facebook</span></a>
-                                <a href="http://demo.woorockets.com/html/one/#" class="twitter">		<i class="fa fa-twitter"></i> 		<span>twitter</span></a>
-                                <a href="http://demo.woorockets.com/html/one/#" class="gplus">			<i class="fa fa-google-plus"></i> 	<span>google plus</span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div><!--end:copyright-->
+            @Html.Partial("Footer")
             @RenderSection("footer", required: false)
         </footer>
         <!--jQuery-->

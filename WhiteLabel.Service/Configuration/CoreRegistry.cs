@@ -6,7 +6,7 @@ using WhiteLabel.Data.Azure.Base;
 using WhiteLabel.Data.Dapper;
 using WhiteLabel.Data.Repositories;
 
-namespace WhiteLabel.Business.Configuration
+namespace RunThemes.Business.Configuration
 {
     public class CoreRegistry : StructureMap.Configuration.DSL.Registry
     {
