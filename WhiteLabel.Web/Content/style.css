@@ -856,7 +856,6 @@ header .logo img {
 footer {
 	background:url(placeholders/backgrounds/bg_footer.jpg) top center no-repeat fixed;
 	background-size:cover;
-	padding:40px 0;
 	}
 footer a {
 	color: #919191;

@@ -2,7 +2,6 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
     <div id="pageloader" style="display: none;">
         <div class="loader-item" style="display: none;">
             <img src="/images/loading.gif" alt="loader">
@@ -58,168 +57,26 @@
                             <span>Don’t let the confusing code lines draw you back!</span>
                         </div>
                     </div><!--end:col-->
-
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <div class="services-box single-icon">
-                            <div class="icon-box">
-                                <i class="fa fa-magic"></i>
-                            </div>
-                            <div class="sb-content-wrap">
-                                <h3>Parallax Sections</h3>
-                                <p>ONE supports parallax background on every page section depending on cursor movement, and it also works on mobile devices.</p>
-                            </div>
-                        </div>
-                    </div><!--end:col-->
-
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <div class="services-box single-icon">
-                            <div class="icon-box">
-                                <i class="fa fa-twitter"></i>
-                            </div>
-                            <div class="sb-content-wrap">
-                                <h3>Based on Twitter Bootstrap</h3>
-                                <p>We used sleek, intuitive and powerful font-end framework Twitter Bootstrap to create an excellent experience for users.</p>
-                            </div>
-                        </div>
-                    </div><!--end:col-->
-
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <div class="services-box single-icon">
-                            <div class="icon-box">
-                                <i class="fa fa-flag"></i>
-                            </div>
-                            <div class="sb-content-wrap">
-                                <h3>More than 400 font-awesome</h3>
-                                <p>ONE integrated with beautiful scalable vector icons from font awesome, you can easily include them in your posts.</p>
-                            </div>
-                        </div>
-                    </div><!--end:col-->
-
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <div class="services-box single-icon">
-                            <div class="icon-box">
-                                <i class="fa fa-google"></i>
-                            </div>
-                            <div class="sb-content-wrap">
-                                <h3>600+ Google web fonts</h3>
-                                <p>Access the massive Google Fonts library and take control of your theme’s typography to create your unique style.</p>
-                            </div>
-                        </div>
-                    </div><!--end:col-->
-
+                
+                    @Feature("Parallax Sections", "ONE supports parallax background on every page section depending on cursor movement, and it also works on mobile devices.", "magic")
+                    @Feature("Based on Twitter Bootstrap", "We used sleek, intuitive and powerful font-end framework Twitter Bootstrap to create an excellent experience for users.", "twitter")
+                    @Feature("More than 400 font-awesome", "ONE integrated with beautiful scalable vector icons from font awesome, you can easily include them in your posts.", "flag")
+                    @Feature("600+ Google web fonts", "Access the massive Google Fonts library and take control of your theme’s typography to create your unique style.", "google")
                 </div><!--end:row-->
-
-
                 <div class="row">
-
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <div class="services-box single-icon">
-                            <div class="icon-box">
-                                <i class="fa fa-history"></i>
-                            </div>
-                            <div class="sb-content-wrap">
-                                <h3>5 under construction options</h3>
-                                <p>We provide 5 under construction styles to match your taste; your site is still exciting even it hasn’t published.</p>
-                            </div>
-                        </div>
-                    </div><!--end:col-->
-
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <div class="services-box single-icon">
-                            <div class="icon-box">
-                                <i class="fa fa-shopping-cart"></i>
-                            </div>
-                            <div class="sb-content-wrap">
-                                <h3>E-commerce ready</h3>
-                                <p>ONE enables you to turn your simple website into a fully functional E-Commerce store right out of the box.</p>
-                            </div>
-                        </div>
-                    </div><!--end:col-->
-
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <div class="services-box single-icon">
-                            <div class="icon-box">
-                                <i class="fa fa-refresh"></i>
-                            </div>
-                            <div class="sb-content-wrap">
-                                <h3>Slider revolution included</h3>
-                                <p>We have included Slider Revolution into theme files so you can save <strong>12$</strong> for the license of beautiful slides.</p>
-                            </div>
-                        </div>
-                    </div><!--end:col-->
-
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <div class="services-box single-icon">
-                            <div class="icon-box">
-                                <i class="fa fa-header"></i>
-                            </div>
-                            <div class="sb-content-wrap">
-                                <h3>Flexible header style</h3>
-                                <p>You can easily switch the header to light/dark color or flexible use vertical/horizontal header to enjoy.</p>
-                            </div>
-                        </div>
-                    </div><!--end:col-->
-
+                    @Feature("5 under construction options", "We provide 5 under construction styles to match your taste; your site is still exciting even it hasn’t published.", "history")
+                    @Feature("E-commerce ready", "ONE enables you to turn your simple website into a fully functional E-Commerce store right out of the box.", "shopping-cart")
+                    @Feature("Slider revolution included", "We have included Slider Revolution into theme files so you can save <strong>12$</strong> for the license of beautiful slides.", "refresh")
+                    @Feature("Flexible header style", "You can easily switch the header to light/dark color or flexible use vertical/horizontal header to enjoy.", "header")
                 </div><!--end:row-->
-
-
                 <div class="row">
-
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <div class="services-box single-icon">
-                            <div class="icon-box">
-                                <i class="fa fa-puzzle-piece"></i>
-                            </div>
-                            <div class="sb-content-wrap">
-                                <h3>Multiple pre-build pages</h3>
-                                <p>With One, you can build your personal portfolio, cooperate website, e-market right away just by few clicks.</p>
-                            </div>
-                        </div>
-                    </div><!--end:col-->
-
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <div class="services-box single-icon">
-                            <div class="icon-box">
-                                <i class="fa fa-html5"></i>
-                            </div>
-                            <div class="sb-content-wrap">
-                                <h3>validate Html5 &amp; CSS3 </h3>
-                                <p>One lets you validate HTML5 &amp; CSS3 markup on your entire sites with a single click, simple and independent.</p>
-                            </div>
-                        </div>
-                    </div><!--end:col-->
-
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <div class="services-box single-icon">
-                            <div class="icon-box">
-                                <i class="fa fa-mobile"></i>
-                            </div>
-                            <div class="sb-content-wrap">
-                                <h3>Responsive &amp; retina display</h3>
-                                <p>You can rest assured that every pixel will respond as perfectly it should no matter what your visitors are.</p>
-                            </div>
-                        </div>
-                    </div><!--end:col-->
-
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <div class="services-box single-icon">
-                            <div class="icon-box">
-                                <i class="fa fa-android"></i>
-                            </div>
-                            <div class="sb-content-wrap">
-                                <h3>Multiple Background styles</h3>
-                                <p>There’s no limitation of background anymore, you can add either video or slide to your site background.</p>
-                            </div>
-                        </div>
-                    </div><!--end:col-->
-
+                    @Feature("Multiple pre-build pages", "With One, you can build your personal portfolio, cooperate website, e-market right away just by few clicks.", "puzzle-piece")
+                    @Feature("validate Html5 &amp; CSS3", "One lets you validate HTML5 &amp; CSS3 markup on your entire sites with a single click, simple and independent.", "html5")
+                    @Feature("Responsive &amp; retina display", "You can rest assured that every pixel will respond as perfectly it should no matter what your visitors are.", "mobile")
+                    @Feature("Multiple Background styles", "There’s no limitation of background anymore, you can add either video or slide to your site background.", "android")
                 </div><!--end:row-->
-
-
-
             </div><!--end:container-->
         </section> <!--end:features-->
-
         <section style=" padding:100px 0;" id="dm-demos">
             <div class="container">
                 <div class="row">
@@ -331,27 +188,12 @@
 
             </div>
         </section> <!--end:features-->
-
-
-
-
-        <div class="copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-5 col-md-5 col-sm-12">Copyright 2014 - One template by <a href="http://woorockets.com/" target="_blank">woorockets.com</a>.  Powered by <a href="http://demo.woorockets.com/html/one/#">Html5 &amp; Css3</a></div>
-                    <div class="col-lg-7 col-md-7 col-sm-12 clearfix">
-                        <div class="socials" style="float:right">
-                            <a href="http://demo.woorockets.com/html/one/#" class="facebook">		<i class="fa fa-facebook"></i> 		<span>facebook</span></a>
-                            <a href="http://demo.woorockets.com/html/one/#" class="twitter">		<i class="fa fa-twitter"></i> 		<span>twitter</span></a>
-                            <a href="http://demo.woorockets.com/html/one/#" class="gplus">			<i class="fa fa-google-plus"></i> 	<span>google plus</span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div><!--end:copyright-->
-        <a href="#" class="back-to-top" style="display: none;"> <i class="fa fa-angle-up"></i> </a>
     </div><!--end:wrapper-->
     
+@section footer {
+    <a href="#" class="back-to-top" style="display: none;"> <i class="fa fa-angle-up"></i> </a>
+}
+
 @section scripts {
     <script>
         if (!window.console) console = { log: function () { } };
@@ -374,4 +216,19 @@
             $('body').addClass('no-hidden');
         });
     </script>
+}
+
+@helper Feature(string title, string description, string icon)
+{
+    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <div class="services-box single-icon">
+            <div class="icon-box">
+                <i class="@string.Format("fa fa-{0}", icon)"></i>
+            </div>
+            <div class="sb-content-wrap">
+                <h3>@title</h3>
+                <p>@description</p>
+            </div>
+        </div>
+    </div><!--end:col-->
 }
