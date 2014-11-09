@@ -19,7 +19,7 @@ namespace WhiteLabel.Web.Views
         {
             var userService = WebContainer.Current.GetInstance<IUserService>();
             var userProvider = WebContainer.Current.GetInstance<IUserProvider>();
-            CurrentUser = userService.GetById(userProvider.CurrentUserId);
+            //CurrentUser = userService.GetById(userProvider.CurrentUserId);
  
             CurrentUrl = HttpContext.Current.Request.Url.ToString();
             IsAuthenticated = HttpContext.Current != null && HttpContext.Current.User != null && HttpContext.Current.User.Identity != null && HttpContext.Current.User.Identity.IsAuthenticated;
