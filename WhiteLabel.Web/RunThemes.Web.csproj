@@ -310,8 +310,8 @@
     <Compile Include="Configuration\DependencyResolution\StructureMapDependencyResolver.cs" />
     <Compile Include="Configuration\DependencyResolution\StructureMapDependencyScope.cs" />
     <Compile Include="Exceptions\NotAuthorizedException.cs" />
-    <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
-    <Compile Include="Filters\RequiresAuthorizationAttribute.cs" />
+    <Compile Include="Controllers\Attributes\InitializeSimpleMembershipAttribute.cs" />
+    <Compile Include="Controllers\Attributes\RequiresAuthorizationAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -474,6 +474,7 @@
     <Content Include="Images\blue_abstract_background.jpg" />
     <Content Include="Images\favicon.ico" />
     <Content Include="Images\loading.gif" />
+    <Content Include="Images\logo-white-small.png" />
     <Content Include="Images\logo-white.png" />
     <Content Include="Images\main-logo.png" />
     <Content Include="Images\marker-blue.png" />
