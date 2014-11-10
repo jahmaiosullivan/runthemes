@@ -59,7 +59,11 @@
                 @Html.Partial("LoginModal")
                 @Html.Partial("RegisterModal")
             }
-            @RenderBody()
+            <div class="wrapper">
+                @Html.Partial("Banner")
+                @Html.Partial("Header")
+                @RenderBody()
+            </div>
             <footer>
                 @Html.Partial("Footer")
                 @RenderSection("footer", required: false)
