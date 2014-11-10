@@ -8,8 +8,8 @@
 	width:100%;
 	display:block;
 	position:relative;
-	min-height:150px;
-	background:url("/images/blue_abstract_background.jpg") no-repeat scroll center bottom,linear-gradient(-45deg, #673c8e, #236295, #9869ff) repeat scroll 0 0 rgba(0, 0, 0, 0);
+	min-height:100px;
+	background: #9869ff;
 	background-size:cover;
 	/*if ie9 */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#673c8e', endColorstr='#9869ff',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */	
@@ -21,7 +21,6 @@
 	text-transform:uppercase;
 	font-weight:bold;
 	color:#fff;
-	margin:20px 0 10px 0;
 	}	
 .dm-features {
 	background: url(/images/pattern2.png);
