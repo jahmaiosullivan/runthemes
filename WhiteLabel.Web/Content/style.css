@@ -3898,8 +3898,7 @@ ul.post-meta-infos {
 	display:block;
 	position:relative;
 	text-align:center;
-	margin-bottom:20px;
-	}
+}
 .services-box h3 {
 	font-weight:400;
 	text-transform:uppercase;
@@ -3978,9 +3977,7 @@ ul.post-meta-infos {
 .services-box .sb-content-wrap {
 	display:block;
 	width:100%;
-	padding:10px 0;
-	
-	}
+}
 .services-box .sb-content-wrap p:after,
 .services-box .sb-content-wrap p:before {
 	content:'';
