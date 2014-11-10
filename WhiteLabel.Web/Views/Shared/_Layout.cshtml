@@ -55,7 +55,11 @@
         @RenderSection("styles", required: false)
     </head>
         <body>
-            @Html.Partial("Modal")
+            @if (!Request.IsAuthenticated)
+            {
+                @Html.Partial("LoginModal")
+                @Html.Partial("RegisterModal")
+            }
             @RenderBody()
             <footer>
                 @Html.Partial("Footer")

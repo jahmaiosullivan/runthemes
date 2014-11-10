@@ -1,0 +1,35 @@
+﻿    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                @using (Html.BeginForm("Login", "Account", new {ReturnUrl = ViewBag.ReturnUrl}, FormMethod.Post, new {@class = "form-horizontal", role = "form"}))
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title">Login</h4>
+                    </div>
+                    <div class="modal-body row">
+
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <p>
+                                <label for="email"> Email :</label>
+                                <input id="email" type="text" aria-required="true" size="30" value="" name="email">
+                            </p>
+                            <p> <a href="#">» Creat new account</a>	</p>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <p>
+                                <label for="password"> Password :</label>
+                                <input id="password" type="password" aria-required="true" size="30" value="" name="password">
+                            </p>
+                            <p> <a href="#">» Lost Password ?</a> 	</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary btn-violet">Login</button>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
