@@ -3,7 +3,7 @@ using System.Web;
 using Microsoft.AspNet.Identity;
 using WhiteLabel.Business.Providers;
 
-namespace WhiteLabel.Web.Providers
+namespace RunThemes.Web.Providers
 {
     public class UserProvider : IUserProvider
     {
