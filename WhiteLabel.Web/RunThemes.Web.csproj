@@ -266,7 +266,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApiControllers\ApartmentsApiController.cs" />
     <Compile Include="ApiControllers\CommentApiController.cs" />
     <Compile Include="ApiControllers\WallPostApiController.cs" />
     <Compile Include="ApiControllers\ImageApiController.cs" />
@@ -281,7 +280,6 @@
     <Compile Include="App_Start\StructuremapMvc.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="App_Start\WebApiControllerResolver.cs" />
-    <Compile Include="AutoMappings\ApartmentMappingProfile.cs" />
     <Compile Include="AutoMappings\ImageInfoMappingProfile.cs" />
     <Compile Include="AutoMappings\Resolvers\IdToUserViewModelResolver.cs" />
     <Compile Include="AutoMappings\Resolvers\PostCommentsResolver.cs" />
@@ -299,7 +297,6 @@
     <Compile Include="Configuration\WebContainer.cs" />
     <Compile Include="Configuration\WebRegistry.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\AptController.cs" />
     <Compile Include="Controllers\Attributes\HttpVersionHeaderFilterAttribute.cs" />
     <Compile Include="Controllers\Attributes\LogExceptionAttribute.cs" />
     <Compile Include="Controllers\Attributes\PlaceHolderAttribute.cs" />
@@ -333,7 +330,6 @@
     <Compile Include="ViewModels\ModalViewModel.cs" />
     <Compile Include="Providers\UserProvider.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="ViewModels\ApartmentViewModel.cs" />
     <Compile Include="ViewModels\InternalServerErrorViewModel.cs" />
     <Compile Include="ViewModels\PostCommentViewModel.cs" />
     <Compile Include="ViewModels\PostViewModel.cs" />
@@ -468,6 +464,7 @@
     <Content Include="Images\7.jpg" />
     <Content Include="Images\8.jpg" />
     <Content Include="Images\9.jpg" />
+    <Content Include="Images\Abstract_background.jpg" />
     <Content Include="Images\apple-touch-icon-114x114.png" />
     <Content Include="Images\apple-touch-icon-144x144.png" />
     <Content Include="Images\apple-touch-icon-57x57.png" />
@@ -489,6 +486,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\less\reset.less" />
     <Content Include="Content\less\errors.less" />
+    <Content Include="Images\pattern2.png" />
     <Content Include="Images\u1.jpg" />
     <Content Include="Images\u2.jpg" />
     <Content Include="Images\u3.jpg" />
@@ -581,10 +579,8 @@
     <Content Include="Views\Shared\_TwoColumnLayout.cshtml" />
     <Content Include="Views\Shared\_ThreeColumnLayout.cshtml" />
     <Content Include="Content\fonts\fontawesome-webfont.eot" />
-    <None Include="Views\Apt\Create.cshtml" />
-    <None Include="Views\Apt\Index.cshtml" />
-    <None Include="Views\Apt\Search.cshtml" />
-    <None Include="Views\Home\Index.cshtml" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\MiniHeader.cshtml" />
   </ItemGroup>
   <ItemGroup>

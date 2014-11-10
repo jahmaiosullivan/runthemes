@@ -105,7 +105,6 @@
     <Compile Include="Services\BaseDapperService.cs" />
     <Compile Include="Services\BaseService.cs" />
     <Compile Include="Services\EmailService.cs" />
-    <Compile Include="Services\ApartmentService.cs" />
     <Compile Include="Services\IBaseService.cs" />
     <Compile Include="Services\IImageService.cs" />
     <Compile Include="Services\ImageService.cs" />

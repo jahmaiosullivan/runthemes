@@ -13,7 +13,6 @@ namespace WhiteLabel.Web.AutoMappings
                 cfg.AddProfile<ImageInfoMappingProfile>();
                 cfg.AddProfile<UserMappingProfile>();
                 cfg.AddProfile<PostMappingProfile>();
-                cfg.AddProfile<ApartmentMappingProfile>();
             });
             Mapper.AssertConfigurationIsValid();
         }
