@@ -1,31 +1,32 @@
 ﻿<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h4 class="modal-title">Login</h4>
-            </div>
-            <div class="modal-body row">
-
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                    <p>
-                        <label for="username"> Username :</label>
-                        <input id="username" type="text" aria-required="true" size="30" value="" name="username">
-                    </p>
-                    <p> <a href="#">» Creat new account</a>	</p>
+            @using (Html.BeginForm("Register", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form", autocomplete = "off" }))
+            {
+                @Html.AntiForgeryToken()
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">Register</h4>
                 </div>
+                <div class="modal-body row">
 
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                    <p>
-                        <label for="password"> Password :</label>
-                        <input id="password" type="password" aria-required="true" size="30" value="" name="password">
-                    </p>
-                    <p> <a href="#">» Lost Password ?</a> 	</p>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <p>
+                            <label for="email"> Email :</label>
+                            <input aria-required="true" autocomplete="off" id="email" name="email" size="30" type="text" value="">
+                        </p>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <p>
+                            <label for="password"> Password :</label>
+                            <input id="Password" autocomplete="off" type="password" aria-required="true" size="30" value="" name="Password">
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary btn-violet">Login</button>
-            </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary btn-violet">Register</button>
+                </div>
+            }
         </div>
     </div>
 </div>
