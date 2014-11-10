@@ -4999,7 +4999,6 @@ ul.post-meta-infos {
 	.text-heading.large-head,
 	.text-heading.large-head2 {
 		text-align:center;
-		margin-bottom:50px;
 		}
 	.text-heading.large-head span {
 		padding-top:10px;
@@ -5026,9 +5025,7 @@ ul.post-meta-infos {
 		border-radius:0;
 		}
 		
-	.text-heading.large-head2 {
-		margin-bottom:40px;
-		}
+	
 	.text-heading.large-head2:before {
 		top:75px;
 		}
