@@ -1,37 +1,21 @@
-﻿@using Microsoft.AspNet.Identity
-@using WhiteLabel.Web.Views
-@if (Request.IsAuthenticated)
-{
-           
-    
-    
+﻿@if (Request.IsAuthenticated)
+{   
     using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
     {
-    @Html.AntiForgeryToken()
-
-    <ul class="nav navbar-nav navbar-right">
+       @Html.AntiForgeryToken()
         <li>
-            <nav class="main-nav">
-                <ul>
-                    <li>
-                        <a href="#" title="user profile">@CurrentUser.DisplayName</a>
-                        <ul>
-                            <li><a href="/users/profile">Edit Profile</a></li>
-                            <li>
-                                <a href="javascript:document.getElementById('logoutForm').submit()">Log out</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
+            <a href="#" title="user profile">@CurrentUser.DisplayName</a>
+            <ul>
+                <li><a href="/users/profile" class="external">Edit Profile</a></li>
+                <li>
+                    <a href="javascript:document.getElementById('logoutForm').submit()" class="external">Log out</a>
+                </li>
+            </ul>
         </li>
-    </ul>
     }
 }
 else
 {
-    <ul class="nav navbar-nav navbar-right">
-        <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
-        <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
-    </ul>
+    <li>@Html.ActionLink("Register", "Register", "Account", null, new { id = "registerLink", @class="external" })</li>
+    <li>@Html.ActionLink("Log in", "Login", "Account", null, new { id = "loginLink", @class = "external" })</li>
 }

@@ -10,8 +10,8 @@
     <!--end:preloader-->
     <!--wrapper-->
     <div class="wrapper">
-        @Banner()
-        @Header()
+        @Html.Partial("Banner")
+        @Html.Partial("Header")
 
         <section class="dm-features">
             <div class="container">
@@ -163,12 +163,6 @@
                 console.log('done scrolling');
             }
         });
-
-
-        $(document).ready(function () {
-            new google.maps.places.SearchBox(document.getElementById('location'));
-            $('body').addClass('no-hidden');
-        });
     </script>
 }
 
@@ -185,50 +179,4 @@
             </div>
         </div>
     </div><!--end:col-->
-}
-
-@helper Header()
-{
-    <header class="header-2" style="height: auto;">
-        <div class="nav-container stickmenu clearfix" style="top: 0px;">
-            <div class="inner">
-                <a class="logo" href="/">
-                    <img alt="" src="/Images/main-logo.png">
-                </a>
-                <ul class="main-menu">
-                    <li class="active"><a href="#features">Features</a></li>
-                    <li class=""><a href="#dm-themes">Themes</a></li>
-                    <li><a href="/" target="_blank" class="external">Support</a></li>
-                </ul>
-                <!-- end:main-menu -->
-
-                <div id="mobile-menu" class="dl-menuwrapper">
-                    <button class="dl-trigger"><i class="fa fa-bars"></i></button>
-                    <ul class="dl-menu">
-                        <li class="active"><a href="#features">Features</a></li>
-                        <li><a href="#dm-themes">Themes</a></li>
-                        <li><a href="http://support.woorockets.com/" target="_blank" class="external">Support</a></li>
-                    </ul>
-                </div><!-- /dl-menuwrapper -->
-
-
-
-            </div> <!--end:inner-->
-        </div><!--end:nav-container-->
-    </header>
-}
-
-@helper Banner()
-{
-    <section class="one-section dm-hero" id="features">
-        <div class="middle-content">
-            <div style="text-align: center;" >
-                <div style="display: inline-block;"><img src="/images/logo-white.png"></div>
-                <div style="display: inline-block;">
-                    <h1>Mvc Skins</h1>
-                    <h2>The union of templates and MVC code</h2>
-                </div>
-            </div>
-        </div>
-    </section>
 }
