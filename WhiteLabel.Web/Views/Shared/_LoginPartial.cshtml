@@ -1,21 +1,14 @@
 ﻿@if (Request.IsAuthenticated)
-{   
-    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new {id = "logoutForm", @class = "navbar-right"}))
     {
-       @Html.AntiForgeryToken()
-        <li>
-            <a href="#" title="user profile">@CurrentUser.DisplayName</a>
-            <ul>
-                <li><a href="/users/profile" class="external">Edit Profile</a></li>
-                <li>
-                    <a href="javascript:document.getElementById('logoutForm').submit()" class="external">Log out</a>
-                </li>
-            </ul>
-        </li>
+        @Html.AntiForgeryToken()
     }
+    <li><a href="#" title="user profile">MyName</a></li>
+    <li><a href="javascript:document.getElementById('logoutForm').submit()" class="external">Log out</a></li>
 }
 else
 {
-    <li>@Html.ActionLink("Register", "Register", "Account", null, new { id = "registerLink", @class="external" })</li>
-    <li>@Html.ActionLink("Log in", "Login", "Account", null, new { id = "loginLink", @class = "external" })</li>
+    <li><a id="registerLink" class="external" data-toggle="modal" href="@Url.Action("Register", "Account")" data-target="#myModal">Register</a></li>
+    <li><a id="loginLink" class="external" data-toggle="modal" href="@Url.Action("Login", "Account")" data-target="#myModal">Log in</a></li>
 }

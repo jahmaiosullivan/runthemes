@@ -10,11 +10,5 @@ namespace RunThemes.Web.Controllers
             return View();
         }
 
-        [HttpGet]
-        [AllowAnonymous]
-        public ActionResult ComingSoon()
-        {
-            return View();
-        }
     }
 }
