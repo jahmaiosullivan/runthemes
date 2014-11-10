@@ -5,10 +5,9 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using RunThemes.Web;
 using WhiteLabel.Web.ViewModels;
 
-namespace WhiteLabel.Web.Controllers
+namespace RunThemes.Web.Controllers
 {
     [Authorize]
     public class AccountController : Controller
