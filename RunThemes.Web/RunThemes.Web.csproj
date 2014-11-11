@@ -305,6 +305,7 @@
     <Compile Include="Controllers\CommonControllerBase.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\FileController.cs" />
+    <Compile Include="Controllers\GeneralController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Configuration\DependencyResolution\StructureMapDependencyResolver.cs" />
@@ -606,6 +607,7 @@
   <ItemGroup>
     <Folder Include="App_Code\" />
     <Folder Include="App_Data\" />
+    <Folder Include="Views\General\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config">

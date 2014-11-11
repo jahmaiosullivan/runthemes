@@ -1,4 +1,6 @@
-﻿<style>
+﻿@using RunThemes.Web.Models
+@model RunThemes.Web.Models.HeaderMenu
+<style>
     .login-menu.main-menu {
         float: right;
     }
@@ -7,12 +9,12 @@
     <div class="nav-container stickmenu clearfix" style="top: 0px;">
         <div class="inner">
             <ul class="main-menu">
-                <li class="active"><a id="featuresLink" href="/#dm-features">Features</a></li>
+                <li class="@string.Format("{0}", Model == HeaderMenu.Features ? "active": "")"><a id="featuresLink" href="/#dm-features">Features</a></li>
                 <li><a id="themesLink" href="/#dm-themes">Themes</a></li>
                 <li><a id="supportLink" href="/support" class="external">Support</a></li>
                 @if (Request.IsAuthenticated)
                 {
-                    <li><a id="downloadsLink" href="/downloads#downloads" class="external">My Downloads</a></li>
+                    <li class="@string.Format("{0}", Model == HeaderMenu.Downloads ? "active": "")"><a id="downloadsLink" href="/downloads#downloads" class="external">My Downloads</a></li>
                 }
             </ul>
             @if (!Request.IsAuthenticated)

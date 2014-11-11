@@ -621,5 +621,10 @@ namespace RunThemes.Common.Helpers
         {
             return string.IsNullOrEmpty(text) ? string.Empty : char.ToLower(text[0]) + text.Substring(1);
         }
+
+        public static string RemoveFromEnd(this string s, string suffix)
+        {
+            return s.EndsWith(suffix) ? s.Substring(0, s.Length - suffix.Length) : s;
+        }
     }
 }
