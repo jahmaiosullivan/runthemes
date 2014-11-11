@@ -29,7 +29,7 @@ namespace RunThemes.Data.Dapper
         static SqlQueryManager()
         {
             AssemblyProvider = () => typeof(SqlQueryManager).Assembly;
-            ResourceNamePrefixProvider = () => "WhiteLabel.Data.SqlQueries.";
+            ResourceNamePrefixProvider = () => "RunThemes.Data.SqlQueries.";
             ResourceNamesProvider = () => AssemblyProvider().GetManifestResourceNames();
         }
 

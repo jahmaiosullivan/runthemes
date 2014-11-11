@@ -322,6 +322,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="ModelBuilders\UsersModelBuilder.cs" />
+    <Compile Include="Models\HeaderMenu.cs" />
     <Compile Include="ViewModels\AccountViewModels.cs" />
     <Compile Include="ViewModels\IdentityModels.cs" />
     <Compile Include="ViewModels\ManageViewModels.cs" />
@@ -453,16 +454,25 @@
     <Content Include="Content\less\header.less" />
     <Content Include="Images\0.jpg" />
     <Content Include="Images\1.jpg" />
+    <Content Include="Images\1_1.jpg" />
     <Content Include="Images\10.jpg" />
     <Content Include="Images\11.jpg" />
     <Content Include="Images\2.jpg" />
+    <Content Include="Images\2_1.jpg" />
     <Content Include="Images\3.jpg" />
+    <Content Include="Images\3_1.jpg" />
     <Content Include="Images\4.jpg" />
+    <Content Include="Images\4_1.jpg" />
     <Content Include="Images\5.jpg" />
+    <Content Include="Images\5_1.jpg" />
     <Content Include="Images\6.jpg" />
+    <Content Include="Images\6_1.jpg" />
     <Content Include="Images\7.jpg" />
+    <Content Include="Images\7_1.jpg" />
     <Content Include="Images\8.jpg" />
+    <Content Include="Images\8_1.jpg" />
     <Content Include="Images\9.jpg" />
+    <Content Include="Images\9_1.jpg" />
     <Content Include="Images\Abstract_background.jpg" />
     <Content Include="Images\apple-touch-icon-114x114.png" />
     <Content Include="Images\apple-touch-icon-144x144.png" />
