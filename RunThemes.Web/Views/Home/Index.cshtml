@@ -164,10 +164,14 @@
 {
     <script>
         if (!window.location.hash) {
-            setTimeout(function () {
-                $('#themesLink').click();
+            setTimeout(function() {
+                $('#dm-themesLink').click();
             }, 300);
-        } 
+        } else {
+            setTimeout(function () {
+                $(window.location.hash + 'Link').click();
+            }, 300);
+        }
     </script>
 }
 
