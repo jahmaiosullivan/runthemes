@@ -6,7 +6,7 @@ properties {
 	$DefaultServer='(local)'
 	$SqlServer = if ($SqlServer -ne $NULL) { $SqlServer } else { $DefaultServer }
 	$SecondarySqlServer = if ($SecondarySqlServer -ne $NULL) { $SecondarySqlServer } else { $SqlServer }
-	$SqlDatabase = if ($SqlDatabase -ne $NULL) { $SqlDatabase } else { 'HobbyClue' }	
+	$SqlDatabase = if ($SqlDatabase -ne $NULL) { $SqlDatabase } else { 'RunThemes' }	
 }
 
 task upgradedb -depends db-init-upgrade
@@ -20,19 +20,19 @@ task css -depends less
 # Config Tasks
 # Build Tasks
 task run-clean {
-    exec { msbuild HobbyClue.sln /t:Clean /v:quiet }
+    exec { msbuild RunThemes.sln /t:Clean /v:quiet }
     clean $webCompileDir
 }
 
 task run-build -depends generate-config, less {
-	exec { msbuild HobbyClue.sln /t:Build /v:Minimal /p:Configuration=$configuration }
+	exec { msbuild RunThemes.sln /t:Build /v:Minimal /p:Configuration=$configuration }
 }
 
 task generate-config {
-	exec { msbuild HobbyClue.Web/HobbyClue.Web.csproj /t:TransformWebConfig /p:Configuration=$configuration /v:Minimal }	
-	$transformedConfigPath = "HobbyClue.Web\obj\$configuration\TransformWebConfig\transformed\web.config"
+	exec { msbuild RunThemes.Web/RunThemes.Web.csproj /t:TransformWebConfig /p:Configuration=$configuration /v:Minimal }	
+	$transformedConfigPath = "RunThemes.Web\obj\$configuration\TransformWebConfig\transformed\web.config"
 	if ((test-path $transformedConfigPath) -eq $TRUE) {		
-        copy "$transformedConfigPath" "HobbyClue.Web\web.config"
+        copy "$transformedConfigPath" "RunThemes.Web\web.config"
 		write-host "Copied transformed web.config from $transformedConfigPath" -foregroundColor 'cyan'
     }
 	else 
@@ -42,19 +42,19 @@ task generate-config {
 }
 
 task run-unit-tests {
-    exec { .\ExternalBinaries\xunit\xunit.console.clr4.x86.exe "HobbyClue.Tests\bin\$configuration\HobbyClue.Tests.dll" }
+    exec { .\ExternalBinaries\xunit\xunit.console.clr4.x86.exe "RunThemes.Tests\bin\$configuration\RunThemes.Tests.dll" }
 }
 
 task run-unit-tests-release {
-    exec { .\ExternalBinaries\xunit\xunit.console.clr4.x86.exe "HobbyClue.Tests\bin\Release\HobbyClue.Tests.dll" }
+    exec { .\ExternalBinaries\xunit\xunit.console.clr4.x86.exe "RunThemes.Tests\bin\Release\RunThemes.Tests.dll" }
 }
 
 task run-js-tests {
-    exec { .\ExternalBinaries\Chutzpah\chutzpah.console.exe 'HobbyClue.Tests\Web\Scripts' }
+    exec { .\ExternalBinaries\Chutzpah\chutzpah.console.exe 'RunThemes.Tests\Web\Scripts' }
 }
 
 task less {
-	exec { .\ExternalBinaries\dotless\dotless.Compiler.exe -m HobbyClue.Web\content\less\styles.less HobbyClue.Web\content\ }
+	exec { .\ExternalBinaries\dotless\dotless.Compiler.exe -m RunThemes.Web\content\less\styles.less RunThemes.Web\content\ }
 }
 
 # Database Tasks

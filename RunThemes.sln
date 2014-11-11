@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunThemes.Common", "WhiteLabel.Common\RunThemes.Common.csproj", "{A05FA0C9-B371-472B-A9C7-3EB1EBF6883A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunThemes.Common", "RunThemes.Common\RunThemes.Common.csproj", "{A05FA0C9-B371-472B-A9C7-3EB1EBF6883A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunThemes.Data", "WhiteLabel.Data\RunThemes.Data.csproj", "{86C48B94-3616-4252-834E-C9531AF926F3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunThemes.Data", "RunThemes.Data\RunThemes.Data.csproj", "{86C48B94-3616-4252-834E-C9531AF926F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunThemes.Business", "WhiteLabel.Service\RunThemes.Business.csproj", "{11476D80-9558-4354-AD2A-FED26CBE046A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunThemes.Business", "RunThemes.Service\RunThemes.Business.csproj", "{11476D80-9558-4354-AD2A-FED26CBE046A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunThemes.Tests", "WhiteLabel.Tests\RunThemes.Tests.csproj", "{3F0C78B9-EED3-49D4-A614-942D0D8CCC62}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunThemes.Web", "WhiteLabel.Web\RunThemes.Web.csproj", "{2B9F4331-CBBB-47D6-B810-E21B452182D9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunThemes.Tests", "RunThemes.Tests\RunThemes.Tests.csproj", "{3F0C78B9-EED3-49D4-A614-942D0D8CCC62}"
 EndProject
 Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "RunThemes.Cloud", "RunThemes.Cloud\RunThemes.Cloud.ccproj", "{AB814F97-9006-460A-8417-D74E1AE7C71E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunThemes.Web", "RunThemes.Web\RunThemes.Web.csproj", "{2B9F4331-CBBB-47D6-B810-E21B452182D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,14 +37,14 @@ Global
 		{3F0C78B9-EED3-49D4-A614-942D0D8CCC62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F0C78B9-EED3-49D4-A614-942D0D8CCC62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F0C78B9-EED3-49D4-A614-942D0D8CCC62}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2B9F4331-CBBB-47D6-B810-E21B452182D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2B9F4331-CBBB-47D6-B810-E21B452182D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2B9F4331-CBBB-47D6-B810-E21B452182D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2B9F4331-CBBB-47D6-B810-E21B452182D9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AB814F97-9006-460A-8417-D74E1AE7C71E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AB814F97-9006-460A-8417-D74E1AE7C71E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB814F97-9006-460A-8417-D74E1AE7C71E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB814F97-9006-460A-8417-D74E1AE7C71E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B9F4331-CBBB-47D6-B810-E21B452182D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B9F4331-CBBB-47D6-B810-E21B452182D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B9F4331-CBBB-47D6-B810-E21B452182D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B9F4331-CBBB-47D6-B810-E21B452182D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
