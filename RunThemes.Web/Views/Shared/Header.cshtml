@@ -9,21 +9,12 @@
     <div class="nav-container stickmenu clearfix" style="top: 0px;">
         <div class="inner">
             <ul class="main-menu">
-                <li class="@string.Format("{0}", Model == HeaderMenu.Features ? "active": "")">
-                    <a id="dm-featuresLink" href="/#dm-features">Features</a>
-                </li>
-                <li><a id="dm-themesLink" href="/#dm-themes">Themes</a></li>
-                <li><a id="supportLink" href="/support" class="external">Support</a></li>
-                @if (Request.IsAuthenticated)
-                {
-                    <li class="@string.Format("{0}", Model == HeaderMenu.Downloads ? "active": "")"><a id="downloadsLink" href="/downloads#downloads" class="external">My Downloads</a></li>
-                }
+                @MenuList()
             </ul>
             @if (!Request.IsAuthenticated)
             {
                 <a class="btn btn-primary btn-orange logo" href="/">Sell your theme through us</a>
             }
-            
             <ul class="login-menu main-menu">
                 @Html.Partial("_LoginPartial")
             </ul>
@@ -31,16 +22,25 @@
             <div id="mobile-menu" class="dl-menuwrapper">
                 <button class="dl-trigger"><i class="fa fa-bars"></i></button>
                 <ul class="dl-menu">
-                    <li class="active"><a class="scroller" href="#features">Features</a></li>
-                    <li><a href="#dm-themes">Themes</a></li>
-                    <li><a href="http://support.woorockets.com/" class="external">Support</a></li>
-                    @if (Request.IsAuthenticated)
-                    {
-                        <li><a href="/downloads" class="external">Downloads</a></li>
-                    }
+                    @MenuList()
+                </ul>
+                <ul class="login-menu main-menu">
                     @Html.Partial("_LoginPartial")
                 </ul>
             </div><!--end:nav-container-->
         </div>
     </div>
 </header>
+
+@helper MenuList()
+{
+    <li class="@string.Format("{0}", Model == HeaderMenu.Features ? "active": "")">
+        <a id="dm-featuresLink" href="/#dm-features">Features</a>
+    </li>
+    <li><a id="dm-kitsLink" href="/#dm-kits">Kits</a></li>
+    <li><a id="supportLink" href="/support" class="external">Support</a></li>
+    if (Request.IsAuthenticated)
+    {
+        <li class="@string.Format("{0}", Model == HeaderMenu.Downloads ? "active": "")"><a id="downloadsLink" href="/downloads#downloads" class="external">My Downloads</a></li>
+    }
+}
