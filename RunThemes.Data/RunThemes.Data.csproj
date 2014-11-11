@@ -95,12 +95,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Azure\Base\BaseQueueStorageRepository.cs" />
+    <Compile Include="Models\UserDownload.cs" />
+    <Compile Include="Models\Template.cs" />
     <Compile Include="Models\Post.cs" />
     <Compile Include="Models\PostComment.cs" />
-    <Compile Include="Models\Promotion.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Repositories\PostRepository.cs" />
     <Compile Include="Repositories\PostCommentRepository.cs" />
+    <Compile Include="Repositories\UserDownloadsRepository.cs" />
+    <Compile Include="Repositories\TemplatesRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
     <Compile Include="Azure\HCTableEntity.cs" />
     <Compile Include="Dapper\IQueryManager.cs" />

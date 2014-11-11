@@ -109,6 +109,8 @@
     <Compile Include="Services\IImageService.cs" />
     <Compile Include="Services\ImageService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\UserDownloadsService.cs" />
+    <Compile Include="Services\TemplatesService.cs" />
     <Compile Include="Services\PostService.cs" />
     <Compile Include="Services\PostCommentService.cs" />
     <Compile Include="Services\UserService.cs" />
