@@ -1,21 +1,26 @@
-﻿<header class="header-2" style="height: auto;">
+﻿<style>
+    .login-menu.main-menu {
+        float: right;
+    }
+</style>
+<header class="header-2" style="height: auto;">
     <div class="nav-container stickmenu clearfix" style="top: 0px;">
         <div class="inner">
-            <a class="logo" href="/">
-                <img alt="" src="/Images/main-logo.png">
-            </a>
+            <ul class="main-menu">
+                <li class="active"><a id="featuresLink" href="/#dm-features">Features</a></li>
+                <li><a id="themesLink" href="/#dm-themes">Themes</a></li>
+                <li><a id="supportLink" href="/support" class="external">Support</a></li>
+                @if (Request.IsAuthenticated)
+                {
+                    <li><a id="downloadsLink" href="/downloads#downloads" class="external">My Downloads</a></li>
+                }
+            </ul>
             @if (!Request.IsAuthenticated)
             {
                 <a class="btn btn-primary btn-orange logo" href="/">Sell your theme through us</a>
             }
-            <ul class="main-menu">
-                <li class="active"><a href="#features">Features</a></li>
-                <li><a id="themesLink" href="#dm-themes">Themes</a></li>
-                <li><a href="/support" class="external">Support</a></li>
-                @if (Request.IsAuthenticated)
-                {
-                    <li><a href="/downloads" class="external">My Downloads</a></li>
-                }
+            
+            <ul class="login-menu main-menu">
                 @Html.Partial("_LoginPartial")
             </ul>
             <!-- end:main-menu -->

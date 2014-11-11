@@ -3,7 +3,7 @@
 }
 
     
-<section class="dm-features">
+<section id="dm-features">
     <div class="container">
         <div class="col-lg-12">
             <div class="text-heading large-head2 bold">
@@ -35,7 +35,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="text-heading large-head2 bold">
-                    <h1>Sites</h1>
+                    <h1>Themes</h1>
                     <span>Choose a fully wired site and then choose additional features.</span>
                 </div>
             </div><!--end:col-->
@@ -163,9 +163,11 @@
 @if (Request.IsAuthenticated)
 {
     <script>
-        setTimeout(function () {
-            $('#themesLink').click();
-        }, 300);
+        if (!window.location.hash) {
+            setTimeout(function () {
+                $('#themesLink').click();
+            }, 300);
+        } 
     </script>
 }
 

@@ -18,7 +18,7 @@
 /*Main menu*/
 
 header .main-menu {
-	float: right;
+	float: left;
 	text-align: center;
 	margin: 0;
 }
