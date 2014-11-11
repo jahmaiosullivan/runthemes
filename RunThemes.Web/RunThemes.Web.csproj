@@ -617,6 +617,9 @@
   <ItemGroup>
     <Content Include="Views\Shared\LoginModal.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\PageLoader.cshtml" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

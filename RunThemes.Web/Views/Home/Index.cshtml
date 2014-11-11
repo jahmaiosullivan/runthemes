@@ -1,16 +1,13 @@
-﻿@using RunThemes.Web.Views
-@{
+﻿@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@PageLoader()
     
 <section class="dm-features">
     <div class="container">
         <div class="col-lg-12">
             <div class="text-heading large-head2 bold">
                 <h1>Features</h1>
-                <span>Pick and choose only the features you need.</span>
             </div>
         </div><!--end:col-->
         <div class="row">
@@ -32,14 +29,14 @@
             @Feature("Full support", "30 days of support out of the box or sign up for our 1 year support package to cover everything including the kitchen sink.", "support")
         </div><!--end:row-->
     </div><!--end:container-->
-</section> <!--end:features-->
+</section> 
 <section id="dm-themes">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="text-heading large-head2 bold">
-                    <h1>Themes</h1>
-                    <span>Choose a theme and then choose your features. We wire it all up for you into a working ASP.NET MVC project and hand it you on the fly.</span>
+                    <h1>Sites</h1>
+                    <span>Choose a fully wired site and then choose additional features.</span>
                 </div>
             </div><!--end:col-->
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
@@ -138,10 +135,9 @@
 
 
     </div>
-</section> <!--end:features-->
+</section> 
 
     
-
 @section scripts {
     <script>
         if (!window.console) console = { log: function () { } };
@@ -173,14 +169,6 @@
     </script>
 }
 
-
-@helper PageLoader()
-{
-<div id="pageloader" style="display: none;">
-    <div class="loader-item" style="display: none;">
-        <img src="/images/loading.gif" alt="loader">
-    </div>
-</div>}
 @helper Feature(string title, string description, string icon)
 {
     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
