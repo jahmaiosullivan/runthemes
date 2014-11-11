@@ -48,6 +48,10 @@
 	2. MAIN
 ==========================================================*/
 
+.strong {
+    font-weight: bold !important;
+}
+
 	* { 
 		margin: 0;
 		padding: 0;
