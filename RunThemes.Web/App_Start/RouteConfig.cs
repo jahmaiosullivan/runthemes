@@ -11,10 +11,8 @@ namespace RunThemes.Web
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapRoute("ComingSoon", "comingsoon", new {controller = "Home", action = "ComingSoon"});
             routes.MapRoute("FileUpload", "media/{action}", new { controller = "Media", action = "Index" });
-            routes.MapRoute("ManageApartments", "manageapartments", new { controller = "Manage", action = "ManageApartments" });
-            routes.MapRoute("SingleApt", "{controller}/{id}", new { controller = "Home", action = "Index", id = UrlParameter.Optional }, constraints: new { id = new IntegerConstraint() });
+            routes.MapRoute("Downloads", "downloads", new { controller = "Home", action = "Downloads" });
             routes.MapRoute("Default", "{controller}/{action}/{id}", new { controller = "Home", action = "Index", id = UrlParameter.Optional });
             routes.MapRoute("ErrorNotFound", "{*path}", new { controller = "Error", action = "NotFound" });
         }

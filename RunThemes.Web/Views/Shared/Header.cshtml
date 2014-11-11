@@ -11,10 +11,10 @@
             <ul class="main-menu">
                 <li class="active"><a href="#features">Features</a></li>
                 <li><a id="themesLink" href="#dm-themes">Themes</a></li>
-                <li><a href="/support" target="_blank" class="external">Support</a></li>
+                <li><a href="/support" class="external">Support</a></li>
                 @if (Request.IsAuthenticated)
                 {
-                    <li><a href="/downloads" target="_blank" class="external">My Downloads</a></li>
+                    <li><a href="/downloads" class="external">My Downloads</a></li>
                 }
                 @Html.Partial("_LoginPartial")
             </ul>
@@ -24,10 +24,10 @@
                 <ul class="dl-menu">
                     <li class="active"><a class="scroller" href="#features">Features</a></li>
                     <li><a href="#dm-themes">Themes</a></li>
-                    <li><a href="http://support.woorockets.com/" target="_blank" class="external">Support</a></li>
+                    <li><a href="http://support.woorockets.com/" class="external">Support</a></li>
                     @if (Request.IsAuthenticated)
                     {
-                        <li><a href="/downloads" target="_blank" class="external">Downloads</a></li>
+                        <li><a href="/downloads" class="external">Downloads</a></li>
                     }
                     @Html.Partial("_LoginPartial")
                 </ul>
