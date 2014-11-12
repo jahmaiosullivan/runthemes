@@ -5,6 +5,7 @@ using RunThemes.Data.Azure;
 using RunThemes.Data.Azure.Base;
 using RunThemes.Data.Dapper;
 using RunThemes.Data.Repositories;
+using StructureMap.Graph;
 
 namespace RunThemes.Business.Configuration
 {
@@ -15,7 +16,7 @@ namespace RunThemes.Business.Configuration
             Scan(s =>
             {
                 s.TheCallingAssembly();
-                s.AssembliesFromApplicationBaseDirectory(f => (f.FullName.Contains("RunThemes")));
+                s.AssembliesFromApplicationBaseDirectory(f => (f.FullName.Contains("RunThemes") || f.FullName.Contains("NearForums")));
                 s.WithDefaultConventions();
             });
 

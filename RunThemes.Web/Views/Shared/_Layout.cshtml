@@ -62,7 +62,7 @@
             }
             <div class="wrapper">
                 @Html.Partial("Banner")
-                @{ Html.RenderAction("Header", "General"); }
+                @{ Html.RenderAction("Header", "General", new { area = "" }); }
                 @RenderBody()
             </div>
             <footer>

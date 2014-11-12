@@ -1,0 +1,22 @@
+﻿@model PageContent
+@{
+    ViewBag.Title = Model.Title;
+}
+<ul class="path floatContainer">
+	<li class="first">@Html.ActionLinkLocalized("Forums", "List", "Forums")</li>
+</ul>
+<h1>@ViewBag.Title</h1>
+<div class="pageContent">
+	<div class="page-@Model.ShortName">
+		@Html.Raw(Model.Body)
+	</div>
+	@if (Role == UserRole.Admin)
+	{
+	<div class="toolbar floatContainer">
+		<ul>
+			<li class="edit">@Html.ActionLinkLocalized("Edit", "Edit", new{name=Model.ShortName})</li>
+			<li class="manage">@Html.ActionLinkLocalized("Manage pages", "List")</li>
+		</ul>
+	</div>
+	}
+</div>

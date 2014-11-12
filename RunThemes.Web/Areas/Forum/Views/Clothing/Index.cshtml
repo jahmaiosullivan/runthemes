@@ -1,0 +1,47 @@
+﻿@model IEnumerable<AreaDemo.Areas.Men.Models.MenClothing>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h3 > Men Clothings</h3>
+    
+
+<table  class="tblStyle">
+    <tr class="tblHearerRow">
+        <th class="tblHearerCell">Product
+        </th>
+        <th class="tblHearerCell">Price
+        </th>
+        <th class="tblHearerCell">Size
+        </th>
+        <th class="tblHearerCell">Images
+        </th>
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr class="tblRow">           
+            <td class="tblColumn">
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td class="tblColumn">
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td class="tblColumn">
+                @Html.DisplayFor(modelItem => item.Size)
+            </td>
+            <td class="tblColumn">
+                <div class="thumbnail-item">
+                    <a href="#">
+                        <img src="@item.imageURL" class="thumbnail" />  
+                        </a>                        
+                    <div class="tooltip">
+                        <img src="@item.imageURL" alt="" class="imageShadow" />
+                        <span class="overlay"></span>
+                    </div>
+                </div>                
+            </td>
+        </tr>
+    }
+
+</table>

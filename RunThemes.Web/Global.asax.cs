@@ -1,8 +1,10 @@
 ﻿using System.Linq;
+using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using NearForums.Web.Output;
 using RunThemes.Web.AutoMappings;
 using RunThemes.Web.Configuration;
 
@@ -17,6 +19,7 @@ namespace RunThemes.Web
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
+            DependenciesHelper.Register(new HttpContextWrapper(Context));
 
             SetupFilterProvider();
             var factory = new StructureMapControllerFactory(WebContainer.Current);
@@ -34,8 +37,8 @@ namespace RunThemes.Web
         
         private static void SetupFilterProvider()
         {
-            var oldProvider = FilterProviders.Providers.Single(f => f is FilterAttributeFilterProvider);
-            FilterProviders.Providers.Remove(oldProvider);
+            var oldProvider = FilterProviders.Providers.FirstOrDefault(f => f is FilterAttributeFilterProvider);
+            if(oldProvider != null) FilterProviders.Providers.Remove(oldProvider);
             var provider = new StructureMapFilterProvider();
             FilterProviders.Providers.Add(provider);
         }

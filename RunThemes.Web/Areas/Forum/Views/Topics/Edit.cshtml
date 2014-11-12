@@ -1,0 +1,96 @@
+﻿@model Topic
+@{
+	ViewBag.Title = ViewData.WriteIf("IsEdit", S("Edit thread"), S("Post new thread"));
+}
+<ul class="path floatContainer">
+	<li class="first">@Html.ActionLinkLocalized("Forums", "List", "Forums")</li>
+	<li>@Html.ActionLink(Model.Forum.Name, "Detail", "Forums", new{forum=Model.Forum.ShortName}, null)</li>
+</ul>
+<h1>@ViewBag.Title</h1>
+@Html.ValidationSummary("<h3>" + S("Please check the following errors:") + "</h3>", new Dictionary<string, object>
+{
+	{"Description", S("Thread message must not be blank.")}
+	,{"Tags", S("Tags must not be blank, separated by spaces and must not contain special characters. The maximum number of tags allowed is 6.")}
+	,{"Title", S("Subject must not be blank.")}
+	,{"ShortName", ""}
+	,{"PostAccessRole", S("The role required to post should be greater than the required to read.")}
+	,{"captcha", new Dictionary<ValidationErrorType, string>(){
+		{ValidationErrorType.NullOrEmpty, S("Captcha must not be blank.")}
+		,{ValidationErrorType.CompareNotMatch, S("Captcha does not match the image value. Please retry.")}}}
+	,{"email", new Dictionary<ValidationErrorType, string>(){
+		{ValidationErrorType.NullOrEmpty, S("Email must not be blank in order to notify of new posts.")}
+		,{ValidationErrorType.Format, S("Email format is not valid.")}}}
+})
+@{Html.BeginForm(null, null, null, FormMethod.Post, new{@id="topicEditForm"});}
+@Html.AntiForgeryToken()
+<fieldset>
+	<legend>@T("Fill in the fields and submit")</legend>
+	<div class="formItem floatContainer">
+		<label for="title">@T("Subject")</label>
+		@Html.TextBoxFor(p => p.Title, new{@class="text", id="title"})
+	</div>
+	<div class="formItem floatContainer">
+		<label for="tags">@T("Tags")</label>
+		@Html.TextBox("tags", null, new{@class="text"})
+		<span class="note">@T("Separated by spaces")</span>
+	</div>
+	<div class="formItem textarea floatContainer">
+		<label for="description">@T("Message")</label>
+		@Html.TextArea("description")
+		@Html.Partial("EditorScripts", CreateViewData(new{Name="description"}))
+	</div>
+	@if (Role > UserRole.Member)
+	{	 
+		<div class="formItem floatContainer">
+			<label for="ReadAccessRole">@T("Read access")</label>
+			@Html.DropDownListDefault("ReadAccessRole", ViewData.Get<SelectList>("UserRoles"), "", S("Everybody"))
+		</div>
+		<div class="formItem floatContainer">
+			<label for="PostAccessRole">@T("Access to post a message in this thread")</label>
+			@Html.DropDownList("PostAccessRole", ViewData.Get<SelectList>("UserRoles"))
+			<span class="note">@T("Notice that roles are hierarchical")</span>
+		</div>
+	}
+	@Html.Captcha(S("Type the text shown in the image"))
+	@if (this.User.HasModeratorPriviledges)
+	{
+	<div class="formItem checkbox">
+		@Html.CheckBox("isSticky")
+		<label for="isSticky">@T("Sticky thread?")</label>
+	</div>
+	}
+	@if (this.Config.Notifications.Subscription.IsDefined)
+	{
+	<div class="formItem floatContainer">
+		<div class="checkbox">
+			@Html.CheckBox("notify", new{onclick = "toggleEmail();"})
+			<label for="notify">@T("Notify me of new posts on this thread via email")</label>
+			@(this.User.Email == null ? Html.TextBox("email", null, new{@class="notifyEmail", @style="display:none;"}) : MvcHtmlString.Empty)
+		</div>
+	</div>
+	}
+	else
+	{
+		@Html.Hidden("notify", false)
+	}
+	<div class="formItem buttons">
+		<input type="submit" value="@T("Send")" />
+	</div>
+</fieldset>
+@{Html.EndForm();}
+<script type="text/javascript">
+	$("form#topicEditForm").submit(preventMultipleSubmit);
+
+	function toggleEmail()
+	{
+		if ($("#notify").is(":checked"))
+		{
+			$('#email').show().focus();
+		}
+		else
+		{
+			$('#email').hide();
+		}
+	}
+	$(document).ready(toggleEmail);
+</script>

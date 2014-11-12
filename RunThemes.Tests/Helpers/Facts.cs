@@ -6,7 +6,7 @@ namespace RunThemes.Tests.Helpers
 {
     public class Facts<TClassUnderTest> where TClassUnderTest : class
     {
-        protected MoqAutoMocker<TClassUnderTest> AutoMocker { get; private set; }
+        protected RhinoAutoMocker<TClassUnderTest> AutoMocker { get; private set; }
 
         public TClassUnderTest ClassUnderTest
         {
@@ -18,7 +18,7 @@ namespace RunThemes.Tests.Helpers
 
         public Facts()
         {
-            AutoMocker = new MoqAutoMocker<TClassUnderTest>();
+            AutoMocker = new RhinoAutoMocker<TClassUnderTest>(MockMode.AAA);
         }
 
         public Mock<T> Mock<T>(params Object[] args) where T : class

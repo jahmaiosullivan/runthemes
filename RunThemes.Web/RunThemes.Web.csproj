@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -13,7 +13,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>RunThemes.Web</RootNamespace>
     <AssemblyName>RunThemes.Web</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -21,6 +21,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>05221da7</NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -50,11 +51,19 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="AutoMapper">
-      <HintPath>..\packages\AutoMapper.3.1.1\lib\net40\AutoMapper.dll</HintPath>
+    <Reference Include="Autofac">
+      <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
     </Reference>
-    <Reference Include="AutoMapper.Net4">
-      <HintPath>..\packages\AutoMapper.3.1.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+    <Reference Include="Autofac.Integration.Mvc">
+      <HintPath>..\packages\Autofac.Mvc5.3.3.3\lib\net45\Autofac.Integration.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper, Version=3.3.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AutoMapper.3.3.0-ci1027\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4, Version=3.3.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AutoMapper.3.3.0-ci1027\lib\net40\AutoMapper.Net4.dll</HintPath>
     </Reference>
     <Reference Include="DotNetOpenAuth.AspNet, Version=4.3.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -76,39 +85,56 @@
     <Reference Include="DotNetOpenAuth.OpenId.RelyingParty">
       <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.3.4.13329\lib\net45-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.2-beta1\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.2-beta1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9\lib\Net45\HtmlAgilityPack.dll</HintPath>
     </Reference>
     <Reference Include="HtmlSanitizationLibrary">
       <HintPath>..\..\Forums\ExternalBinaries\Framework\HtmlSanitizationLibrary.dll</HintPath>
     </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Lucene.Net">
+      <HintPath>..\packages\Lucene.Net.3.0.3\lib\NET40\Lucene.Net.dll</HintPath>
+    </Reference>
     <Reference Include="Mandrill">
       <HintPath>..\packages\Mandrill.1.0.93\lib\net40\Mandrill.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.AspNet.Identity.Core">
-      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.1.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.0-alpha1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
-      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.1.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.0-alpha1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.AspNet.Identity.Owin">
-      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.1.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.0-alpha1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.Data.Edm, Version=5.6.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.Data.Edm, Version=5.6.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.Data.Edm.5.6.2\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+      <HintPath>..\packages\Microsoft.Data.Edm.5.6.3\lib\net40\Microsoft.Data.Edm.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Data.OData, Version=5.6.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.Data.OData, Version=5.6.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.Data.OData.5.6.2\lib\net40\Microsoft.Data.OData.dll</HintPath>
+      <HintPath>..\packages\Microsoft.Data.OData.5.6.3\lib\net40\Microsoft.Data.OData.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Data.Services.Client, Version=5.6.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.6.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.Data.Services.Client.5.6.2\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
+      <HintPath>..\packages\Microsoft.Data.Services.Client.5.6.3\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Owin">
       <HintPath>..\packages\Microsoft.Owin.3.0.0\lib\net45\Microsoft.Owin.dll</HintPath>
@@ -137,16 +163,17 @@
     <Reference Include="Microsoft.Owin.Security.Twitter">
       <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Practices.ServiceLocation">
-      <HintPath>..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Web.WebPages.OAuth, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.OAuth.3.1.0\lib\net45\Microsoft.Web.WebPages.OAuth.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.OAuth.3.2.2\lib\net45\Microsoft.Web.WebPages.OAuth.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.WindowsAzure.Configuration, Version=1.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.WindowsAzure.Configuration, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.WindowsAzure.ConfigurationManager.1.8.0.0\lib\net35-full\Microsoft.WindowsAzure.Configuration.dll</HintPath>
+      <HintPath>..\packages\Microsoft.WindowsAzure.ConfigurationManager.2.0.3\lib\net40\Microsoft.WindowsAzure.Configuration.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.WindowsAzure.Diagnostics, Version=2.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
       <Private>True</Private>
@@ -158,63 +185,96 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\WindowsAzure.Storage.4.3.0\lib\net40\Microsoft.WindowsAzure.Storage.dll</HintPath>
     </Reference>
+    <Reference Include="NearForums.DataAccess, Version=9.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Users\jaosulli\Downloads\solution\NearForums.DataAccess\bin\Debug\NearForums.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="NearForums.Services, Version=9.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Users\jaosulli\Downloads\solution\NearForums.Services\bin\Debug\NearForums.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="NearForums.Web, Version=9.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Users\jaosulli\Downloads\solution\NearForums.Web.Output\bin\NearForums.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="NearForums.Web.Controllers, Version=9.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Users\jaosulli\Downloads\solution\NearForums.Web.Output\bin\NearForums.Web.Controllers.dll</HintPath>
+    </Reference>
+    <Reference Include="NearForums.Web.Output, Version=9.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Users\jaosulli\Downloads\solution\NearForums.Web.Output\bin\NearForums.Web.Output.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\packages\NLog.3.1.0.0\lib\net45\NLog.dll</HintPath>
     </Reference>
     <Reference Include="Owin">
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
     </Reference>
-    <Reference Include="RestSharp">
-      <HintPath>..\packages\RestSharp.104.4.0\lib\net4\RestSharp.dll</HintPath>
+    <Reference Include="RestSharp, Version=105.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\RestSharp.105.0.0\lib\net4\RestSharp.dll</HintPath>
     </Reference>
     <Reference Include="RouteDebugger">
       <HintPath>..\packages\routedebugger.2.1.4.0\lib\net40\RouteDebugger.dll</HintPath>
     </Reference>
-    <Reference Include="StructureMap">
-      <HintPath>..\packages\structuremap.2.6.4.1\lib\net40\StructureMap.dll</HintPath>
+    <Reference Include="StructureMap, Version=3.1.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\structuremap.3.1.4.143\lib\net40\StructureMap.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap.Net4, Version=3.1.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\structuremap.3.1.4.143\lib\net40\StructureMap.Net4.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Activities" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data.Services.Client" />
     <Reference Include="System.Net.Http" />
-    <Reference Include="System.Net.Http.Extensions">
-      <HintPath>..\packages\Microsoft.Net.Http.2.2.18\lib\net45\System.Net.Http.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net.Http.Formatting, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.28.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.1.0\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.28\lib\net45\System.Net.Http.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="System.Net.Http.Primitives">
-      <HintPath>..\packages\Microsoft.Net.Http.2.2.18\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.2\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.28.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.28\lib\net45\System.Net.Http.Primitives.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http.WebRequest" />
     <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Spatial, Version=5.6.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="System.Spatial, Version=5.6.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\System.Spatial.5.6.2\lib\net40\System.Spatial.dll</HintPath>
+      <HintPath>..\packages\System.Spatial.5.6.3\lib\net40\System.Spatial.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.ApplicationServices" />
-    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.0\lib\net45\System.Web.Helpers.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.Helpers.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.Http, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="System.Web.Http, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.1.0\lib\net45\System.Web.Http.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.2\lib\net45\System.Web.Http.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.Http.WebHost, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.1.0\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.2\lib\net45\System.Web.Http.WebHost.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.Mvc, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="System.Web.Mvc, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.1.0\lib\net45\System.Web.Mvc.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.2\lib\net45\System.Web.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -222,7 +282,7 @@
     </Reference>
     <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.Razor.3.1.0\lib\net45\System.Web.Razor.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.2\lib\net45\System.Web.Razor.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Routing" />
     <Reference Include="System.Configuration" />
@@ -233,15 +293,15 @@
     </Reference>
     <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.0\lib\net45\System.Web.WebPages.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
@@ -250,7 +310,7 @@
     </Reference>
     <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\WebActivatorEx.2.0.4\lib\net40\WebActivatorEx.dll</HintPath>
+      <HintPath>..\packages\WebActivatorEx.2.0.5\lib\net40\WebActivatorEx.dll</HintPath>
     </Reference>
     <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -258,11 +318,11 @@
     </Reference>
     <Reference Include="WebMatrix.Data, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.3.1.0\lib\net45\WebMatrix.Data.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.3.2.2\lib\net45\WebMatrix.Data.dll</HintPath>
     </Reference>
     <Reference Include="WebMatrix.WebData, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.WebData.3.1.0\lib\net45\WebMatrix.WebData.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.WebData.3.2.2\lib\net45\WebMatrix.WebData.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -280,6 +340,13 @@
     <Compile Include="App_Start\StructuremapMvc.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="App_Start\WebApiControllerResolver.cs" />
+    <Compile Include="Areas\Forum\ForumAreaRegistration.cs" />
+    <Compile Include="Areas\Forum\Controllers\ClothingController.cs" />
+    <Compile Include="Areas\Forum\Controllers\FootwearController.cs" />
+    <Compile Include="Areas\Forum\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Forum\Models\MenClothing.cs" />
+    <Compile Include="Areas\Forum\Models\MenFootwears.cs" />
+    <Compile Include="Areas\Forum\Models\MenRepository.cs" />
     <Compile Include="AutoMappings\ImageInfoMappingProfile.cs" />
     <Compile Include="AutoMappings\Resolvers\IdToUserViewModelResolver.cs" />
     <Compile Include="AutoMappings\Resolvers\PostCommentsResolver.cs" />
@@ -310,6 +377,8 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Configuration\DependencyResolution\StructureMapDependencyResolver.cs" />
     <Compile Include="Configuration\DependencyResolution\StructureMapDependencyScope.cs" />
+    <Compile Include="DependencyResolution\StructureMapDependencyResolver.cs" />
+    <Compile Include="DependencyResolution\StructureMapDependencyScope.cs" />
     <Compile Include="Exceptions\NotAuthorizedException.cs" />
     <Compile Include="Controllers\Attributes\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Controllers\Attributes\RequiresAuthorizationAttribute.cs" />
@@ -343,6 +412,98 @@
     <Compile Include="Views\BaseWebViewPage.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\Forum\Content\images\men_cloths\img_c1.jpg" />
+    <Content Include="Areas\Forum\Content\images\men_cloths\img_c2.jpg" />
+    <Content Include="Areas\Forum\Content\images\men_cloths\img_c3.jpg" />
+    <Content Include="Areas\Forum\Content\images\men_cloths\img_c4.jpg" />
+    <Content Include="Areas\Forum\Content\images\men_footwears\img_f1.jpg" />
+    <Content Include="Areas\Forum\Content\images\men_footwears\img_f2.jpg" />
+    <Content Include="Areas\Forum\Content\images\men_footwears\img_f3.jpg" />
+    <Content Include="Areas\Forum\Content\images\men_footwears\img_f4.jpg" />
+    <Content Include="Areas\Forum\images\arrow-right.gif" />
+    <Content Include="Areas\Forum\images\body-bg.png" />
+    <Content Include="Areas\Forum\images\fb-login.png" />
+    <Content Include="Areas\Forum\images\icon-close.gif" />
+    <Content Include="Areas\Forum\images\icon-delete.gif" />
+    <Content Include="Areas\Forum\images\icon-edit.gif" />
+    <Content Include="Areas\Forum\images\icon-manage.gif" />
+    <Content Include="Areas\Forum\images\icon-moderate.png" />
+    <Content Include="Areas\Forum\images\icon-move.gif" />
+    <Content Include="Areas\Forum\images\icon-open.gif" />
+    <Content Include="Areas\Forum\images\icon-print.gif" />
+    <Content Include="Areas\Forum\images\icon-reply.gif" />
+    <Content Include="Areas\Forum\images\icon-show-all.gif" />
+    <Content Include="Areas\Forum\images\icon-sticky.png" />
+    <Content Include="Areas\Forum\images\iconrss.gif" />
+    <Content Include="Areas\Forum\images\loadingMini.gif" />
+    <Content Include="Areas\Forum\images\next-big.gif" />
+    <Content Include="Areas\Forum\scripts\common.js" />
+    <Content Include="Areas\Forum\scripts\jquery-1.7.1.min.js" />
+    <Content Include="Areas\Forum\scripts\mobile.js" />
+    <Content Include="Areas\Forum\scripts\overtip.js" />
+    <Content Include="Areas\Forum\scripts\pager.js" />
+    <Content Include="Areas\Forum\scripts\quoting.js" />
+    <Content Include="Areas\Forum\scripts\search-indexer.js" />
+    <Content Include="Areas\Forum\scripts\tinymce\changelog.txt" />
+    <Content Include="Areas\Forum\scripts\tinymce\jquery.tinymce.js" />
+    <Content Include="Areas\Forum\scripts\tinymce\langs\en.js" />
+    <Content Include="Areas\Forum\scripts\tinymce\license.txt" />
+    <Content Include="Areas\Forum\scripts\tinymce\themes\advanced\about.htm" />
+    <Content Include="Areas\Forum\scripts\tinymce\themes\advanced\anchor.htm" />
+    <Content Include="Areas\Forum\scripts\tinymce\themes\advanced\charmap.htm" />
+    <Content Include="Areas\Forum\scripts\tinymce\themes\advanced\color_picker.htm" />
+    <Content Include="Areas\Forum\scripts\tinymce\themes\advanced\editor_template.js" />
+    <Content Include="Areas\Forum\scripts\tinymce\themes\advanced\editor_template_src.js" />
+    <Content Include="Areas\Forum\scripts\tinymce\themes\advanced\image.htm" />
+    <Content Include="Areas\Forum\scripts\tinymce\themes\advanced\img\colorpicker.jpg" />
+    <Content Include="Areas\Forum\scripts\tinymce\themes\advanced\img\icons.gif" />
+    <Content Include="Areas\Forum\scripts\tinymce\themes\advanced\js\about.js" />
+    <Content Include="Areas\Forum\scripts\tinymce\themes\advanced\js\anchor.js" />
+    <Content Include="Areas\Forum\scripts\tinymce\themes\advanced\js\charmap.js" />
+    <Content Include="Areas\Forum\scripts\tinymce\themes\advanced\js\color_picker.js" />
+    <Content Include="Areas\Forum\scripts\tinymce\themes\advanced\js\image.js" />
+    <Content Include="Areas\Forum\scripts\tinymce\themes\advanced\js\link.js" />
+    <Content Include="Areas\Forum\scripts\tinymce\themes\advanced\js\source_editor.js" />
+    <Content Include="Areas\Forum\scripts\tinymce\themes\advanced\langs\en.js" />
+    <Content Include="Areas\Forum\scripts\tinymce\themes\advanced\langs\en_dlg.js" />
+    <Content Include="Areas\Forum\scripts\tinymce\themes\advanced\link.htm" />
+    <Content Include="Areas\Forum\scripts\tinymce\themes\advanced\skins\default\content.css" />
+    <Content Include="Areas\Forum\scripts\tinymce\themes\advanced\skins\default\dialog.css" />
+    <Content Include="Areas\Forum\scripts\tinymce\themes\advanced\skins\default\img\buttons.png" />
+    <Content Include="Areas\Forum\scripts\tinymce\themes\advanced\skins\default\img\items.gif" />
+    <Content Include="Areas\Forum\scripts\tinymce\themes\advanced\skins\default\img\menu_arrow.gif" />
+    <Content Include="Areas\Forum\scripts\tinymce\themes\advanced\skins\default\img\menu_check.gif" />
+    <Content Include="Areas\Forum\scripts\tinymce\themes\advanced\skins\default\img\progress.gif" />
+    <Content Include="Areas\Forum\scripts\tinymce\themes\advanced\skins\default\img\tabs.gif" />
+    <Content Include="Areas\Forum\scripts\tinymce\themes\advanced\skins\default\ui.css" />
+    <Content Include="Areas\Forum\scripts\tinymce\themes\advanced\skins\o2k7\content.css" />
+    <Content Include="Areas\Forum\scripts\tinymce\themes\advanced\skins\o2k7\dialog.css" />
+    <Content Include="Areas\Forum\scripts\tinymce\themes\advanced\skins\o2k7\img\button_bg.png" />
+    <Content Include="Areas\Forum\scripts\tinymce\themes\advanced\skins\o2k7\img\button_bg_black.png" />
+    <Content Include="Areas\Forum\scripts\tinymce\themes\advanced\skins\o2k7\img\button_bg_silver.png" />
+    <Content Include="Areas\Forum\scripts\tinymce\themes\advanced\skins\o2k7\ui.css" />
+    <Content Include="Areas\Forum\scripts\tinymce\themes\advanced\skins\o2k7\ui_black.css" />
+    <Content Include="Areas\Forum\scripts\tinymce\themes\advanced\skins\o2k7\ui_silver.css" />
+    <Content Include="Areas\Forum\scripts\tinymce\themes\advanced\source_editor.htm" />
+    <Content Include="Areas\Forum\scripts\tinymce\themes\simple\editor_template.js" />
+    <Content Include="Areas\Forum\scripts\tinymce\themes\simple\editor_template_src.js" />
+    <Content Include="Areas\Forum\scripts\tinymce\themes\simple\img\icons.gif" />
+    <Content Include="Areas\Forum\scripts\tinymce\themes\simple\langs\en.js" />
+    <Content Include="Areas\Forum\scripts\tinymce\themes\simple\skins\default\content.css" />
+    <Content Include="Areas\Forum\scripts\tinymce\themes\simple\skins\default\ui.css" />
+    <Content Include="Areas\Forum\scripts\tinymce\themes\simple\skins\o2k7\content.css" />
+    <Content Include="Areas\Forum\scripts\tinymce\themes\simple\skins\o2k7\img\button_bg.png" />
+    <Content Include="Areas\Forum\scripts\tinymce\themes\simple\skins\o2k7\ui.css" />
+    <Content Include="Areas\Forum\scripts\tinymce\tiny_mce.js" />
+    <Content Include="Areas\Forum\scripts\tinymce\tiny_mce_popup.js" />
+    <Content Include="Areas\Forum\scripts\tinymce\tiny_mce_src.js" />
+    <Content Include="Areas\Forum\scripts\tinymce\utils\editable_selects.js" />
+    <Content Include="Areas\Forum\scripts\tinymce\utils\form_utils.js" />
+    <Content Include="Areas\Forum\scripts\tinymce\utils\mctabs.js" />
+    <Content Include="Areas\Forum\scripts\tinymce\utils\validate.js" />
+    <Content Include="Areas\Forum\styles\content.css" />
+    <Content Include="Areas\Forum\styles\layout.css" />
+    <Content Include="Areas\Forum\styles\mobile.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\css\animations.css" />
     <Content Include="Content\css\fancySelect.css" />
@@ -524,15 +685,15 @@
     <Content Include="Scripts\jquery.timeago.js" />
     <Content Include="Scripts\knockout-3.0.0.debug.js" />
     <Content Include="Scripts\knockout-3.0.0.js" />
-    <Content Include="Scripts\knockout.debug.js" />
-    <Content Include="Scripts\knockout.js" />
+    <Content Include="Scripts\knockout-3.2.0.debug.js" />
+    <Content Include="Scripts\knockout-3.2.0.js" />
     <Content Include="Scripts\knockout.mapping-latest.debug.js" />
     <Content Include="Scripts\knockout.mapping-latest.js" />
     <Content Include="Scripts\main.js" />
     <Content Include="Scripts\markdown\Markdown.Converter.js" />
     <Content Include="Scripts\markdown\Markdown.Editor.js" />
     <Content Include="Scripts\markdown\Markdown.Sanitizer.js" />
-    <Content Include="Scripts\modernizr-2.7.1.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\One\analytics.js" />
     <Content Include="Scripts\One\bootstrap.min.js" />
     <Content Include="Scripts\One\fancySelect.js" />
@@ -607,6 +768,7 @@
   <ItemGroup>
     <Folder Include="App_Code\" />
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Forum\Content\search-index\" />
     <Folder Include="Views\General\" />
   </ItemGroup>
   <ItemGroup>
@@ -650,6 +812,106 @@
   <ItemGroup>
     <Content Include="Views\Home\Downloads.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Forum\Views\Clothing\Index.cshtml" />
+    <Content Include="Areas\Forum\Views\Footwear\Index.cshtml" />
+    <Content Include="Areas\Forum\Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Forum\Views\web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\Integration.config" />
+    <Content Include="Config\Logging.config" />
+    <Content Include="Config\Redirector.config" />
+    <Content Include="Config\Routes.config" />
+    <Content Include="Config\Site.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Forum\Content\localization\en-us.po" />
+    <Content Include="Areas\Forum\Content\localization\es-es.po" />
+    <Content Include="Areas\Forum\Content\templates\installation\clear-list.zip" />
+    <Content Include="Areas\Forum\Content\templates\installation\greysand.zip" />
+    <Content Include="Areas\Forum\Content\templates\installation\sample.zip" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Forum\scripts\tinymce\plugins.zip" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Forum\Views\Admin\Dashboard.cshtml" />
+    <Content Include="Areas\Forum\Views\Authentication\NotAuthorized.cshtml" />
+    <Content Include="Areas\Forum\Views\Authentication\ProviderSelect.cshtml" />
+    <Content Include="Areas\Forum\Views\Authentication\TwitterFail.cshtml" />
+    <Content Include="Areas\Forum\Views\FormsAuthentication\ChangePassword.cshtml" />
+    <Content Include="Areas\Forum\Views\FormsAuthentication\ChangePasswordSuccess.cshtml" />
+    <Content Include="Areas\Forum\Views\FormsAuthentication\Register.cshtml" />
+    <Content Include="Areas\Forum\Views\FormsAuthentication\ResetPassword.cshtml" />
+    <Content Include="Areas\Forum\Views\FormsAuthentication\ResetPasswordEmailConfirmation.cshtml" />
+    <Content Include="Areas\Forum\Views\ForumCategories\Edit.cshtml" />
+    <Content Include="Areas\Forum\Views\ForumCategories\List.cshtml" />
+    <Content Include="Areas\Forum\Views\Forums\Detail.cshtml" />
+    <Content Include="Areas\Forum\Views\Forums\Edit.cshtml" />
+    <Content Include="Areas\Forum\Views\Forums\ForumOptions.cshtml" />
+    <Content Include="Areas\Forum\Views\Forums\ForumTopicList.cshtml" />
+    <Content Include="Areas\Forum\Views\Forums\LatestAllTopics.cshtml" />
+    <Content Include="Areas\Forum\Views\Forums\LatestTopicsRss.cshtml" />
+    <Content Include="Areas\Forum\Views\Forums\List.cshtml" />
+    <Content Include="Areas\Forum\Views\Forums\ListAllUnansweredTopics.cshtml" />
+    <Content Include="Areas\Forum\Views\Forums\ListUnansweredTopics.cshtml" />
+    <Content Include="Areas\Forum\Views\Forums\Manage.cshtml" />
+    <Content Include="Areas\Forum\Views\Forums\TagDetail.cshtml" />
+    <Content Include="Areas\Forum\Views\Messages\Edit.cshtml" />
+    <Content Include="Areas\Forum\Views\Messages\ListFlagged.cshtml" />
+    <Content Include="Areas\Forum\Views\PageContents\Detail.cshtml" />
+    <Content Include="Areas\Forum\Views\PageContents\Edit.cshtml" />
+    <Content Include="Areas\Forum\Views\PageContents\List.cshtml" />
+    <Content Include="Areas\Forum\Views\SearchEngine\Manage.cshtml" />
+    <Content Include="Areas\Forum\Views\SearchEngine\Search.cshtml" />
+    <Content Include="Areas\Forum\Views\Settings\EditGeneral.cshtml" />
+    <Content Include="Areas\Forum\Views\Settings\EditSpamPrevention.cshtml" />
+    <Content Include="Areas\Forum\Views\Settings\EditUI.cshtml" />
+    <Content Include="Areas\Forum\Views\Settings\Submenu.cshtml" />
+    <Content Include="Areas\Forum\Views\Templates\Add.cshtml" />
+    <Content Include="Areas\Forum\Views\Templates\AddDefaultTemplates.cshtml" />
+    <Content Include="Areas\Forum\Views\Templates\List.cshtml" />
+    <Content Include="Areas\Forum\Views\Templates\PreviewPartial.cshtml" />
+    <Content Include="Areas\Forum\Views\TopicsSubscriptions\Unsubscribe.cshtml" />
+    <Content Include="Areas\Forum\Views\Topics\Detail.cshtml" />
+    <Content Include="Areas\Forum\Views\Topics\Edit.cshtml" />
+    <Content Include="Areas\Forum\Views\Topics\LatestMessages.cshtml" />
+    <Content Include="Areas\Forum\Views\Topics\Move.cshtml" />
+    <Content Include="Areas\Forum\Views\Topics\PageMore.cshtml" />
+    <Content Include="Areas\Forum\Views\Topics\Related.cshtml" />
+    <Content Include="Areas\Forum\Views\Topics\Toolbar.cshtml" />
+    <Content Include="Areas\Forum\Views\Users\Detail.cshtml" />
+    <Content Include="Areas\Forum\Views\Users\DetailMessages.cshtml" />
+    <Content Include="Areas\Forum\Views\Users\Edit.cshtml" />
+    <Content Include="Areas\Forum\Views\Users\List.cshtml" />
+    <Content Include="Areas\Forum\Views\Users\MessagesByUser.cshtml" />
+    <Content Include="Areas\Forum\Views\Users\ModeratorReasonDetail.cshtml" />
+    <Content Include="Areas\Forum\Views\Users\Toolbar.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Forum\Views\Shared\ButtonFacebook.cshtml" />
+    <Content Include="Areas\Forum\Views\Shared\ButtonTwitter.cshtml" />
+    <Content Include="Areas\Forum\Views\Shared\EditorScripts.cshtml" />
+    <Content Include="Areas\Forum\Views\Shared\Errors\403.cshtml" />
+    <Content Include="Areas\Forum\Views\Shared\Errors\404.cshtml" />
+    <Content Include="Areas\Forum\Views\Shared\Errors\500.cshtml" />
+    <Content Include="Areas\Forum\Views\Shared\FooterContent.cshtml" />
+    <Content Include="Areas\Forum\Views\Shared\HeadContainer.cshtml" />
+    <Content Include="Areas\Forum\Views\Shared\HeaderContent.cshtml" />
+    <Content Include="Areas\Forum\Views\Shared\LoginForm.cshtml" />
+    <Content Include="Areas\Forum\Views\Shared\LoginFormFull.cshtml" />
+    <Content Include="Areas\Forum\Views\Shared\MessageItem.cshtml" />
+    <Content Include="Areas\Forum\Views\Shared\Mobile.cshtml" />
+    <Content Include="Areas\Forum\Views\Shared\SearchBox.cshtml" />
+    <Content Include="Areas\Forum\Views\Shared\SinceDate.cshtml" />
+    <Content Include="Areas\Forum\Views\Shared\Site.cshtml" />
+    <Content Include="Areas\Forum\Views\Shared\TagCloud.cshtml" />
+    <Content Include="Areas\Forum\Views\Shared\Templated.cshtml" />
+    <Content Include="Areas\Forum\Views\Shared\UserMenu.cshtml" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -682,11 +944,14 @@
     <PostBuildEvent>
     </PostBuildEvent>
   </PropertyGroup>
-  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets')" />
-  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
-    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
-    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
   </Target>
+  <Import Project="..\packages\AutoMapper.3.3.0-ci1027\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.3.0-ci1027\tools\AutoMapper.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

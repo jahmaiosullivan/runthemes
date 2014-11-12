@@ -1,0 +1,127 @@
+﻿body
+{
+}
+ul
+{
+	padding: 5px 0 5px 10px;
+	margin: 0;
+}
+li.toContent
+{
+	display: none;
+}
+ul.path
+{
+	display: none;
+}
+#pagerClient img
+{
+	display: none;
+}
+form div.textarea span input
+{
+	display: none;
+}
+div.toolbar li
+{
+	display: inline;
+}
+div.pager span.current, div.pager span.disabled
+{
+	cursor: default;
+	color: #999999;
+	font-weight: bold;
+}
+div.ui-content ul.items
+{
+	margin: 10px 0 10px 0;
+}
+ul.items span.details
+{
+	display: none;
+}
+ul.items div.topicCount, ul.items div.views
+{
+	right: 80px;
+}
+div.options a.selected
+{
+	text-decoration: none;
+}
+ul.itemsHeader
+{
+	display: none;
+}
+ul#messages
+{
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+ul#messages li
+{
+	margin-bottom: 2px;
+	padding: 0 10px 10px 5px;
+	overflow: hidden;
+}
+ul#messages div.msgBody
+{
+	padding: 10px 0 0 8px;
+}
+ul#messages div.msgBody p.removed
+{
+	font-style: italic;
+}
+ul#messages div.msgHeader
+{
+	font-size: 16px;
+	color: #666666;
+}
+ul#messages div.msgHeader a
+{
+	text-decoration: none;
+}
+ul#messages div.msgHeader a.msgId
+{
+	font-size: 22px;
+	font-weight: normal;
+}
+ul#messages div.msgUser
+{
+	display: none;
+}
+ul div.msgOptions
+{
+	text-align: right;
+	visibility: hidden;
+	position: relative;
+	top: 2px;
+	line-height: 11px;
+}
+ul div.msgOptions a
+{
+	text-decoration: none;
+	font-weight: normal;
+	border-left: solid 1px #666666;
+	padding-left: 3px;
+}
+ul div.msgOptions a:hover
+{
+	text-decoration: underline;
+}
+ul div.msgOptions a.first
+{
+	border: none;
+}
+li.over
+{
+	background-color: #F0F0F0;
+}
+li.over div.msgOptions
+{
+	visibility: visible;
+}
+div li.print
+{
+	display: none;
+}

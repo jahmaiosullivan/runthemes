@@ -1,0 +1,69 @@
+﻿@model List<Topic>
+@{
+    ViewBag.Title = T("Flagged messages");
+}
+<ul class="path floatContainer">
+	<li class="first">@Html.ActionLinkLocalized("Forums", "List", "Forums")</li>
+	<li>@Html.ActionLinkLocalized("Admin", "Dashboard", "Admin")</li>
+</ul>
+<h1>@ViewBag.Title</h1>
+@if (Model.Count > 0)
+{
+	<ul id="listFlagged">
+	@foreach (Topic t in Model)
+	{
+		<li>
+			<h3>@Html.ActionLink(t.Title, "ShortUrl", "Topics", new{id=t.Id}, null)</h3>
+			<ul>
+			@foreach (Message m in t.Messages)
+			{
+				<li>
+					<div class="msgHeader">
+						<strong>
+							@Html.ActionLink("#" + m.Id, "ShortUrl", "Topics", null, null, "msg" + m.Id, new{id=t.Id}, null)
+						</strong>
+						<span class="userSep">
+						@T("by")
+						</span>
+						<strong class="userName">@Html.ActionLink(m.User.UserName, "Detail", "Users", new{id=m.User.Id}, null)</strong>
+					</div>
+					<div class="msgBody">@Html.Raw(m.Body)</div>
+					<div class="msgOptions">
+						@Html.LinkLocalized("remove", "#", new{onclick="return deleteMessage(" + m.Id + ", '" + Url.Action("Delete", "Messages", new{id=t.Id, name=t.ShortName, forum=t.Forum.ShortName}) + "', this);", @class="first"})
+						@Html.LinkLocalized("clear flags", "#", new{title="Remove all flags from the message", onclick="return clearFlags(" + m.Id + ", '" + Url.Action("ClearFlags", "Messages", new{id=t.Id, name=t.ShortName, forum=t.Forum.ShortName}) + "', this);"})
+					</div>
+				</li>
+			}
+			</ul>
+		</li>
+	}
+	</ul>
+}
+else
+{
+	<p class="warning">@T("No flagged messages found.")</p>
+}
+<script type="text/javascript">
+	$(document).ready(function ()
+	{
+
+		$("#listFlagged > li > ul > li").hover(function () { $(this).addClass("over"); }, function () { $(this).removeClass("over"); });
+	});
+
+	function clearFlags(mid, url, sender)
+	{
+		if (confirm('@T("Are you sure you want to clear all flags from the message?")'))
+		{
+			$.post(url, { mid: mid }, function (data)
+			{
+				$(sender).closest("li").remove();
+			});
+		}
+		return false;
+	}
+
+	function deleteMessage(mid, url, sender)
+	{
+		return deleteMessageCommon(mid, url, '@T("Are you sure you want to hide the message #{0}?")', '@T("Message removed")', sender);
+	}
+</script>

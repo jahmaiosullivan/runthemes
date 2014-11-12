@@ -1,0 +1,106 @@
+﻿@model List<Template>
+@{
+    ViewBag.Title = @T("Templates");
+}
+<ul class="path floatContainer">
+	<li class="first">@Html.ActionLinkLocalized("Forums", "List", "Forums")</li>
+	<li>@Html.ActionLinkLocalized("Admin", "Dashboard", "Admin")</li>
+</ul>
+<div class="templates">
+	<h1>@ViewBag.Title</h1>
+	@if (ViewData.GetDefault<bool>("DeleteCurrent"))
+	{ 
+		<p class="error">@T("You cannot delete the current template.")</p>
+	}
+	@if (ViewData.GetDefault<bool>("Access"))
+	{
+		<p class="error">@T("The application does not have the necessary file read/write access.")</p>
+	}
+	
+	@using (Html.BeginForm(null, null, FormMethod.Post, new{@id="mainForm"}))
+	{
+		@Html.AntiForgeryToken()
+		<input type="hidden" name="id" id="templateId" />
+		if (Model.Count > 0)
+		{
+			<ul class="templateList floatContainer">
+			@foreach (Template t in Model)
+			{
+				<li class="@(t == Model.First() ? "first" : "")">
+					<div><img src="@(ViewBag.BasePath + t.Key)/screenshot.png" width="240" alt="@t.Key template screenshot" /></div>
+					<h3>@t.Key</h3>
+					<p>@t.Description</p>
+					<div class="templateOptions">
+						@if (!t.IsCurrent)
+						{
+							<span>
+								<a href="#" onclick="return activeTemplate(@t.Id);">@T("Activate")</a>
+								|
+								@Html.ActionLinkLocalized("Preview", "Preview", new { id = t.Id }, new { target="_blank"})
+							</span>
+						}
+						else
+						{
+							<strong>@T("Active")</strong>
+						}
+						|
+						@Html.ActionLinkLocalized("Export", "Export", new{id=t.Id})
+						@if (!t.IsCurrent)
+						{
+							<span>
+								|
+								<a href="#" onclick="return deleteTemplate(@t.Id);">@T("Remove")</a>
+							</span>
+						}
+					</div>
+				</li>
+			}
+			</ul>
+		}
+		else
+		{
+			<p class="noItems">
+				@T("No templates found.")
+				<br />
+				<a href="#" onclick="return loadDefaultTemplates();">@T("Do you want to load the default templates?")</a>
+			</p>
+		}
+		<p>@Html.LinkLocalized("How to create a custom template", "http://www.nearforums.com/templating", new { target="_blank"})</p>
+		<p>@Html.ActionLinkLocalized("Upload a new template >>", "Add")</p>
+		if (!Config.UI.Template.UseTemplates)
+		{
+			<p style="padding-top: 50px;">
+				@T("Templating feature is <strong>disabled</strong> by configuration.")
+			</p>
+			<code>
+				&lt;template useTemplates="true" path="~/content/templates/" /&gt;
+			</code>
+		}
+	}
+</div>
+<script type="text/javascript">
+	function deleteTemplate(id) 
+	{
+		if (confirm("@T("Are you sure you want to REMOVE this template?.\\nthis action is not reversible.")")) 
+		{
+			$("#templateId").val(id);
+			$('#mainForm').attr('action', '@(Url.Action("Delete"))').submit();
+		}
+		return false;
+	}
+
+	function activeTemplate(id)
+	{
+		if (confirm("@T("Are you sure you want to activate this template?")")) 
+		{
+			$("#templateId").val(id);
+			$('#mainForm').attr('action', '@(Url.Action("SetCurrent"))').submit();
+		}
+		return false;
+	}
+
+	function loadDefaultTemplates() 
+	{
+		$('#mainForm').attr('action', '@(Url.Action("AddDefaultTemplates"))').submit();
+	}
+</script>

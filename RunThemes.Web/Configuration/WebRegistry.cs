@@ -8,8 +8,8 @@ namespace RunThemes.Web.Configuration
     {
         public WebRegistry()
         {
-            For<HttpContextBase>().Use(GetCurrentHttpContext);
-            For<ApplicationUserManager>().Use(GetUserManager);
+            For<HttpContextBase>().Use(ctx => GetCurrentHttpContext(ctx));
+            For<ApplicationUserManager>().Use(ctx => GetUserManager(ctx));
         }
 
         private ApplicationUserManager GetUserManager(IContext context)

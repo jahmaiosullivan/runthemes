@@ -1,0 +1,36 @@
+﻿@model List<PageContent>
+@{
+    ViewBag.Title = T("Content Pages");
+}
+<ul class="path floatContainer">
+	<li class="first">@Html.ActionLinkLocalized("Forums", "List", "Forums")</li>
+	<li>@Html.ActionLinkLocalized("Admin", "Dashboard", "Admin")</li>
+</ul>
+<h1>@ViewBag.Title</h1>
+@if (this.Model.Count > 0)
+{
+	<ul class="admin">
+	@foreach (PageContent p in this.Model)
+	{
+		<li>
+			<span class="actions">@Html.ActionLinkLocalized("Edit", "Edit", new{name=p.ShortName}) <a href="#" onclick="return deletePage('@Url.Action("Delete", new{name=p.ShortName})', '@p.Title', this);">@T("Delete")</a></span>
+			@Html.ActionLink(p.Title, "Detail", new{name=p.ShortName})
+		</li>
+	}
+	</ul>
+}
+<p>@Html.ActionLinkLocalized("Create a new content page >>", "Add")</p>
+
+<script type="text/javascript">
+	function deletePage(url, title, sender)
+	{
+		if (confirm('@T("Are you sure you want to delete the page {0}?")'.replace('{0}', title)))
+		{
+			$.post(url, {}, function (data)
+			{
+				$(sender).closest("li").remove();
+			});
+		}
+		return false;
+	}
+</script>

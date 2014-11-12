@@ -1,0 +1,27 @@
+﻿@model Topic
+<div class="toolbar floatContainer">
+	<ul>
+		@if ((Model.HasPostAccess(Role) || (User == null && Model.PostAccessRole == UserRole.Member)) && !Model.IsClosed)
+		{
+			@* Show the reply link for nonmembers and for users who can edit *@
+			<li class="reply">@Html.ActionLinkLocalized("Reply", "Add", "Messages", null, new{rel="nofollow"})</li>
+		}
+		<li class="showAll"><a href="#" onclick="return pager.showAll();">@T("Show all messages")</a></li>
+		<li class="print"><a href="#" onclick="window.print();return false;">@T("Print")</a></li>
+		@if (User!= null && (User.HasModeratorPriviledges || User.Id == Model.User.Id))
+		{
+			<li class="edit">@Html.ActionLinkLocalized("Edit", "Edit")</li>
+			<li class="move">@Html.ActionLinkLocalized("Move thread", "Move", new{forumName=Model.Forum.ShortName})</li>
+			<li class="delete">@Html.ActionLinkLocalized("Delete", "Delete", null, new { @onclick = "return postAndContinue(this, {}, '" + S("Are you sure you want to DELETE this thread?") + "');", rel = "nofollow" })</li>
+			if (!this.Model.IsClosed)
+			{
+				<li class="close">@Html.ActionLinkLocalized("Close", "CloseReplies", null, new { @onclick = "return postAndContinue(this, {}, '" + S("Are you sure you want to CLOSE this thread for further replies?") + "');", rel = "nofollow"})</li>
+			}
+			else
+			{
+				<li class="open">@Html.ActionLinkLocalized("Open to replies", "OpenReplies", null, new { @onclick = "return postAndContinue(this, {});", rel = "nofollow"})</li>
+			}
+		}
+	</ul>
+</div>
+@Html.AntiForgeryToken()

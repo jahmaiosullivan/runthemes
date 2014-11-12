@@ -17,19 +17,16 @@
 
 using System.Web.Http;
 using System.Web.Mvc;
-using RunThemes.Web;
 using RunThemes.Web.Configuration;
-using RunThemes.Web.Configuration.DependencyResolution;
+using RunThemes.Web.DependencyResolution;
 
-[assembly: WebActivator.PreApplicationStartMethod(typeof(StructuremapMvc), "Start")]
+[assembly: WebActivator.PreApplicationStartMethod(typeof(RunThemes.Web.App_Start.StructuremapMvc), "Start")]
 
-namespace RunThemes.Web {
+namespace RunThemes.Web.App_Start {
     public static class StructuremapMvc {
-        public static void Start()
-        {
-            var container = WebContainer.Current;
-            DependencyResolver.SetResolver(new StructureMapDependencyResolver(container));
-            GlobalConfiguration.Configuration.DependencyResolver = new StructureMapDependencyResolver(container);
+        public static void Start() {
+			DependencyResolver.SetResolver(new StructureMapDependencyResolver(WebContainer.Current));
+            GlobalConfiguration.Configuration.DependencyResolver = new StructureMapDependencyResolver(WebContainer.Current);
         }
     }
 }

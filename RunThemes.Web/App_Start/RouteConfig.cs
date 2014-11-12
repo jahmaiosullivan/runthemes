@@ -11,9 +11,12 @@ namespace RunThemes.Web
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapRoute("FileUpload", "media/{action}", new { controller = "Media", action = "Index" });
-            routes.MapRoute("Downloads", "downloads", new { controller = "Home", action = "Downloads" });
-            routes.MapRoute("Default", "{controller}/{action}/{id}", new { controller = "Home", action = "Index", id = UrlParameter.Optional });
+            routes.MapRoute("FileUpload", "media/{action}", new { controller = "Media", action = "Index" },
+                new[] { "RunThemes.Web.Controllers" });
+            routes.MapRoute("Downloads", "downloads", new { controller = "Home", action = "Downloads" },
+                new[] { "RunThemes.Web.Controllers" });
+            routes.MapRoute("Default", "{controller}/{action}/{id}", new { controller = "Home", action = "Index", id = UrlParameter.Optional },
+                new[] { "RunThemes.Web.Controllers" });
             routes.MapRoute("ErrorNotFound", "{*path}", new { controller = "Error", action = "NotFound" });
         }
     }
