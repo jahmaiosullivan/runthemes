@@ -15,27 +15,6 @@ Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "RunThemes.Cloud", "RunTheme
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunThemes.Web", "RunThemes.Web\RunThemes.Web.csproj", "{2B9F4331-CBBB-47D6-B810-E21B452182D9}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "RunThemes.Forums(1)", "http://localhost:40323", "{69159127-79C5-483D-A366-D6AF6613C027}"
-	ProjectSection(WebsiteProperties) = preProject
-		UseIISExpress = "true"
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_40323"
-		Debug.AspNetCompiler.PhysicalPath = "..\RunThemes.Forums\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_40323\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_40323"
-		Release.AspNetCompiler.PhysicalPath = "..\RunThemes.Forums\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_40323\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		SlnRelativePath = "..\RunThemes.Forums\"
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -66,10 +45,6 @@ Global
 		{2B9F4331-CBBB-47D6-B810-E21B452182D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B9F4331-CBBB-47D6-B810-E21B452182D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B9F4331-CBBB-47D6-B810-E21B452182D9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{69159127-79C5-483D-A366-D6AF6613C027}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{69159127-79C5-483D-A366-D6AF6613C027}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{69159127-79C5-483D-A366-D6AF6613C027}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{69159127-79C5-483D-A366-D6AF6613C027}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
