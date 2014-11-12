@@ -15,9 +15,16 @@ namespace RunThemes.Web.Areas.Forum
         public override void RegisterArea(AreaRegistrationContext context) 
         {
             context.MapRoute(
+                "Forum_Home",
+                "Forum",
+                new { action = "Index", controller="Home" },
+                new[] { "NearForums.Web.Controllers" }
+            );
+
+            context.MapRoute(
                 "Forum_default",
                 "Forum/{controller}/{action}/{id}",
-                new { action = "Index", id = UrlParameter.Optional },
+                new { action = "Index", id = UrlParameter.Optional, page = 1 },
                 new[] { "NearForums.Web.Controllers" }
             );
         }
