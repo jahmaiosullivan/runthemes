@@ -17,7 +17,7 @@ namespace RunThemes.Web.Areas.Forum
             context.MapRoute(
                 "Forum_Home",
                 "Forum",
-                new { action = "Index", controller="Home" },
+                new { action = "List", controller="Forums" },
                 new[] { "NearForums.Web.Controllers" }
             );
 
