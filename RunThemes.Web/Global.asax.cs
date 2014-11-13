@@ -72,7 +72,7 @@ namespace RunThemes.Web
                 var contextUser = Context.User as Data.Models.User;
                 if (contextUser == null) return;
 
-                Context.Session.Add("User", new UserState(new User
+                var forumsUser = new User
                 {
                     Banned = contextUser.Banned,
                     BirthDate = contextUser.BirthDate,
@@ -80,7 +80,6 @@ namespace RunThemes.Web
                     EmailPolicy = EmailPolicy.None,
                     Guid = Guid.Parse(contextUser.Id),
                     Id = Guid.Parse(contextUser.Id),
-                    Role = UserRole.Admin,
                     UserName = contextUser.UserName,
                     Suspended = contextUser.Suspended,
                     SuspendedEnd = contextUser.SuspendedEnd,
@@ -89,7 +88,14 @@ namespace RunThemes.Web
                     PasswordResetGuid = contextUser.PasswordResetGuid.ToString(),
                     PasswordResetGuidExpireDate = contextUser.PasswordResetExpireDate ?? DateTime.MinValue,
                     Photo = contextUser.Avatar
-                }, AuthenticationProvider.CustomDb));
+                };
+                UserRole ur;
+                if (Enum.TryParse(contextUser.RoleName, out ur))
+                {
+                    forumsUser.Role = ur;
+                }
+
+                Context.Session.Add("User", new UserState(forumsUser, AuthenticationProvider.CustomDb));
             }
         }
     }

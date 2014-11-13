@@ -188,7 +188,7 @@ namespace RunThemes.Data.Dapper
             return Get(primaryKeyField.Name, (TValType)DapperExtensions.ChangeType(idvalue.ToString(), primaryKeyField.Type));
         }
 
-        public T Get<TValType>(string column, TValType val)
+        public virtual T Get<TValType>(string column, TValType val)
         {
             var sql = string.Format(BaseQuery + " where {0} = @Val", column);
             var results = _queryManager.ExecuteSql<T>(sql, new { @Val = val });

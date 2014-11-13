@@ -16,5 +16,8 @@ SELECT
     ,u.[DisplayName]
     ,u.[Avatar]
     ,u.[About]
+	,r.Name as "RoleName"
   FROM 
-	[AspNetUsers] u
+	[AspNetUsers] u left outer join 
+	  [AspNetUserRoles] ur on ur.UserId = u.Id 
+	  left outer join [AspNetRoles] r on ur.RoleId = r.Id
