@@ -1,0 +1,60 @@
+﻿@model Forum
+@{
+	ViewBag.Title = Model.Name;
+	if (IsAction("MostViewedTopics"))
+	{
+		ViewBag.Title = T("{0} - Most viewed", Model.Name);
+	}
+	else if (IsAction("LatestTopics"))
+	{
+		ViewBag.Title = T("{0} - Latest activity", Model.Name);
+	}
+}
+@section Head
+{
+	@if (IsAction("Detail"))
+	{
+		@Html.MetaDescription(Model.Description)
+	}
+}
+<div class="forumDetail">
+	<ul class="path floatContainer">
+		<li class="first">@Html.ActionLinkLocalized("Forums", "List", "Forums")</li>
+	</ul>
+	<h1>@ViewBag.Title</h1>
+	@Html.Partial("ForumOptions")
+	@if (IsAction("Detail"))
+	{
+		<p class="description">@Model.Description</p>
+	}
+
+	@if (Model.HasPostAccess(Role) || User == null)
+	{
+		<p class="topAction">@Html.ActionLinkLocalized("Post a thread >>", "Add", "Topics", new{forum=this.Model.ShortName}, null)</p>
+	}
+
+	@if (this.Model.Topics.Count > 0)
+	{
+		Html.RenderPartial("ForumTopicList", this.Model.Topics);
+	}
+	else
+	{
+		<p class="warning">@T("No threads for this forum.")</p>
+	}
+	@Html.Pager(Config.UI.TopicsPerPage, this.PageIndex, (int)ViewData["TotalTopics"], S("Previous"), S("Next"))
+	@Html.Partial("TagCloud", ViewData.Get<List<WeightTag>>("Tags"))
+	@if (Model.HasPostAccess(Role) || User == null)
+	{
+		<p class="action">@Html.ActionLinkLocalized("Post a thread >>", "Add", "Topics", new{forum=this.Model.ShortName}, null)</p>
+	}
+	
+	@if (Role >= UserRole.Moderator)
+	{
+	<div class="toolbar floatContainer">
+		<ul>
+			<li class="edit">@Html.ActionLinkLocalized("Edit", "Edit", new { forum = Model.ShortName })</li>
+			<li class="manage">@Html.ActionLinkLocalized("Manage forums", "Manage")</li>
+		</ul>
+	</div>
+	}
+</div>

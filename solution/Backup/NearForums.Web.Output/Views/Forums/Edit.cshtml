@@ -1,0 +1,51 @@
+﻿@model Forum
+@{
+	ViewBag.Title = ViewData.WriteIf("IsEdit", S("Edit forum"), S("Create a forum"));
+}
+<ul class="path floatContainer">
+	<li class="first">@Html.ActionLinkLocalized("Forums", "List", "Forums")</li>
+	<li>@Html.ActionLinkLocalized("Admin", "Dashboard", "Admin")</li>
+	<li>@Html.ActionLinkLocalized("Manage forums", "Manage", "Forums")</li>
+</ul>
+<h1>@ViewBag.Title</h1>
+@Html.ValidationSummary("<h3>" + S("Please check the following errors:") + "</h3>", new Dictionary<string, object>
+	{
+		{"Description", S("Description must not be blank.")}
+		,{"Name", S("Forum name must not be blank.")}
+		,{"ShortName", ""}
+		,{"Category.Id", S("Category must not be blank.")}
+		,{"PostAccessRole", S("The role required to post should be greater than the required to read.")}
+	}, null)
+@{Html.BeginForm(null, null, this.Model == null ? null : new{forum=this.Model.ShortName}, FormMethod.Post, new{@id="forumEditForm"});}
+@Html.AntiForgeryToken()
+<fieldset>
+	<legend>@T("Fill in the fields and submit")</legend>
+	<div class="formItem floatContainer">
+		<label for="name">@T("Name")</label>
+		@Html.TextBox("name", null, new{@class="text"})
+	</div>
+	<div class="formItem floatContainer">
+		<label for="category_id">@T("Category")</label>
+		@Html.DropDownListDefault("category.id", ViewData.Get<SelectList>("Categories"), "", S("-Select a Category-"))
+	</div>
+	<div class="formItem textarea">
+		<label for="description">@T("Description")</label>
+		@Html.TextArea("description")
+	</div>
+	<div class="formItem floatContainer">
+		<label for="ReadAccessRole">@T("Read access")</label>
+		@Html.DropDownListDefault("ReadAccessRole", ViewData.Get<SelectList>("UserRoles"), "", S("Everybody"))
+	</div>
+	<div class="formItem floatContainer">
+		<label for="PostAccessRole">@T("Access to post a new thread")</label>
+		@Html.DropDownList("PostAccessRole", ViewData.Get<SelectList>("UserRoles"))
+		<span class="note">@T("Notice that roles are hierarchical")</span>
+	</div>
+	<div class="formItem buttons">
+		<input type="submit" value="@T("Send")" />
+	</div>
+</fieldset>
+@{Html.EndForm();}
+<script type="text/javascript">
+	$("form#forumEditForm").submit(preventMultipleSubmit);
+</script>

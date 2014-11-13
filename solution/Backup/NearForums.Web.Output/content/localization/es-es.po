@@ -1,0 +1,1456 @@
+﻿# Nearforums PO file - es-ES
+# PO File format: http://www.gnu.org/s/hello/manual/gettext/PO-Files.html
+# This file is distributed under the MIT license: http://nearforums.codeplex.com/license
+
+#: NearForums.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Admin Dashboard"
+msgstr "Panel de administración"
+
+#: NearForums.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Forums"
+msgstr "Foros"
+
+#: NearForums.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Moderation"
+msgstr "Moderación"
+
+#: NearForums.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Manage forums"
+msgstr "Gestionar foros"
+
+#: NearForums.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Add / edit / delete forums."
+msgstr "Añadir / editar / borrar foros."
+
+#: NearForums.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Unanswered threads"
+msgstr "Temas sin respuesta"
+
+#: NearForums.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "View unanswered threads from all forums."
+msgstr "Ver temas sin respuesta de todos los foros."
+
+#: NearForums.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Flagged messages"
+msgstr "Mensajes inadecuados"
+
+#: NearForums.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Manage all flagged messages."
+msgstr "Gestionar los mensajes marcados como inadecuados."
+
+#: NearForums.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Manage users"
+msgstr "Administrar usuarios"
+
+#: NearForums.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Promote, demote, delete and manage forum users."
+msgstr "Promover, degradar, eliminar y administrar usuarios del foro."
+
+#: NearForums.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Administration"
+msgstr "Administración"
+
+#: NearForums.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Manage pages"
+msgstr "Gestionar páginas"
+
+#: NearForums.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Manage content pages like about / privacy / ..."
+msgstr "Administrar las páginas de contenido (Acerca de, Privacidad, ...)"
+
+#: NearForums.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Manage templates"
+msgstr "Templates: Administrar plantillas"
+
+#: NearForums.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Manage the site templates for the forum."
+msgstr "Administrar las plantillas de sitio."
+
+#: NearForums.Web.Output\Views\Authentication\ProviderSelect.cshtml
+msgid "Sign in"
+msgstr "Login"
+
+#: NearForums.Web.Output\Views\Authentication\ProviderSelect.cshtml
+msgid "Sign in using your existing account"
+msgstr "Inicia sesión con tu cuenta"
+
+#: NearForums.Web.Output\Views\Authentication\ProviderSelect.cshtml
+msgid "Sign in with your Facebook account"
+msgstr "Inicia sesión con tu cuenta de Facebook"
+
+#: NearForums.Web.Output\Views\Authentication\ProviderSelect.cshtml
+msgid "You should be entering the same email address and password that you would use to log into Facebook homepage. Facebook will not share your password with us."
+msgstr "Utiliza tus datos de acceso de Facebook. Facebook no compartirá tu contraseña con nosotros."
+
+#: NearForums.Web.Output\Views\Authentication\ProviderSelect.cshtml
+msgid "Sign in with your Twitter account"
+msgstr "Inicia sesión con tu cuenta de Twitter"
+
+#: NearForums.Web.Output\Views\Authentication\ProviderSelect.cshtml
+msgid "You should be entering your twitter username and password at twitter.com website to login on the forums. Twitter will not share your password with us."
+msgstr "Utiliza tus datos de acceso de Twitter. Facebook no compartirá tu contraseña con nosotros."
+
+#: NearForums.Web.Output\Views\Authentication\ProviderSelect.cshtml
+msgid "Sign in with your site credentials"
+msgstr "Iniciar sesión con las credenciales de este	sitio"
+
+#: NearForums.Web.Output\Views\Authentication\ProviderSelect.cshtml
+msgid "Login"
+msgstr "Login"
+
+#: NearForums.Web.Output\Views\Authentication\NotAuthorized.cshtml
+msgid "Access denied"
+msgstr "Acceso denegado"
+
+#: NearForums.Web.Output\Views\Authentication\NotAuthorized.cshtml
+msgid "You must belong to the role {0} to perform this action."
+msgstr "Debes ser un usuario del rol {0} para realizar esta acción."
+
+#: NearForums.Web.Output\Views\FormsAuthentication\ChangePassword.cshtml
+msgid "Change Password"
+msgstr "Cambiar contraseña"
+
+#: NearForums.Web.Output\Views\FormsAuthentication\ChangePassword.cshtml
+msgid "Please check the following errors:"
+msgstr "Por favor, consulta los siguientes errores:"
+
+#: NearForums.Web.Output\Views\FormsAuthentication\ChangePassword.cshtml
+msgid "You must specify your current password."
+msgstr "Debes especificar la contraseña actual."
+
+#: NearForums.Web.Output\Views\FormsAuthentication\ChangePassword.cshtml
+msgid "Your current password does not match."
+msgstr "Tu contraseña actual no coincide."
+
+#: NearForums.Web.Output\Views\FormsAuthentication\ChangePassword.cshtml
+msgid "You must specify a new password of {0} or more characters."
+msgstr "Debes especificar una nueva contraseña de caracteres {0} o más."
+
+#: NearForums.Web.Output\Views\FormsAuthentication\ChangePassword.cshtml
+msgid "The new password and confirmation password do not match."
+msgstr "La nueva contraseña y la confirmación de la contraseña no coinciden."
+
+#: NearForums.Web.Output\Views\FormsAuthentication\ChangePassword.cshtml
+msgid "Use the form below to change your password"
+msgstr "Utiliza el siguiente formulario para cambiar su contraseña"
+
+#: NearForums.Web.Output\Views\FormsAuthentication\ChangePassword.cshtml
+msgid "Current password"
+msgstr "Contraseña actual"
+
+#: NearForums.Web.Output\Views\FormsAuthentication\ChangePassword.cshtml
+msgid "New password"
+msgstr "Nueva contraseña"
+
+#: NearForums.Web.Output\Views\FormsAuthentication\ChangePassword.cshtml
+msgid "New passwords are required to be a minimum of {0} characters in length."
+msgstr "Las contraseñas deben tener un mínimo de {0} caracteres."
+
+#: NearForums.Web.Output\Views\FormsAuthentication\ChangePassword.cshtml
+msgid "Confirm new password"
+msgstr "Confirmar nueva contraseña"
+
+#: NearForums.Web.Output\Views\FormsAuthentication\ChangePasswordSuccess.cshtml
+msgid "Your password has been changed successfully."
+msgstr "Su contraseña ha sido cambiada con éxito."
+
+#: NearForums.Web.Output\Views\FormsAuthentication\ChangePasswordSuccess.cshtml
+msgid "Back to my account >>"
+msgstr "Volver a Mi cuenta>>"
+
+#: \NearForums.Web.Output\Views\FormsAuthentication\Login.cshtml
+msgid "The username or password provided is incorrect."
+msgstr "El nombre de usuario o contraseña no son correctos."
+
+#: NearForums.Web.Output\Views\Shared\LoginForm.cshtml
+msgid "Enter your username and password. <br />Don't have an account?"
+msgstr "Introduce tu nombre de usuario y contraseña. <br /> ¿Todavía no tienes una cuenta?"
+
+#: NearForums.Web.Output\Views\Shared\LoginForm.cshtml
+msgid "Create one"
+msgstr "Crea tu cuenta ahora"
+
+#: NearForums.Web.Output\Views\Shared\LoginForm.cshtml
+msgid "Username"
+msgstr "Nombre de usuario"
+
+#: NearForums.Web.Output\Views\Shared\LoginForm.cshtml
+msgid "Password"
+msgstr "Contraseña"
+
+#: NearForums.Web.Output\Views\Shared\LoginForm.cshtml
+msgid "Remember me"
+msgstr "Recordar"
+
+#: NearForums.Web.Output\Views\Shared\LoginForm.cshtml
+msgid "Forgot your password?"
+msgstr "¿Has olvidado tu contraseña?"
+
+#: NearForums.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "Register"
+msgstr "Registrar"
+
+#: NearForums.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "Email must not be blank."
+msgstr "El correo electrónico no debe estar en blanco."
+
+#: NearForums.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "Email format is not valid."
+msgstr "Formato de correo electrónico no es válido."
+
+#: NearForums.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "A user account already exists for the email address you entered."
+msgstr "Una cuenta de usuario ya existe para la dirección de correo indicada."
+
+#: NearForums.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "Username must not be blank."
+msgstr "Nombre de usuario no debe estar en blanco."
+
+#: NearForums.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "Username format is not valid."
+msgstr "El formato del campo nombre de usuario no es válido."
+
+#: NearForums.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "Username already in use"
+msgstr "Nombre de usuario ya está en uso"
+
+#: NearForums.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "Password must not be blank."
+msgstr "La contraseña no debe estar en blanco."
+
+#: NearForums.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "Password format is not valid."
+msgstr "Formato de del campo contraseña no es válido."
+
+#: NearForums.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "Password does not match the confirm password."
+msgstr "La contraseña no coincide con la contraseña de confirmación."
+
+#: NearForums.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "Use the form below to create a new account"
+msgstr "Utiliza el siguiente formulario para crear una cuenta nueva"
+
+#: NearForums.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "Email"
+msgstr "Correo electrónico"
+
+#: NearForums.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "Passwords are required to be a minimum of {0} characters in length."
+msgstr "Las contraseñas deben tener un mínimo de {0} caracteres."
+
+#: NearForums.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "Confirm Password"
+msgstr "Confirmar contraseña"
+
+#: NearForums.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "I agree with the Terms and Conditions set forth by the Site Owner."
+msgstr "Estoy de acuerdo con los términos y condiciones establecidos por el propietario del sitio."
+
+#: NearForums.Web.Output\Views\FormsAuthentication\Register.cshtml
+msgid "Create a new account"
+msgstr "Crear una nueva cuenta de usuario"
+
+#: NearForums.Web.Output\Views\FormsAuthentication\ResetPassword.cshtml
+msgid "Reset Password"
+msgstr "Restablecer contraseña"
+
+#: NearForums.Web.Output\Views\FormsAuthentication\ResetPassword.cshtml
+msgid "There is no account associated with the provided email address."
+msgstr "No hay ninguna cuenta asociada a la dirección de correo electrónico."
+
+#: NearForums.Web.Output\Views\FormsAuthentication\ResetPassword.cshtml
+msgid "Provide your email. A link will be sent to your email so that you can reset your password."
+msgstr "Introduzca su correo electrónico. Un enlace será enviada a su correo electrónico para que pueda restablecer su contraseña."
+
+#: NearForums.Web.Output\Views\FormsAuthentication\ResetPassword.cshtml
+msgid "Submit"
+msgstr "Enviar"
+
+#: NearForums.Web.Output\Views\FormsAuthentication\ResetPasswordEmailConfirmation.cshtml
+msgid "Email Sent"
+msgstr "Hemos enviado un correo a su cuenta de email"
+
+#: NearForums.Web.Output\Views\FormsAuthentication\ResetPasswordEmailConfirmation.cshtml
+msgid "Instructions about how to reset your password were sent to your email."
+msgstr "Instrucciones acerca de cómo restablecer su contraseña fueron enviados a su correo electrónico."
+
+#: NearForums.Web.Output\Views\Forums\Detail.cshtml
+msgid "{0} - Most viewed"
+msgstr "{0} - Más visitados"
+
+#: NearForums.Web.Output\Views\Forums\Detail.cshtml
+msgid "{0} - Latest activity"
+msgstr "{0} - Más recientes"
+
+#: NearForums.Web.Output\Views\Forums\Detail.cshtml
+msgid "No threads for this forum."
+msgstr "No hay temas en este foro."
+
+#: NearForums.Web.Output\Views\Forums\Detail.cshtml
+msgid "Previous"
+msgstr "Anterior"
+
+#: NearForums.Web.Output\Views\Forums\Detail.cshtml
+msgid "Next"
+msgstr "Siguiente"
+
+#: NearForums.Web.Output\Views\Forums\Detail.cshtml
+msgid "Post a thread >>"
+msgstr "Publicar un nuevo tema >>"
+
+#: NearForums.Web.Output\Views\Forums\Detail.cshtml
+msgid "Edit"
+msgstr "Editar"
+
+#: NearForums.Web.Output\Views\Forums\Edit.cshtml
+msgid "Edit forum"
+msgstr "Editar foro"
+
+#: NearForums.Web.Output\Views\Forums\Edit.cshtml
+msgid "Create a forum"
+msgstr "Crear un foro"
+
+#: NearForums.Web.Output\Views\Forums\Edit.cshtml
+msgid "Admin"
+msgstr "Administración"
+
+#: NearForums.Web.Output\Views\Forums\Edit.cshtml
+msgid "Description must not be blank."
+msgstr "La descripción no debe estar en blanco."
+
+#: NearForums.Web.Output\Views\Forums\Edit.cshtml
+msgid "Forum name must not be blank."
+msgstr "El nombre del foro no debe estar en blanco."
+
+#: NearForums.Web.Output\Views\Forums\Edit.cshtml
+msgid "Category must not be blank."
+msgstr "La categoría no debe estar en blanco."
+
+#: NearForums.Web.Output\Views\Forums\Edit.cshtml
+msgid "Name"
+msgstr "Nombre"
+
+#: NearForums.Web.Output\Views\Forums\Edit.cshtml
+msgid "Category"
+msgstr "Categoría"
+
+#: NearForums.Web.Output\Views\Forums\Edit.cshtml
+msgid "-Select a Category-"
+msgstr "-Selecciona una categoría-"
+
+#: NearForums.Web.Output\Views\Forums\Edit.cshtml
+msgid "Message"
+msgstr "Mensaje"
+
+#: NearForums.Web.Output\Views\Forums\Edit.cshtml
+msgid "Send"
+msgstr "Enviar"
+
+#: NearForums.Web.Output\Views\Forums\Edit.cshtml
+msgid "The role required to post should be greater than the required to read."
+msgstr "El rol requerido para publicar debe ser un rol superior al de lectura."
+
+#: NearForums.Web.Output\Views\Forums\Edit.cshtml
+msgid "Read access"
+msgstr "Acceso de lectura"
+
+#: NearForums.Web.Output\Views\Forums\Edit.cshtml
+msgid "Everybody"
+msgstr "Todos"
+
+#: NearForums.Web.Output\Views\Forums\Edit.cshtml
+msgid "Access to post a new thread"
+msgstr "Acceso a publicar un nuevo tema"
+
+#: NearForums.Web.Output\Views\Forums\Edit.cshtml
+msgid "Notice that roles are hierarchical"
+msgstr "Tenga en cuenta que los roles son jerárquicos"
+
+#: NearForums.Web.Output\Views\Forums\ForumOptions.cshtml
+msgid "Most viewed threads"
+msgstr "Más visitados"
+
+#: NearForums.Web.Output\Views\Forums\ForumOptions.cshtml
+msgid "Latest activity"
+msgstr "Más recientes"
+
+#: NearForums.Web.Output\Views\Forums\ForumTopicList.cshtml
+msgid "Title"
+msgstr "Asunto"
+
+#: NearForums.Web.Output\Views\Forums\ForumTopicList.cshtml
+msgid "Replies"
+msgstr "Respuestas"
+
+#: NearForums.Web.Output\Views\Forums\ForumTopicList.cshtml
+msgid "Views"
+msgstr "Visitas"
+
+#: NearForums.Web.Output\Views\Forums\ForumTopicList.cshtml
+msgid "Last post"
+msgstr "Último mensaje"
+
+#: NearForums.Web.Output\Views\Forums\ForumTopicList.cshtml
+msgid "by"
+msgstr "por"
+
+#: NearForums.Web.Output\Views\Forums\ForumTopicList.cshtml
+msgid "{0} <span class=\"label\">replies</span>"
+msgstr "{0} <span class=\"label\">respuestas</span>"
+
+#: NearForums.Web.Output\Views\Forums\ForumTopicList.cshtml
+msgid "1 <span class=\"label\">reply</span>"
+msgstr "1 <span class=\"label\">respuesta</span>"
+
+#: NearForums.Web.Output\Views\Forums\ForumTopicList.cshtml, NearForums.Web.Output\Views\Forums\ListAllUnansweredTopics.cshtml
+msgid "{0} <span class=\"label\">views</span>"
+msgstr "{0} <span class=\"label\">visitas</span>"
+
+#: NearForums.Web.Output\Views\Forums\ForumTopicList.cshtml, NearForums.Web.Output\Views\Forums\ListAllUnansweredTopics.cshtml
+msgid "1 <span class=\"label\">view</span>"
+msgstr "1 <span class=\"label\">visita</span>"
+
+#: NearForums.Web.Output\Views\Forums\ForumTopicList.cshtml
+msgid "No posts"
+msgstr "Ningún mensaje"
+
+#: NearForums.Web.Output\Views\Forums\LatestAllTopics.cshtml
+msgid "Latest threads on all forums"
+msgstr "Temas mas recientes en todos los foros"
+
+#: NearForums.Web.Output\Views\Forums\LatestAllTopics.cshtml
+msgid "Latest threads on all forums at {0}"
+msgstr "Temas más recientes en todos los foros - {0}"
+
+#: NearForums.Web.Output\Views\Forums\LatestTopicsRss.cshtml
+msgid "Latest threads on '{0}' forum"
+msgstr "Temas más recientes en el foro '{0}'"
+
+#: NearForums.Web.Output\Views\Forums\List.cshtml
+msgid "Forum"
+msgstr "Foro"
+
+#: NearForums.Web.Output\Views\Forums\List.cshtml
+msgid "Topics"
+msgstr "Temas"
+
+#: NearForums.Web.Output\Views\Forums\List.cshtml
+msgid "Posts"
+msgstr "Mensajes"
+
+#: NearForums.Web.Output\Views\Forums\List.cshtml
+msgid "threads"
+msgstr "temas"
+
+#: NearForums.Web.Output\Views\Forums\List.cshtml
+msgid "thread"
+msgstr "tema"
+
+#: NearForums.Web.Output\Views\Forums\List.cshtml
+msgid "posts"
+msgstr "mensajes"
+
+#: NearForums.Web.Output\Views\Forums\List.cshtml
+msgid "post"
+msgstr "mensaje"
+
+#: NearForums.Web.Output\Views\Forums\List.cshtml
+msgid "No forums found."
+msgstr "No hay ningún foro."
+
+#: NearForums.Web.Output\Views\Forums\List.cshtml
+msgid "Welcome to Nearforums!"
+msgstr "Bienvenido a Nearforums!"
+
+#: NearForums.Web.Output\Views\Forums\List.cshtml
+msgid "You've successfully setup your Nearforums site"
+msgstr "Has instalado Nearforums correctamente"
+
+#: NearForums.Web.Output\Views\Forums\List.cshtml
+msgid "Here are a few things you can do to get started"
+msgstr "Hay aquí algunas cosas que podrás hacer para empezar"
+
+#: NearForums.Web.Output\Views\Forums\ListAllUnansweredTopics.cshtml
+msgid "Unanswered Threads"
+msgstr "Temas sin respuestas"
+
+#: NearForums.Web.Output\Views\Forums\ListAllUnansweredTopics.cshtml
+msgid "No unanswered threads, for now :)"
+msgstr "No hay temas sin respuesta, por ahora:)"
+
+#: NearForums.Web.Output\Views\Forums\ListUnansweredTopics.cshtml
+msgid "{0} - Unanswered threads"
+msgstr "{0} - Sin respuesta"
+
+#: NearForums.Web.Output\Views\Forums\ListUnansweredTopics.cshtml
+msgid "No unanswered threads for this forum."
+msgstr "No hay temas sin respuesta en este foro."
+
+#: NearForums.Web.Output\Views\Forums\Manage.cshtml
+msgid "Delete"
+msgstr "Suprimir"
+
+#: NearForums.Web.Output\Views\Forums\Manage.cshtml
+msgid "Create a new forum >>"
+msgstr "Crear un nuevo foro >>"
+
+#: NearForums.Web.Output\Views\Forums\Manage.cshtml
+msgid "Are you sure you want to delete this forum?.\\nAll threads and posts of this forum will not be accessible."
+msgstr "¿Estás seguro que desea eliminar este foro?\\nTodos los temas y los mensajes de este foro no serán accesibles."
+
+#: NearForums.Web.Output\Views\Forums\TagDetail.cshtml
+msgid "Threads tagged \"{0}\""
+msgstr "Temas \"{0}\""
+
+#: NearForums.Web.Output\Views\Messages\ListFlagged.cshtml
+msgid "remove"
+msgstr "eliminar"
+
+#: NearForums.Web.Output\Views\Messages\ListFlagged.cshtml
+msgid "clear flags"
+msgstr "quitar marcas"
+
+#: NearForums.Web.Output\Views\Messages\ListFlagged.cshtml
+msgid "Are you sure you want to clear all flags from the message?"
+msgstr "¿Está seguro que desea quitar todas las marcas al mensaje?"
+
+#: NearForums.Web.Output\Views\Messages\ListFlagged.cshtml
+msgid "Are you sure you want to hide the message #{0}?"
+msgstr "¿Está seguro que desea ocultar el mensaje #{0}?"
+
+#: NearForums.Web.Output\Views\Messages\ListFlagged.cshtml
+msgid "Message removed"
+msgstr "Mensaje eliminado"
+
+#: NearForums.Web.Output\Views\Messages\ListFlagged.cshtml
+msgid "No flagged messages found."
+msgstr "No se han encontrado mensajes marcados como inadecuado."
+
+#: NearForums.Web.Output\Views\PageContents\Edit.cshtml
+msgid "Edit page"
+msgstr "Editar página"
+
+#: NearForums.Web.Output\Views\PageContents\Edit.cshtml
+msgid "Create a new content page"
+msgstr "Crear una nueva página de contenido"
+
+#: NearForums.Web.Output\Views\PageContents\Edit.cshtml
+msgid "Pages"
+msgstr "Páginas"
+
+#: NearForums.Web.Output\Views\PageContents\Edit.cshtml
+msgid "Page title must not be blank."
+msgstr "El título de la página no debe estar en blanco."
+
+#: NearForums.Web.Output\Views\PageContents\Edit.cshtml
+msgid "Page content must not be blank."
+msgstr "El contenido de la página no debe estar en blanco."
+
+#: NearForums.Web.Output\Views\PageContents\Edit.cshtml
+msgid "Page title"
+msgstr "Título"
+
+#: NearForums.Web.Output\Views\PageContents\Edit.cshtml
+msgid "Content of the page"
+msgstr "Contenido"
+
+#: NearForums.Web.Output\Views\PageContents\List.cshtml
+msgid "Content Pages"
+msgstr "Páginas de Contenido"
+
+#: NearForums.Web.Output\Views\PageContents\List.cshtml
+msgid "Create a new content page >>"
+msgstr "Crear una nueva página de contenido >>"
+
+#: NearForums.Web.Output\Views\PageContents\List.cshtml
+msgid "Are you sure you want to delete the page {0}?"
+msgstr "¿Está seguro que desea eliminar la página {0}?"
+
+#: NearForums.Web.Output\Views\Shared\ButtonFacebook.cshtml
+msgid "Login using Facebook"
+msgstr "Iniciar sesión con Facebook"
+
+#: NearForums.Web.Output\Views\Shared\ButtonTwitter.cshtml
+msgid "Login using Twitter"
+msgstr "Iniciar sesión con Twitter"
+
+#: NearForums.Web.Output\Views\Shared\FooterContent.cshtml
+msgid "About"
+msgstr "Acerca de"
+
+#: NearForums.Web.Output\Views\Shared\FooterContent.cshtml
+msgid "Terms and conditions"
+msgstr "Términos y condiciones"
+
+#: NearForums.Web.Output\Views\Shared\MessageItem.cshtml, NearForums.Web.Output\Views\Users\Detail.cshtml
+msgid "Member for:"
+msgstr "Miembro por:"
+
+#: NearForums.Web.Output\Views\Shared\MessageItem.cshtml
+msgid "The message was removed by a forum moderator."
+msgstr "El mensaje fue eliminado por un moderador del foro."
+
+#: NearForums.Web.Output\Views\Shared\MessageItem.cshtml
+msgid "link"
+msgstr "enlace"
+
+#: NearForums.Web.Output\Views\Shared\MessageItem.cshtml, NearForums.Web.Output\Views\Messages\ListFlagged.cshtml
+msgid "reply"
+msgstr "responder"
+
+#: NearForums.Web.Output\Views\Shared\MessageItem.cshtml
+msgid "flag"
+msgstr "marcar como inapropiado"
+
+#: NearForums.Web.Output\Views\Shared\SinceDate.cshtml
+msgid "years"
+msgstr "años"
+
+#: NearForums.Web.Output\Views\Shared\SinceDate.cshtml
+msgid "year"
+msgstr "año"
+
+#: NearForums.Web.Output\Views\Shared\SinceDate.cshtml
+msgid "months"
+msgstr "meses"
+
+#: NearForums.Web.Output\Views\Shared\SinceDate.cshtml
+msgid "month"
+msgstr "mes"
+
+#: NearForums.Web.Output\Views\Shared\SinceDate.cshtml
+msgid "days"
+msgstr "días"
+
+#: NearForums.Web.Output\Views\Shared\SinceDate.cshtml
+msgid "day"
+msgstr "día"
+
+#: NearForums.Web.Output\Views\Shared\SinceDate.cshtml
+msgid "Less than a day"
+msgstr "Menos de un día"
+
+#: NearForums.Web.Output\Views\Shared\TagCloud.cshtml
+msgid "Browse by tags"
+msgstr "Navegar por tags"
+
+#: NearForums.Web.Output\Views\Shared\UserMenu.cshtml
+msgid "Go to content"
+msgstr "Ir al contenido"
+
+#: NearForums.Web.Output\Views\Shared\UserMenu.cshtml
+msgid "Sign In"
+msgstr "Login"
+
+#: NearForums.Web.Output\Views\Shared\UserMenu.cshtml
+msgid "Admin dashboard"
+msgstr "Panel de administración"
+
+#: NearForums.Web.Output\Views\Shared\UserMenu.cshtml
+msgid "Account"
+msgstr "Cuenta"
+
+#: NearForums.Web.Output\Views\Shared\UserMenu.cshtml
+msgid "Logout"
+msgstr "Cerrar sesión"
+
+#: NearForums.Web.Output\Views\Shared\Errors\403.cshtml
+msgid "Forbidden"
+msgstr "Acceso prohibido"
+
+#: NearForums.Web.Output\Views\Shared\Errors\403.cshtml
+msgid "The page you requested is forbidden."
+msgstr "El acceso a la página solicitada está prohibido."
+
+#: NearForums.Web.Output\Views\Shared\Errors\404.cshtml
+msgid "Page not found"
+msgstr "Página no encontrada"
+
+#: NearForums.Web.Output\Views\Shared\Errors\404.cshtml
+msgid "The page you requested was not found."
+msgstr "La página solicitada no se encuentra."
+
+#: NearForums.Web.Output\Views\Shared\Errors\500.cshtml
+msgid "An error occurred while processing your request"
+msgstr "Ha ocurrido un error al procesar su solicitud"
+
+#: NearForums.Web.Output\Views\Shared\Errors\500.cshtml
+msgid "An error occurred"
+msgstr "Ha ocurrido un error"
+
+#: NearForums.Web.Output\Views\Shared\Errors\500.cshtml
+msgid "An error occurred on the server when processing your request. <br />The error detail was sent to our support team.<br />Sorry for the inconvenience."
+msgstr "Se produjo un error en el servidor al procesar la petición. <br /> El detalle de error fue enviado a nuestro equipo de soporte. <br /> Disculpa las molestias."
+
+#: NearForums.Web.Output\Views\Templates\Add.cshtml
+msgid "Add Template"
+msgstr "Añadir template"
+
+#: NearForums.Web.Output\Views\Templates\Add.cshtml
+msgid "Templates"
+msgstr "Templates"
+
+#: NearForums.Web.Output\Views\Templates\Add.cshtml
+msgid "The application does not have file Write access on the server's template folder."
+msgstr "La aplicación no tiene acceso de escritura en carpeta de Templates del servidor."
+
+#: NearForums.Web.Output\Views\Templates\Add.cshtml
+msgid "File format is invalid. Please include only the allowed files."
+msgstr "El formato de archivo no es válido. Por favor, incluya sólo los ficheros permitidos."
+
+#: NearForums.Web.Output\Views\Templates\Add.cshtml
+msgid "File must not be blank."
+msgstr "El archivo no debe estar en blanco."
+
+#: NearForums.Web.Output\Views\Templates\Add.cshtml
+msgid "File size is larger than the maximum size supported (3Mb)."
+msgstr "El tamaño del archivo es superior al tamaño máximo permitido (3 Mb)."
+
+#: NearForums.Web.Output\Views\Templates\Add.cshtml
+msgid "You can not replace the active template."
+msgstr "No se puede reemplazar el template activo."
+
+#: NearForums.Web.Output\Views\Templates\Add.cshtml
+msgid "The html template file does not contain the required placeholders: headcontainer and bodycontainer"
+msgstr "El archivo HTML no contiene los marcadores de posición requeridos: headcontainer y bodycontainer"
+
+#: NearForums.Web.Output\Views\Templates\Add.cshtml
+msgid "Template key format is not valid. Include a-z 0-9 and up to 64 characters."
+msgstr "El nombre del template no es válido. Solo a-z 0-9 y hasta 64 caracteres."
+
+#: NearForums.Web.Output\Views\Templates\Add.cshtml
+msgid "Template File (.zip)"
+msgstr "Archivo de template (.zip)"
+
+#: NearForums.Web.Output\Views\Templates\Add.cshtml
+msgid "Comments"
+msgstr "Comentarios"
+
+#: NearForums.Web.Output\Views\Templates\Add.cshtml
+msgid "Use default name"
+msgstr "Usar el nombre por defecto"
+
+#: NearForums.Web.Output\Views\Templates\Add.cshtml
+msgid "Name / Key"
+msgstr "Nombre (Identificador)"
+
+#: NearForums.Web.Output\Views\Templates\AddDefaultTemplates.cshtml
+msgid "Load default templates"
+msgstr "Cargar los templates por defecto"
+
+#: NearForums.Web.Output\Views\Templates\AddDefaultTemplates.cshtml
+msgid "{0} templates loaded."
+msgstr "{0} templates cargados."
+
+#: NearForums.Web.Output\Views\Templates\AddDefaultTemplates.cshtml
+msgid "Continue >>"
+msgstr "Continuar >>"
+
+#: NearForums.Web.Output\Views\Templates\List.cshtml
+msgid "You cannot delete the current template."
+msgstr "No se puede eliminar el template activo."
+
+#: NearForums.Web.Output\Views\Templates\List.cshtml
+msgid "The application does not have the necessary file read/write access."
+msgstr "La aplicación no tiene los permisos necesarios de lectura / escritura en el servidor."
+
+#: NearForums.Web.Output\Views\Templates\List.cshtml
+msgid "Activate"
+msgstr "Activar"
+
+#: NearForums.Web.Output\Views\Templates\List.cshtml
+msgid "Preview"
+msgstr "Vista previa"
+
+#: NearForums.Web.Output\Views\Templates\List.cshtml
+msgid "Active"
+msgstr "Activo"
+
+#: NearForums.Web.Output\Views\Templates\List.cshtml
+msgid "Export"
+msgstr "Exportar"
+
+#: NearForums.Web.Output\Views\Templates\List.cshtml
+msgid "Remove"
+msgstr "Eliminar"
+
+#: NearForums.Web.Output\Views\Templates\List.cshtml
+msgid "No templates found."
+msgstr "No hay templates instalados."
+
+#: NearForums.Web.Output\Views\Templates\List.cshtml
+msgid "Do you want to load the default templates?"
+msgstr "¿Desea cargar los templates por defecto?"
+
+#: NearForums.Web.Output\Views\Templates\List.cshtml
+msgid "How to create a custom template"
+msgstr "Cómo crear un nuevo template"
+
+#: NearForums.Web.Output\Views\Templates\List.cshtml
+msgid "Upload a new template >>"
+msgstr "Subir un nuevo template >>"
+
+#: NearForums.Web.Output\Views\Templates\List.cshtml
+msgid "Templating feature is <strong>disabled</strong> by configuration."
+msgstr "La funcionalidad de Templating está <strong>deshabilitada</strong> por configuración."
+
+#: NearForums.Web.Output\Views\Templates\List.cshtml
+msgid "Are you sure you want to REMOVE this template?.\\nthis action is not reversible."
+msgstr "¿Está seguro que desea ELIMINAR este template? \\nEsta acción no es reversible"
+
+#: NearForums.Web.Output\Views\Templates\List.cshtml
+msgid "Are you sure you want to activate this template?"
+msgstr "¿Está seguro que desea activar este template?"
+
+#: NearForums.Web.Output\Views\Topics\Detail.cshtml
+msgid "Posted by"
+msgstr "Por"
+
+#: NearForums.Web.Output\Views\Topics\Detail.cshtml
+msgid "Displaying <span class=\"firstItem\">{0}</span> to <span class=\"lastItem\">{1}</span> of <span class=\"totalItems\">{2}</span> messages"
+msgstr "<span class=\"firstItem\">{0}</span> a <span class=\"lastItem\">{1}</span> de <span class=\"totalItems\">{2}</span> mensajes"
+
+#: NearForums.Web.Output\Views\Topics\Detail.cshtml
+msgid "Show more messages"
+msgstr "Mostrar más mensajes"
+
+#: NearForums.Web.Output\Views\Topics\Detail.cshtml
+msgid "Thanks you, a moderator will review the message."
+msgstr "Gracias, un moderador revisará el mensaje."
+
+#: NearForums.Web.Output\Views\Topics\Detail.cshtml
+msgid "The browser has lost session, click ok to return to the login page"
+msgstr "El navegador a perdido la sesión, haz clic en OK para ir a la página de login"
+
+#: NearForums.Web.Output\Views\Topics\Edit.cshtml
+msgid "Edit thread"
+msgstr "Editar tema"
+
+#: NearForums.Web.Output\Views\Topics\Edit.cshtml
+msgid "Post new thread"
+msgstr "Nuevo tema"
+
+#: NearForums.Web.Output\Views\Topics\Edit.cshtml
+msgid "Thread message must not be blank."
+msgstr "El mensaje no puede estar vacío."
+
+#: NearForums.Web.Output\Views\Topics\Edit.cshtml
+msgid "Tags must not be blank, separated by spaces and must not contain special characters. The maximum number of tags allowed is 6."
+msgstr "Las etiquetas no deben estar en blanco. Deben estar separadas por espacios y no debe contener caracteres especiales. El número máximo de etiquetas permitidas es de 6"
+
+#: NearForums.Web.Output\Views\Topics\Edit.cshtml
+msgid "Subject must not be blank."
+msgstr "El asunto no puede estar vacío"
+
+#: NearForums.Web.Output\Views\Topics\Edit.cshtml
+msgid "Email must not be blank in order to notify of new posts."
+msgstr "El correo electrónico no debe estar en blanco a fin de notificar de nuevos mensajes."
+
+#: NearForums.Web.Output\Views\Topics\Edit.cshtml
+msgid "Fill in the fields and submit"
+msgstr "Rellena los campos del formulario"
+
+#: NearForums.Web.Output\Views\Topics\Edit.cshtml
+msgid "Subject"
+msgstr "Asunto"
+
+#: NearForums.Web.Output\Views\Topics\Edit.cshtml
+msgid "Tags"
+msgstr "Tags"
+
+#: NearForums.Web.Output\Views\Topics\Edit.cshtml
+msgid "Separated by spaces"
+msgstr "separados por espacios"
+
+#: NearForums.Web.Output\Views\Topics\Edit.cshtml
+msgid "Type the text shown in the image"
+msgstr "Escriba el texto mostrado en la imagen"
+
+#: NearForums.Web.Output\Views\Topics\Edit.cshtml
+msgid "Sticky thread?"
+msgstr "Sticky?"
+
+#: NearForums.Web.Output\Views\Topics\Edit.cshtml
+msgid "Notify me of new posts on this thread via email"
+msgstr "Notificarme de nuevos mensajes en este tema a través de correo electrónico"
+
+#: NearForums.Web.Output\Views\Topics\Edit.cshtml
+msgid "Access to post a message in this thread"
+msgstr ""
+
+#: NearForums.Web.Output\Views\Topics\LatestMessages.cshtml
+msgid "Latest messages on &apos;{0}&apos; thread"
+msgstr "Mensajes mas recientes en el tema &apos;{0}&apos;"
+
+#: NearForums.Web.Output\Views\Topics\Move.cshtml
+msgid "Move thread \"{0}\" to another forum"
+msgstr "Mover tema \"{0}\" a otro foro"
+
+#: NearForums.Web.Output\Views\Topics\Move.cshtml
+msgid "Select the destination forum"
+msgstr "Seleccionar el foro de destino"
+
+#: NearForums.Web.Output\Views\Topics\Related.cshtml
+msgid "Related threads"
+msgstr "Temas relacionados"
+
+#: NearForums.Web.Output\Views\Messages\Edit.cshtml
+msgid "Reply"
+msgstr "Responder"
+
+#: NearForums.Web.Output\Views\Messages\Edit.cshtml
+msgid "Body must not be blank."
+msgstr "El cuerpo del mensaje no debe estar en blanco."
+
+#: NearForums.Web.Output\Views\Messages\Edit.cshtml
+msgid "Captcha must not be blank."
+msgstr "Codigo de seguridad no debe estar en blanco."
+
+#: NearForums.Web.Output\Views\Messages\Edit.cshtml
+msgid "Captcha does not match the image value. Please retry."
+msgstr "Codigo de seguridad no coincide con el valor de la imagen. Por favor, inténtelo de nuevo."
+
+#: NearForums.Web.Output\Views\Messages\Edit.cshtml
+msgid "Description"
+msgstr "Descripción"
+
+#: NearForums.Web.Output\Views\Topics\Toolbar.cshtml
+msgid "Show all messages"
+msgstr "Mostrar todos los mensajes"
+
+#: NearForums.Web.Output\Views\Topics\Toolbar.cshtml
+msgid "Print"
+msgstr "Imprimir"
+
+#: NearForums.Web.Output\Views\Topics\Toolbar.cshtml
+msgid "Move thread"
+msgstr "Mover tema"
+
+#: NearForums.Web.Output\Views\Topics\Toolbar.cshtml
+msgid "Close"
+msgstr "Cerrar"
+
+#: NearForums.Web.Output\Views\Topics\Toolbar.cshtml
+msgid "Open to replies"
+msgstr "Abrir tema a nuevas respuestas"
+
+#: \NearForums.Web.Output\Views\Topics\Toolbar.cshtml
+msgid "Are you sure you want to DELETE this thread?"
+msgstr "¿Estás seguro que deseas ELIMINAR este tema?"
+
+#: \NearForums.Web.Output\Views\Topics\Toolbar.cshtml
+msgid "Are you sure you want to CLOSE this thread for further replies?"
+msgstr "¿Estás seguro que deseas CERRAR este tema para nuevos mensajes?"
+
+#: NearForums.Web.Output\Views\TopicsSubscriptions\Unsubscribe.cshtml
+msgid "Unsubscribe"
+msgstr "Cancelar la suscripción"
+
+#: NearForums.Web.Output\Views\TopicsSubscriptions\Unsubscribe.cshtml
+msgid "Unsubscribed from the thread"
+msgstr "Cancelar la suscripción"
+
+#: NearForums.Web.Output\Views\TopicsSubscriptions\Unsubscribe.cshtml
+msgid "You have been unsubscribed from the thread {0}."
+msgstr "Te has desuscrito del tema {0}."
+
+#: NearForums.Web.Output\Views\TopicsSubscriptions\Unsubscribe.cshtml
+msgid "Thank you."
+msgstr "Gracias."
+
+#: NearForums.Web.Output\Views\Users\Detail.cshtml
+msgid "{0} profile"
+msgstr "Perfil de {0}"
+
+#: NearForums.Web.Output\Views\Users\Detail.cshtml
+msgid "Role"
+msgstr "Rol"
+
+#: NearForums.Web.Output\Views\Users\Detail.cshtml
+msgid "Messages posted by {0}"
+msgstr "Mensajes enviados por {0}"
+
+#: NearForums.Web.Output\Views\Users\Detail.cshtml
+msgid "Get all messages posted by {0}"
+msgstr "Obtener todos los mensajes publicados por {0}"
+
+#: NearForums.Web.Output\Views\Users\Detail.cshtml
+msgid "Loading..."
+msgstr "Cargando..."
+
+#: NearForums.Web.Output\Views\Users\Detail.cshtml
+msgid "No messages found."
+msgstr "No se han encontrado mensajes"
+
+#: \NearForums.Web.Output\Views\Users\Detail.cshtml
+msgid "Threads posted by {0}"
+msgstr "Temas enviados por {0}"
+
+#: NearForums.Web.Output\Views\Users\Edit.cshtml
+msgid "Email format is invalid."
+msgstr "El formato de correo electrónico no es válido."
+
+#: NearForums.Web.Output\Views\Users\Edit.cshtml
+msgid "Website url format is invalid."
+msgstr "El formato de URL del sitio web no es válido."
+
+#: NearForums.Web.Output\Views\Users\Edit.cshtml
+msgid "Photo url format is invalid."
+msgstr "Formato de la url foto no es válido."
+
+#: NearForums.Web.Output\Views\Users\Edit.cshtml
+msgid "Username is required."
+msgstr "Nombre de usuario es requerido."
+
+#: NearForums.Web.Output\Views\Users\Edit.cshtml
+msgid "Change your account information"
+msgstr "Cambiar los datos de tu cuenta"
+
+#: NearForums.Web.Output\Views\Users\Edit.cshtml
+msgid "Public name"
+msgstr "Nombre público"
+
+#: NearForums.Web.Output\Views\Users\Edit.cshtml
+msgid "Birthdate"
+msgstr "Fecha de Nacimiento"
+
+#: NearForums.Web.Output\Views\Users\Edit.cshtml
+msgid "Timezone"
+msgstr "Zona horaria"
+
+#: NearForums.Web.Output\Views\Users\Edit.cshtml
+msgid "Photo url"
+msgstr "URL de la foto"
+
+#: NearForums.Web.Output\Views\Users\Edit.cshtml
+msgid "Profile image"
+msgstr "Imagen del perfil de usuario"
+
+#: NearForums.Web.Output\Views\Users\Edit.cshtml
+msgid "Website"
+msgstr "Sitio Web"
+
+#: NearForums.Web.Output\Views\Users\Edit.cshtml
+msgid "Your email will not be shared with anyone. We will not make a different use than detailed below."
+msgstr "Tu dirección de correo electrónico no será compartida con ninguna web o empresa externa. No vamos a hacer un uso diferente a la detallada a continuación."
+
+#: NearForums.Web.Output\Views\Users\Edit.cshtml
+msgid "Email address"
+msgstr "Dirección de email"
+
+#: NearForums.Web.Output\Views\Users\Edit.cshtml
+msgid "Use my email to notify me of replies to threads I subscribed to"
+msgstr "Enviadme correo electrónicos para notificarme acerca de nuevos mensajes sobre los temas que me he suscrito"
+
+#: NearForums.Web.Output\Views\Users\Edit.cshtml
+msgid "Send me a newsletter"
+msgstr "Enviadme la newsletter"
+
+#: NearForums.Web.Output\Views\Users\Edit.cshtml
+msgid "To edit your account settings, click here"
+msgstr "Para editar los datos de tu cuenta, haz clic aquí"
+
+#: NearForums.Web.Output\Views\Users\List.cshtml
+msgid "User name"
+msgstr "Nombre de usuario"
+
+#: NearForums.Web.Output\Views\Users\List.cshtml
+msgid "Search"
+msgstr "Buscar"
+
+#: NearForums.Web.Output\Views\Users\List.cshtml
+msgid "Action"
+msgstr "Acción"
+
+#: NearForums.Web.Output\Views\Users\List.cshtml
+msgid "Registration date"
+msgstr "Fecha de alta"
+
+#: NearForums.Web.Output\Views\Users\List.cshtml
+msgid "Promote"
+msgstr "Promover"
+
+#: NearForums.Web.Output\Views\Users\List.cshtml
+msgid "Demote"
+msgstr "Degradar"
+
+#: NearForums.Web.Output\Views\Users\List.cshtml
+msgid "Edit Profile"
+msgstr "Editar Perfil"
+
+#: NearForums.Web.Output\Views\Users\List.cshtml
+msgid "Are you sure you want to DELETE the user {0}?"
+msgstr "¿Está seguro que desea eliminar el usuario {0}?"
+
+#: NearForums.Web.Output\Views\Users\List.cshtml
+msgid "Are you sure you want to Promote the user {0}?"
+msgstr "¿Está seguro que desea Promover el usuario {0}?"
+
+#: NearForums.Web.Output\Views\Users\List.cshtml
+msgid "Are you sure you want to Demote the user {0}?"
+msgstr "¿Está seguro que desea degradar el usuario {0}?"
+
+#: NearForums.Web.Output\Views\Users\List.cshtml
+msgid "No user found for the username &quot;{0}&quot;."
+msgstr "No se han encontrado usuarios que concuerden con el nombre &quot;{0}&quot;."
+
+#: NearForums.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Manage search index"
+msgstr "Administrar índice de búsqueda"
+
+#: NearForums.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Manage the search index for the forum."
+msgstr "Administrar el índice de búsqueda para el foro."
+
+#: NearForums.Web.Output\Views\SearchEngine\Manage.cshtml
+msgid "The search index contains {0} documents."
+msgstr "El índice de búsqueda contiene {0} documentos."
+
+#: NearForums.Web.Output\Views\SearchEngine\Manage.cshtml
+msgid "You can drop the current search index contents, rebuild and reindex all the threads."
+msgstr "Puedes eliminar contenido del índice de búsqueda actual, reconstruir y volver a indexar todos los temas del foro."
+
+#: NearForums.Web.Output\Views\SearchEngine\Manage.cshtml
+msgid "This operation may take a while depending on the amount of threads and messages."
+msgstr "Esta operación puede tardar unos minutos dependiendo de la cantidad de temas y mensajes."
+
+#: NearForums.Web.Output\Views\SearchEngine\Manage.cshtml
+msgid "Reindex"
+msgstr "Reindexar"
+
+#: NearForums.Web.Output\Views\SearchEngine\Manage.cshtml
+msgid "Are you sure you want to drop the current search index and start reindexing?"
+msgstr "¿Está seguro que quiere eliminar el contenido del índice de búsqueda actual y comenzar a reindexar?"
+
+#: NearForums.Web.Output\Views\SearchEngine\Manage.cshtml
+msgid "Reindexing finished successfully"
+msgstr "Se ha terminado de reindexar con éxito"
+
+#: NearForums.Web.Output\Views\SearchEngine\Manage.cshtml
+msgid "Reindexing Forums...<br />Please do not close this web page"
+msgstr "Reindexando ... <br /> Por favor, no cierre esta página web"
+
+#: NearForums.Web.Output\Views\SearchEngine\Search.cshtml
+msgid "Search results"
+msgstr "Resultados de búsqueda"
+
+#: NearForums.Web.Output\Views\SearchEngine\Search.cshtml
+msgid "{0:##,#} result(s)"
+msgstr "{0:##,#} resultado(s)"
+
+#: NearForums.Web.Output\Views\SearchEngine\Search.cshtml
+msgid "We did not find results for <strong>{0}</strong>"
+msgstr "No se encontraron resultados para <strong>{0}</strong>"
+
+#: NearForums\ModeratorReason.cs
+#: NearForums.Web.Output\Views\Users\Toolbar.cshtml
+msgid "Flaming"
+msgstr "Flaming"
+
+#: NearForums\ModeratorReason.cs
+msgid "Spamming"
+msgstr "Spamming"
+
+#: NearForums\ModeratorReason.cs
+msgid "Harassing"
+msgstr "Acosando"
+
+#: NearForums\ModeratorReason.cs
+msgid "Other"
+msgstr "Otros"
+
+#: NearForums.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Settings"
+msgstr "Ajustes"
+
+#: NearForums.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Change application settings."
+msgstr "Cambiar los ajustes de la aplicación."
+
+#: NearForums.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Manage categories"
+msgstr "Administrar categorias"
+
+#: NearForums.Web.Output\Views\Admin\Dashboard.cshtml
+msgid "Add, edit or delete categories."
+msgstr "Añadir, editar o eliminar categorías."
+
+#: NearForums.Web.Output\Views\Authentication\TwitterFail.cshtml
+msgid "There was a problem while trying to sign in using twitter, please retry."
+msgstr "Hubo un problema al iniciar sesión con Twitter, por favor vuelva a intentar."
+
+#: NearForums.Web.Output\Views\Authentication\TwitterFail.cshtml
+msgid "Retry"
+msgstr "Reintentar"
+
+#: NearForums.Web.Output\Views\ForumCategories\Edit.cshtml
+msgid "Edit Forum Category"
+msgstr "Editar categoría"
+
+#: NearForums.Web.Output\Views\ForumCategories\Edit.cshtml
+msgid "Create a new forum category"
+msgstr "Crear una nueva categoría de foros"
+
+#: NearForums.Web.Output\Views\ForumCategories\Edit.cshtml
+msgid "Forum Category"
+msgstr "Categoría de foros"
+
+#: NearForums.Web.Output\Views\ForumCategories\Edit.cshtml
+msgid "Name must not be blank."
+msgstr "El nombre no puede estar vacío."
+
+#: NearForums.Web.Output\Views\ForumCategories\Edit.cshtml
+msgid "Category order must be a number."
+msgstr "El orden debe ser un valor numérico."
+
+#: NearForums.Web.Output\Views\ForumCategories\Edit.cshtml
+msgid "Category order"
+msgstr "Orden de la categoría"
+
+#: NearForums.Web.Output\Views\ForumCategories\List.cshtml
+msgid "Manage Forum Categories"
+msgstr "Administrar categorías de foros"
+
+#: NearForums.Web.Output\Views\ForumCategories\List.cshtml
+msgid "Create a new category >>"
+msgstr "Añadir una nueva categoría >>"
+
+#: NearForums.Web.Output\Views\ForumCategories\List.cshtml
+msgid "Are you sure you want to delete category {0}?"
+msgstr "¿Está seguro que desea eliminar la categoría {0}?"
+
+#: NearForums.Web.Output\Views\Forums\Detail.cshtml
+msgid "New Topic in this Forum"
+msgstr "Nuevo tema en este Foro"
+
+#: NearForums.Web.Output\Views\Forums\Detail.cshtml
+msgid "You must <a href=\"{0}\">sign in</a> to post."
+msgstr "Debe <a href=\"{0}\">iniciar sesión</a> para publicar un nuevo tema."
+
+#: NearForums.Web.Output\Views\SearchEngine\Manage.cshtml
+msgid "Search engine is enabled"
+msgstr "El motor de búsqueda está activado"
+
+#: NearForums.Web.Output\Views\SearchEngine\Manage.cshtml
+msgid "Disable"
+msgstr "Desactivar"
+
+#: NearForums.Web.Output\Views\SearchEngine\Manage.cshtml
+msgid "Search index is disabled"
+msgstr "El motor de búsqueda está desactivado"
+
+#: NearForums.Web.Output\Views\SearchEngine\Manage.cshtml
+msgid "Enable"
+msgstr "Activar"
+
+#: NearForums.Web.Output\Views\Settings\EditGeneral.cshtml
+msgid "General settings"
+msgstr "Ajustes generales"
+
+#: NearForums.Web.Output\Views\Settings\EditGeneral.cshtml
+msgid "Language is not valid. There is no matching translation (.po) file."
+msgstr "El idioma no es válido. No existe un fichero de traducción (.po) para ese idioma."
+
+#: NearForums.Web.Output\Views\Settings\EditGeneral.cshtml
+msgid "Content path is not valid."
+msgstr "La ruta de contenido no es válida."
+
+#: NearForums.Web.Output\Views\Settings\EditGeneral.cshtml
+msgid "The timezone offset is not valid."
+msgstr "El desplazamiento de zona horaria no es válido."
+
+#: NearForums.Web.Output\Views\Settings\EditGeneral.cshtml
+msgid "Language"
+msgstr "Idioma"
+
+#: NearForums.Web.Output\Views\Settings\EditGeneral.cshtml
+msgid "IETF language tag (RFC 5646)"
+msgstr "Código de lenguaje IETF (RFC 5646)"
+
+#: NearForums.Web.Output\Views\Settings\EditGeneral.cshtml
+msgid "Content path"
+msgstr "Ruta de contenido"
+
+#: NearForums.Web.Output\Views\Settings\EditGeneral.cshtml
+msgid "Time offset from UTC, expressed in hours, used to display the dates inside the forum"
+msgstr "Desplazamiento de UTC, expresada en horas, utilizado para mostrar las fechas dentro del foro"
+
+#: NearForums.Web.Output\Views\Settings\EditSpamPrevention.cshtml
+msgid "Spam prevention settings"
+msgstr "Ajustes de prevención de spam"
+
+#: NearForums.Web.Output\Views\Settings\EditSpamPrevention.cshtml
+msgid "Allowed html elements must be a valid regular expression."
+msgstr "Los elementos HTML permitidos debe ser una expresión regular válida."
+
+#: NearForums.Web.Output\Views\Settings\EditSpamPrevention.cshtml
+msgid "Wait time must be zero or greater."
+msgstr "El tiempo de espera debe ser cero o mayor."
+
+#: NearForums.Web.Output\Views\Settings\EditSpamPrevention.cshtml
+msgid "Allowed html elements in a post"
+msgstr "Elementos HTML permitidos"
+
+#: NearForums.Web.Output\Views\Settings\EditSpamPrevention.cshtml
+msgid "Regex to match the html elements"
+msgstr "Expresión regular de los elementos permitidos"
+
+#: NearForums.Web.Output\Views\Settings\EditSpamPrevention.cshtml
+msgid "Do not sanitize html input by users of role"
+msgstr "No procesar HTML de entrada de los usuarios del rol"
+
+#: NearForums.Web.Output\Views\Settings\EditSpamPrevention.cshtml
+msgid "Fix posted html errors in a post (like unclosed elements / hierarchy / ...)"
+msgstr "Arreglar los errores de sintáxis de HTML (como elementos no cerrados / jerarquía / ...)"
+
+#: NearForums.Web.Output\Views\Settings\EditSpamPrevention.cshtml
+msgid "Wait time between posts"
+msgstr "Tiempo de espera entre mensajes"
+
+#: NearForums.Web.Output\Views\Settings\EditSpamPrevention.cshtml
+msgid "Expressed in minutes."
+msgstr "expresado en minutos."
+
+#: NearForums.Web.Output\Views\Settings\EditSpamPrevention.cshtml
+msgid "Ignore wait time for role (or above)"
+msgstr "Ignorar el tiempo de espera para el rol (o superior)"
+
+#: NearForums.Web.Output\Views\Settings\EditUI.cshtml
+msgid "Appearance settings"
+msgstr "Ajustes de apariencia"
+
+#: NearForums.Web.Output\Views\Settings\EditUI.cshtml
+msgid "Date format is not valid"
+msgstr "Formato de fecha no es válida"
+
+#: NearForums.Web.Output\Views\Settings\EditUI.cshtml
+msgid "Threads per page must be greater than 0."
+msgstr "Temas por página debe ser mayor que 0."
+
+#: NearForums.Web.Output\Views\Settings\EditUI.cshtml
+msgid "Messages per page must be greater than 0."
+msgstr "Mensajes por página debe ser mayor que 0."
+
+#: NearForums.Web.Output\Views\Settings\EditUI.cshtml
+msgid "Amount of tags in the tag cloud must be greater than 0."
+msgstr "Cantidad de etiquetas en la nube de etiquetas debe ser mayor que 0."
+
+#: NearForums.Web.Output\Views\Settings\EditUI.cshtml
+msgid "JQuery library url must be either a virtual path (starting with ~/) or an absolute url."
+msgstr "La url del fichero de jQuery debe ser una ruta de acceso virtual (comenzando con ~ /) o una URL absoluta."
+
+#: NearForums.Web.Output\Views\Settings\EditUI.cshtml
+msgid "Date format"
+msgstr "Formato de fecha"
+
+#: NearForums.Web.Output\Views\Settings\EditUI.cshtml
+msgid "Threads per page"
+msgstr "Temas por página"
+
+#: NearForums.Web.Output\Views\Settings\EditUI.cshtml
+msgid "Messages per page"
+msgstr "Mensajes por página"
+
+#: NearForums.Web.Output\Views\Settings\EditUI.cshtml
+msgid "Default forum sort"
+msgstr "Orden del foro por defecto"
+
+#: NearForums.Web.Output\Views\Settings\EditUI.cshtml
+msgid "Amount of tags in the tag cloud"
+msgstr "Cantidad de etiquetas en la nube de etiquetas"
+
+#: NearForums.Web.Output\Views\Settings\EditUI.cshtml
+msgid "Show user details (image, member since, ...) on thread detail page"
+msgstr "Mostrar datos de usuario (imagen, miembro desde, ...) en la página de detalle del tema"
+
+#: NearForums.Web.Output\Views\Settings\EditUI.cshtml
+msgid "Use templates"
+msgstr "Activar plantillas"
+
+#: NearForums.Web.Output\Views\Settings\EditUI.cshtml
+msgid "Mobile user agents"
+msgstr "User agents móvi"
+
+#: NearForums.Web.Output\Views\Settings\EditUI.cshtml
+msgid "Regex to match the user agent string to. Leave empty to disable mobile specific server layout."
+msgstr "Expresión regular que coincida con la cadena de agente de usuario. Dejar en blanco para desactivar el layout específico móvil."
+
+#: NearForums.Web.Output\Views\Settings\EditUI.cshtml
+msgid "JQuery library"
+msgstr "Librería JQuery"
+
+#: NearForums.Web.Output\Views\Settings\EditUI.cshtml
+msgid "JQuery library Url. Can be either a virtual path (starting with ~/) or an absolute url, like <a href=\"{0}\" target=\"_blank\">the url of the JQuery libraries hosted on Google CDNs</a>."
+msgstr "Url de la librería JQuery. Puede ser una ruta de acceso virtual (comenzando con ~/) o una url absoluta, como <a href=\"{0}\" target=\"_blank\">la Url de la librería jQuery alojadas en la CDN de Google</a>."
+
+#: NearForums.Web.Output\Views\Shared\HeaderContent.cshtml
+msgid "Full details"
+msgstr "Detalle completo"
+
+#: NearForums.Web.Output\Views\Shared\HeaderContent.cshtml
+msgid "A moderator of the forum has sent you a warning. Further inappropriate behavior may result in your suspension or ban from this forum."
+msgstr "Un moderador del foro te ha enviado una advertencia. Si continúa con el comportamiento inapropiado puede dar lugar a su suspensión o prohibición de este foro."
+
+#: NearForums.Web.Output\Views\Users\Detail.cshtml
+msgid "The user is banned from the forums."
+msgstr "El usuario ha sido expulsado (ban)."
+
+#: NearForums.Web.Output\Views\Users\Detail.cshtml
+msgid "The user is suspended from the forums, until {0:d}."
+msgstr "El usuario está suspendido de los foros, hasta {0: d}."
+
+#: NearForums.Web.Output\Views\Users\Detail.cshtml
+msgid "The user has been warned by a moderator."
+msgstr "El usuario ha sido advertido por un moderador."
+
+#: NearForums.Web.Output\Views\Users\Edit.cshtml
+msgid "Change photo"
+msgstr "Cambiar foto"
+
+#: NearForums.Web.Output\Views\Users\Edit.cshtml
+msgid "Use gravatar image"
+msgstr "Usar imagen gravatar"
+
+#: NearForums.Web.Output\Views\Users\Edit.cshtml
+msgid "Remove photo"
+msgstr "Eliminar imagen"
+
+#: NearForums.Web.Output\Views\Users\ModeratorReasonDetail.cshtml
+msgid "Moderator message to {0}"
+msgstr "Mensaje del moderador a {0}"
+
+#: NearForums.Web.Output\Views\Users\ModeratorReasonDetail.cshtml
+msgid "You have been warned by a Moderator."
+msgstr "Usted ha sido advertido por los moderadores."
+
+#: NearForums.Web.Output\Views\Users\ModeratorReasonDetail.cshtml
+msgid "Reason"
+msgstr "Razón"
+
+#: NearForums.Web.Output\Views\Users\ModeratorReasonDetail.cshtml
+msgid "You haven't got any pending notification."
+msgstr "No tiene ninguna notificación pendiente."
+
+#: NearForums.Web.Output\Views\Users\Toolbar.cshtml
+msgid "Moderate"
+msgstr "Moderar"
+
+#: NearForums.Web.Output\Views\Users\Toolbar.cshtml
+msgid "Moderation action"
+msgstr "Acción"
+
+#: NearForums.Web.Output\Views\Users\Toolbar.cshtml
+msgid "Warn"
+msgstr "Advertir"
+
+#: NearForums.Web.Output\Views\Users\Toolbar.cshtml
+msgid "Suspend"
+msgstr "Suspender"
+
+#: NearForums.Web.Output\Views\Users\Toolbar.cshtml
+msgid "Ban"
+msgstr "Expulsar"
+
+#: NearForums.Web.Output\Views\Users\Toolbar.cshtml
+msgid "Reason message"
+msgstr "Detalle de la razón"

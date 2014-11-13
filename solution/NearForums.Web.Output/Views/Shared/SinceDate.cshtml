@@ -1,0 +1,31 @@
+﻿@{
+var period = DateTime.UtcNow.Subtract((DateTime)Model);
+var periodDate = new DateTime(period.Ticks);
+var years = periodDate.Year - 1;
+var months = periodDate.Month-1;
+var days = periodDate.Day - 1;
+var text = new System.Text.StringBuilder();
+
+if (years > 0)
+{
+	text.Append(years);
+	text.Append(" " + (years > 1 ? S("years") : S("year")));
+}
+if (months > 0)
+{
+	text.Append(" ");
+	text.Append(months);
+	text.Append(" " + (months > 1 ? S("months") : S("month")));
+}
+if (days > 0)
+{
+	text.Append(" ");
+	text.Append(days);
+	text.Append(" " + (days > 1 ? S("days") : S("day")));
+}
+if (text.Length == 0)
+{
+	text.Append(S("Less than a day"));
+}
+@text
+}

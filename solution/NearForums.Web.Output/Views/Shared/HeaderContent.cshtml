@@ -1,0 +1,16 @@
+﻿@if (User != null && User.Warned)
+{
+	<div id="accountWarning">
+		<div class="buttons">
+			@Html.ActionLinkLocalized("Full details", "ModeratorReasonDetail", "Users")
+			<a href="@Url.Action("WarnDismiss", "Users")" onclick="return postLink(this, null, function(){$('#accountWarning').slideUp();});">@Html.Img("~/images/icon-delete.gif", S("Close"))</a>
+		</div>
+		@T("A moderator of the forum has sent you a warning. Further inappropriate behavior may result in your suspension or ban from this forum.")
+		@Html.AntiForgeryToken()
+	</div>
+}
+@Html.Partial("UserMenu")
+@if (Config.Search.Enabled)
+{
+	@Html.Partial("SearchBox")
+}

@@ -1,0 +1,12 @@
+﻿@model Topic
+@{
+	Layout = null;
+	ViewBag.HasPostAccess = Model.HasPostAccess(Role);
+	if (Model.Messages.Count > 0)
+	{
+		foreach (Message m in Model.Messages)
+		{
+			Html.RenderPartial("MessageItem", m);
+		}
+	}
+}

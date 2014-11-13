@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<!--
+		headcontainer a mandatory placeholder
+		All scripts used by the site will be included here. Do not remove
+	-->
+    {-headcontainer-}
+	<link href="template-contents/content.css" rel="stylesheet" type="text/css" />
+	<link href="template-contents/styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+			{-headercontent-}
+			<div id="logo"><img src="template-contents/logo.png" alt="logo" /></div>
+        </div>
+        <div id="content">
+			<!--
+				bodycontainer is the mandatory placeholder were all content will be placed. Do not remove.
+			-->
+            {-bodycontainer-}
+        </div>
+        <div id="footer">
+			<p>Designed by <a href="http://www.nearforums.com/team">Nearforums team</a></p>
+			<!-- specify content license here (recommended) -->
+			{-footercontent-}
+        </div>
+    </div>
+	<!--
+		Also, you can use 
+		{-applicationpath-}: renders the relative application path (generally /)
+		{-year-}: renders the current year
+	-->
+</body>
+</html>

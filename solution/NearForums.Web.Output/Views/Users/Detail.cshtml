@@ -1,0 +1,48 @@
+﻿@model User
+@{
+	ViewBag.Title = T("{0} profile", Model.UserName);
+}
+<div class="userDetail">
+	<ul class="path floatContainer">
+		<li class="first">@Html.ActionLinkLocalized("Forums", "List", "Forums")</li>
+	</ul>
+	<h1>@ViewBag.Title</h1>
+
+	@if (Model.Banned || Model.Warned || Model.Suspended)
+	{
+		<div class="moderated">
+		@if (Model.Banned)
+		{
+			@T("The user is banned from the forums.")
+		}
+		else if (Model.Suspended)
+		{
+			@T("The user is suspended from the forums, until {0:d}.", Model.SuspendedEnd)
+		}
+		else
+		{
+			@T("The user has been warned by a moderator.")
+		}
+		</div>
+	}
+	<p><strong>@T("Role"):</strong> @Model.RoleName</p>
+	<p>
+		<strong>@T("Member for:")</strong> @Html.Partial("SinceDate", Model.RegistrationDate)
+	</p>
+	@if (!string.IsNullOrEmpty(Model.ExternalProfileUrl))
+	{
+		<p><strong>@T("{0} profile", new Uri(Model.ExternalProfileUrl).Host.Replace("www.", "").FirstUpperCase()):</strong> @Html.Link(Model.ExternalProfileUrl, new { @target = "_blank" })</p>
+	}
+	@if (ViewData.Get<IList>("Topics").Count > 0)
+	{
+		<h2>@T("Threads posted by {0}", Model.UserName)</h2>
+		<ul>
+		@foreach (Topic t in (IList)ViewData["Topics"])
+		{
+			<li>@Html.ActionLink(t.Title, "ShortUrl", "Topics", new{id=t.Id}, null)</li>	
+		}
+		</ul>
+	}
+	@Html.Partial("DetailMessages")
+	@Html.Partial("Toolbar")
+</div>

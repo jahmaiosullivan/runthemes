@@ -1,0 +1,46 @@
+﻿@model IList<Topic>
+@if (Model.Count > 0)
+{
+	<ul class="itemsHeader">
+		<li class="name">@T("Title")</li>
+		<li class="replies">@T("Replies")</li>
+		<li class="views">@T("Views")</li>
+		<li class="lastPost">@T("Last post")</li>
+	</ul>
+	<ul class="items">
+		@foreach (Topic topic in Model)
+		{
+		<li class="@((topic.IsSticky ? "sticky " : "") + (topic.ReadAccessRole >= UserRole.Moderator ? "moderatorOnly" : ""))">
+
+			<h3 class="name">
+				@Html.ActionLink(topic.Title, "Detail", "Topics", new { name = topic.ShortName, id = topic.Id, page = 0 }, new { @class="itemTitle"})
+				<span class="label">@T("by")</span>
+				<span class="user">@Html.ActionLink(topic.User.UserName, "Detail", "Users", new {id=topic.User.Id }, null) </span>
+				<span class="separator">- </span>
+				<span class="date">@Html.Date(topic.Date)</span>
+			</h3>
+			<div class="replies">@(topic.Replies != 1 ? T("{0} <span class=\"label\">replies</span>", topic.Replies) : T("1 <span class=\"label\">reply</span>"))</div>
+			<div class="separator">/ </div>
+			<div class="views">@(topic.Views != 1 ? T("{0} <span class=\"label\">views</span>", topic.Views) : T("1 <span class=\"label\">view</span>"))</div>
+			<div class="lastPost">
+				@if (topic.LastMessage != null)
+				{
+					<span class="label">@T("Last post")</span>
+					<span class="label2">@T("by")</span>
+					<span class="user">@Html.ActionLink(topic.LastMessage.User.UserName, "Detail", "Users", new {id=topic.LastMessage.User.Id }, null) </span>
+					<span class="separator">- </span>
+					<span class="date">
+						<a href="@(Url.Action("Detail", "Topics", new { name = topic.ShortName, id = topic.Id, page = 0 }))#msg@(topic.LastMessage.Id)">
+						@Html.Date(topic.LastMessage.Date)
+						</a>
+					</span>
+				}
+				else
+				{
+					<span class="nomsg">@T("No posts")</span>
+				}
+			</div>
+		</li>
+		}
+	</ul>
+}

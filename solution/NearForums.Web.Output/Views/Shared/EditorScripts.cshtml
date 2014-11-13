@@ -1,0 +1,45 @@
+﻿@if (User.HasModeratorPriviledges)
+{
+	<script type="text/javascript">
+		var editorOptions = {
+			script_url: "@Url.Content("~/scripts/tinymce/tinymce.min.js")",
+			content_css: "@Url.Content("~/styles/content.css")",
+			width: 640,
+			height: 220,
+			theme: "modern",			
+			remove_script_host: false,
+			convert_urls: false,
+			resizing: "both",
+			menubar: false,
+			plugins: "code, emoticons",
+			toolbar1: "code styleselect formatselect fontselect fontsizeselect alignleft aligncenter alignright alignjustify",
+			toolbar2: "cut copy paste | bold italic underline strikethrough | bullist numlist | outdent indent blockquote | undo redo | emoticons help"
+		};
+	</script>
+}
+else
+{
+	<script type="text/javascript">
+		var editorOptions = {
+			script_url: "@Url.Content("~/scripts/tinymce/tinymce.min.js")",
+			content_css: "@Url.Content("~/styles/content.css")",
+			width: 640,
+			height: 220,
+			theme: "modern",
+			remove_script_host: false,
+			convert_urls: false,
+			resizing: "both",
+			menubar: false,
+			plugins: "emoticons",
+			toolbar: "alignleft aligncenter alignright alignjustify | bold italic underline strikethrough | bullist numlist | outdent indent blockquote | undo redo | emoticons help"
+		};
+	</script>
+}
+
+@Html.Script("~/scripts/tinymce/jquery.tinymce.min.js")
+<script type="text/javascript">
+$(document).ready(function ()
+{
+	$('#@(ViewData["Name"])').tinymce(editorOptions);
+});
+</script>

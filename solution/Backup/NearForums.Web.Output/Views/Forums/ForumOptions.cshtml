@@ -1,0 +1,29 @@
+﻿@model Forum
+@* 
+	Show default sort first
+*@
+@{
+	var defaultSortLabel = S("Most viewed threads");
+	switch (Config.UI.DefaultForumSort)
+	{
+		case ForumSort.LatestActivity: 
+			defaultSortLabel = S("Latest activity");
+			break;
+	}
+}
+<div class="options">
+	@Html.ActionLink(defaultSortLabel, "Detail", new { page = 0 }, IsAction("Detail") ? new { @class = "selected" } : null)
+	@if (Config.UI.DefaultForumSort != ForumSort.MostViewedTopics)
+	{
+		<span>/</span>
+		@Html.ActionLinkLocalized("Most viewed threads", "MostViewedTopics", new { page = 0 }, IsAction("MostViewedTopics") ? new { @class = "selected" } : null)
+	}
+	@if (Config.UI.DefaultForumSort != ForumSort.LatestActivity)
+	{
+		<span>/</span>
+		@Html.ActionLinkLocalized("Latest activity", "LatestTopics", new{page=0,format=NearForums.Web.UI.ResultFormat.Html}, IsAction("LatestTopics") ? new{@class="selected"} : null)
+	}
+	<span>/</span>
+	@Html.ActionLinkLocalized("Unanswered threads", "ListUnansweredTopics", null, IsAction("ListUnansweredTopics") ? new{@class="selected"} : null)
+	<a rel="nofollow" href="@Url.Action("LatestTopics", new{page=0,format=NearForums.Web.UI.ResultFormat.Rss})">@Html.Img("~/images/iconrss.gif", "rss")</a>
+</div>

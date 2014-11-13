@@ -1,0 +1,75 @@
+﻿@model List<ForumCategory>
+@{
+	ViewBag.Title = T("Forums");
+}
+@if (!ViewData.GetDefault<bool>("ShowFirstSteps"))
+{
+	<div class="forumList">
+		<h1>@ViewBag.Title</h1>
+		<div class="options">
+			<a rel="nofollow" href="@Url.Action("LatestAllTopics")">@Html.Img("~/images/iconrss.gif", "rss")</a>
+		</div>
+		@foreach (ForumCategory category in Model)
+		{
+			<h2>@category.Name</h2>
+			<ul class="itemsHeader">
+				<li class="name">@T("Forum")</li>
+				<li class="topicCount">@T("Topics")</li>
+				<li class="replies">@T("Posts")</li>
+				<li class="lastTopic">@T("Last topic")</li>
+			</ul>
+			<ul class="items">
+			@foreach (Forum forum in category.Forums)
+			{
+
+				<li>
+					<h3 class="name">
+						@Html.ActionLink(forum.Name, "Detail", new { forum = forum.ShortName })
+					</h3>
+					<div class="topicCount">@forum.TopicCount <span class="label">@(forum.TopicCount != 1 ? T("threads") : T("thread"))</span></div>
+					<div class="separator">/ </div>
+					<div class="replies">@forum.MessageCount  <span class="label">@(forum.MessageCount != 1 ? T("posts") : T("post"))</span></div>
+					<div class="lastTopic">
+						@if (forum.LastTopic != null)
+						{
+							<span class="label">@T("Last topic")</span>	
+							<span class="topicName">
+								@Html.ActionLink(forum.LastTopic.Title, "Detail", "Topics", new { forum = forum.ShortName, name = forum.LastTopic.ShortName, id = forum.LastTopic.Id, page = 0 }, new { @class="itemTitle"})
+							</span>
+							<span class="label2">@T("by")</span>
+							<span class="user">@Html.ActionLink(forum.LastTopic.User.UserName, "Detail", "Users", new {id=forum.LastTopic.User.Id }, null) </span>	
+		  					<span class="separator">- </span>
+							<span class="date">
+								<a href="@(Url.Action("Detail", "Topics", new { forum = forum.ShortName, name = forum.LastTopic.ShortName, id = forum.LastTopic.Id, page = 0 }))">
+									@Html.Date(forum.LastTopic.Date)
+								</a>
+							</span>
+						}
+						else
+						{
+								<span class="nomsg">@T("No threads")</span>
+						}
+					</div>
+					<p class="description">@forum.Description</p>
+				</li>
+			}
+			</ul>
+		}
+ 		@if (Model.Count == 0)
+		{
+			<p>
+				@T("No forums found.")
+				<br />
+				@Html.ActionLinkLocalized("Create a forum", "Add")
+			</p>
+		}
+	</div>
+}
+else
+{
+	<div class="first-steps">
+		<h1>@T("Welcome to Nearforums!")</h1>
+		<p><strong>@T("You've successfully setup your Nearforums site")</strong></p>
+		<p><a href="http://www.nearforums.com/admin-first-steps" target="_blank">@T("Here are a few things you can do to get started")</a>.</p>
+	</div>
+}
