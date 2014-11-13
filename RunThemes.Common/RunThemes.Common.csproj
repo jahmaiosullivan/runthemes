@@ -34,6 +34,9 @@
     <Reference Include="HtmlSanitizationLibrary">
       <HintPath>..\..\Forums\ExternalBinaries\Framework\HtmlSanitizationLibrary.dll</HintPath>
     </Reference>
+    <Reference Include="NearForums">
+      <HintPath>..\..\..\Users\jaosulli\Downloads\solution\NearForums.Services\bin\Debug\NearForums.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
