@@ -7,6 +7,7 @@
         Downloads = 2,
         AccountHistory = 3,
         Register = 4,
-        LoginLogout = 5
+        LoginLogout = 5,
+        Support = 6
     }
 }

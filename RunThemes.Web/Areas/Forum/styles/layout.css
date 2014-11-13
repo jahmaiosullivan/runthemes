@@ -47,45 +47,6 @@ li
 	margin: 0;
 	padding: 0 0 4px 0;
 }
-a
-{
-	font-weight: normal;
-	color: #0372A0;
-	text-decoration: underline;
-}
-a:hover, #content a:hover
-{
-	text-decoration: underline;
-}
-h1
-{
-	font-family: Helvetica, Arial, sans-serif;
-	font-size: 28px;
-	font-weight: normal;
-	color: #333333;
-	margin: 0px 0px 20px 0px;
-	padding: 0px;
-}
-h2
-{
-	font-size: 20px;
-	font-weight: normal;
-	margin: 0 0 10px 0;
-	padding: 0;
-	color: #222222;
-}
-h3
-{
-	font-size: 16px;
-	font-weight: bold;
-	margin: 3px 0px 0px 0px;
-}
-h4
-{
-	font-size: 14px;
-	font-weight: bold;
-	margin: 4px 0px 12px 13px;
-}
 form
 {
 	margin: 0px 0px 0px 0px;

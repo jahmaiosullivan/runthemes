@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using NearForums.Web.Controllers;
 using RunThemes.Common.Helpers;
 using RunThemes.Web.Models;
 
@@ -14,9 +15,14 @@ namespace RunThemes.Web.Controllers
 
             var selected = HeaderMenu.Features;
             var isDownloadsPage = System.String.Compare(typeof (HomeController).Name.RemoveFromEnd("Controller"), controller, System.StringComparison.OrdinalIgnoreCase) == 0 && action == "Downloads";
+            var isSupportPage = System.String.Compare(typeof(ForumsController).Name.RemoveFromEnd("Controller"), controller, System.StringComparison.OrdinalIgnoreCase) == 0;
             if (isDownloadsPage)
             {
                 selected = HeaderMenu.Downloads;
+            }
+            else if (isSupportPage)
+            {
+                selected = HeaderMenu.Support;
             }
             return PartialView("Header", selected);
         }
