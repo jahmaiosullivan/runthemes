@@ -25,5 +25,5 @@
 	}
 	<span>/</span>
 	@Html.ActionLinkLocalized("Unanswered threads", "ListUnansweredTopics", null, IsAction("ListUnansweredTopics") ? new{@class="selected"} : null)
-	<a rel="nofollow" href="@Url.Action("LatestTopics", new{page=0,format=NearForums.Web.UI.ResultFormat.Rss})">@Html.Img("~/images/iconrss.gif", "rss")</a>
+	<a rel="nofollow" href="@Url.Action("LatestTopics", new{page=0,format=NearForums.Web.UI.ResultFormat.Rss})">@Html.Img("~/Areas/forum/images/iconrss.gif", "rss")</a>
 </div>
