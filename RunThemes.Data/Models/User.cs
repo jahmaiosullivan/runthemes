@@ -1,9 +1,10 @@
 ﻿using System;
+using System.Security.Principal;
 using RunThemes.Common.Attributes;
 
 namespace RunThemes.Data.Models
 {
-    public class User
+    public class User : IPrincipal
     {
         [PrimaryKey]
         public string Id { get; set; }
@@ -22,5 +23,11 @@ namespace RunThemes.Data.Models
         public string DisplayName { get; set; }
         public string Avatar { get; set; }
         public string About { get; set; }
+        public bool IsInRole(string role)
+        {
+            return false;
+        }
+
+        public IIdentity Identity { get; set; }
     }
 }

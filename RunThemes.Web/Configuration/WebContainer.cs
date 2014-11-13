@@ -1,4 +1,5 @@
-﻿using RunThemes.Business.Configuration;
+﻿using NearForums.Services;
+using RunThemes.Business.Configuration;
 using StructureMap;
 
 namespace RunThemes.Web.Configuration
@@ -14,6 +15,7 @@ namespace RunThemes.Web.Configuration
                 x => { 
                     x.AddRegistry<CoreRegistry>();
                     x.AddRegistry<WebRegistry>();
+                    x.Policies.SetAllProperties( y => y.OfType<ITemplatesService>());
                 });
 
             return container;

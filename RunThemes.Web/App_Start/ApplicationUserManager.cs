@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
@@ -12,6 +13,31 @@ namespace RunThemes.Web
         public ApplicationUserManager(IUserStore<ApplicationUser> store)
             : base(store)
         {
+        }
+
+        public override System.Threading.Tasks.Task<ApplicationUser> FindByNameAsync(string userName)
+        {
+            return base.FindByNameAsync(userName);
+        }
+
+        public override Task<ApplicationUser> FindByEmailAsync(string email)
+        {
+            return base.FindByEmailAsync(email);
+        }
+
+        public override Task<ApplicationUser> FindAsync(UserLoginInfo login)
+        {
+            return base.FindAsync(login);
+        }
+
+        public override Task<ApplicationUser> FindAsync(string userName, string password)
+        {
+            return base.FindAsync(userName, password);
+        }
+
+        public override Task<ApplicationUser> FindByIdAsync(string userId)
+        {
+            return base.FindByIdAsync(userId);
         }
 
         public static ApplicationUserManager Create(IdentityFactoryOptions<ApplicationUserManager> options, IOwinContext context) 

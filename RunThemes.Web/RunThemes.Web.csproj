@@ -185,6 +185,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\WindowsAzure.Storage.4.3.0\lib\net40\Microsoft.WindowsAzure.Storage.dll</HintPath>
     </Reference>
+    <Reference Include="NearForums, Version=9.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Users\jaosulli\Downloads\solution\NearForums\bin\Debug\NearForums.dll</HintPath>
+    </Reference>
     <Reference Include="NearForums.DataAccess, Version=9.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\Users\jaosulli\Downloads\solution\NearForums.DataAccess\bin\Debug\NearForums.DataAccess.dll</HintPath>
@@ -195,7 +199,7 @@
     </Reference>
     <Reference Include="NearForums.Web, Version=9.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Users\jaosulli\Downloads\solution\NearForums.Web.Output\bin\NearForums.Web.dll</HintPath>
+      <HintPath>..\..\..\Users\jaosulli\Downloads\solution\NearForums.Web\bin\Debug\NearForums.Web.dll</HintPath>
     </Reference>
     <Reference Include="NearForums.Web.Controllers, Version=9.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -767,6 +771,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Forum\Content\search-index\" />
     <Folder Include="Areas\Forum\Controllers\" />
+    <Folder Include="Modules\" />
     <Folder Include="Views\General\" />
   </ItemGroup>
   <ItemGroup>

@@ -1,10 +1,15 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using NearForums;
 using NearForums.Web.Output;
+using NearForums.Web.State;
+using RunThemes.Business.Providers;
+using RunThemes.Business.Services;
 using RunThemes.Web.AutoMappings;
 using RunThemes.Web.Configuration;
 
@@ -48,5 +53,37 @@ namespace RunThemes.Web
             WebMapping.Configure(WebContainer.Current);
         }
 
+        protected void Application_PostAuthenticateRequest(object sender, EventArgs args)
+        {
+            if (Context.User.Identity.IsAuthenticated)
+            {
+                var userService = WebContainer.Current.GetInstance<IUserService>();
+                var userProvider = WebContainer.Current.GetInstance<IUserProvider>();
+                var currentUser = userService.GetById(userProvider.CurrentUserId);
+                currentUser.Identity = Context.User.Identity;
+                Context.User = currentUser;
+            }
+        }
+
+        protected void Application_AcquireRequestState(object sender, EventArgs args)
+        {
+            if (Context.User.Identity.IsAuthenticated && Context.Session != null)
+            {
+                var contextUser = Context.User as Data.Models.User;
+                if (contextUser == null) return;
+
+                Context.Session.Add("User", new UserState(new User
+                {
+                    Banned = false,
+                    BirthDate = contextUser.BirthDate,
+                    Email = contextUser.Email,
+                    EmailPolicy = EmailPolicy.None,
+                    Guid = Guid.Parse(contextUser.Id),
+                    Id = Guid.Parse(contextUser.Id),
+                    Role = UserRole.TrustedMember,
+                    UserName = contextUser.UserName
+                }, AuthenticationProvider.CustomDb));
+            }
+        }
     }
 }

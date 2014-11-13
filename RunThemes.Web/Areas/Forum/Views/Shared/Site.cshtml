@@ -2,18 +2,21 @@
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
 @section head{
-    @Html.Partial("HeadContainer")
+    @RenderSection("head", required: false)
 }
+
 @section styles{
     @Html.Stylesheet("~/Areas/Forum/styles/layout.css")
     @Html.Stylesheet("~/Areas/Forum/styles/content.css")
 }
 
 <div class="container">
-    <div id="header">
-        @Html.Partial("HeaderContent", ViewData)
+    <div>
+       @if (Config.Search.Enabled)
+       {
+            @Html.Partial("SearchBox")
+       }
     </div>
     @RenderBody()
 </div>
