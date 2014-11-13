@@ -397,6 +397,7 @@ namespace RunThemes.Web.Controllers
         {
             AuthenticationManager.SignOut();
             FormsAuthentication.SignOut();
+            if (ControllerContext.HttpContext.Session != null) ControllerContext.HttpContext.Session.Remove("User");
             return RedirectToLocal(returnUrl);
         }
 
