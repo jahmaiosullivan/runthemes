@@ -30,7 +30,7 @@
 				<p>@T("Change application settings.")</p>
 			</li>
 			<li>
-				<h3>@Html.ActionLinkLocalized("Manage users", "List", "Users")</h3>
+				<h3>@Html.ActionLinkLocalized("Manage users", "List", "Users", new { area = "", userName="", page="" }, null)</h3>
 				<p>@T("Promote, demote, delete and manage forum users.")</p>
 			</li>
 			<li>
