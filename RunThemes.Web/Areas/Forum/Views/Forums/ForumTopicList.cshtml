@@ -15,7 +15,7 @@
 			<h3 class="name">
 				@Html.ActionLink(topic.Title, "Detail", "Topics", new { name = topic.ShortName, id = topic.Id, page = 0 }, new { @class="itemTitle"})
 				<span class="label">@T("by")</span>
-				<span class="user">@Html.ActionLink(topic.User.UserName, "Detail", "Users", new {id=topic.User.Id }, null) </span>
+				<span class="user">@topic.User.UserName</span>
 				<span class="separator">- </span>
 				<span class="date">@Html.Date(topic.Date)</span>
 			</h3>
@@ -27,7 +27,7 @@
 				{
 					<span class="label">@T("Last post")</span>
 					<span class="label2">@T("by")</span>
-					<span class="user">@Html.ActionLink(topic.LastMessage.User.UserName, "Detail", "Users", new {id=topic.LastMessage.User.Id }, null) </span>
+					<span class="user">@topic.LastMessage.User.UserName</span>
 					<span class="separator">- </span>
 					<span class="date">
 						<a href="@(Url.Action("Detail", "Topics", new { name = topic.ShortName, id = topic.Id, page = 0 }))#msg@(topic.LastMessage.Id)">
