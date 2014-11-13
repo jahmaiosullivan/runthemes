@@ -12,10 +12,11 @@ namespace RunThemes.Web.Controllers
         {
             var controller = ControllerContext.ParentActionViewContext.RouteData.Values["controller"].ToString();
             var action = ControllerContext.ParentActionViewContext.RouteData.Values["action"].ToString();
+            var controllerNamespace = ControllerContext.ParentActionViewContext.Controller.GetType().Namespace; //NearForums.Web.Controllers.T
 
             var selected = HeaderMenu.Features;
             var isDownloadsPage = System.String.Compare(typeof (HomeController).Name.RemoveFromEnd("Controller"), controller, System.StringComparison.OrdinalIgnoreCase) == 0 && action == "Downloads";
-            var isSupportPage = System.String.Compare(typeof(ForumsController).Name.RemoveFromEnd("Controller"), controller, System.StringComparison.OrdinalIgnoreCase) == 0;
+            var isSupportPage = System.String.Compare("NearForums.Web.Controllers", controllerNamespace, System.StringComparison.OrdinalIgnoreCase) == 0;
             if (isDownloadsPage)
             {
                 selected = HeaderMenu.Downloads;
