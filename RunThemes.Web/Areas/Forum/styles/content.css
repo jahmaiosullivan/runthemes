@@ -922,3 +922,7 @@ form div.formItem span.largeNote
 .wrapper > .container {
     padding: 20px 0;
 }
+
+input, textarea {
+    width: 250px;
+}

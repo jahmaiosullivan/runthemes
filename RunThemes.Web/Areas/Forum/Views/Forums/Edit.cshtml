@@ -32,10 +32,6 @@
 		@Html.TextArea("description")
 	</div>
 	<div class="formItem floatContainer">
-		<label for="ReadAccessRole">@T("Read access")</label>
-		@Html.DropDownListDefault("ReadAccessRole", ViewData.Get<SelectList>("UserRoles"), "", S("Everybody"))
-	</div>
-	<div class="formItem floatContainer">
 		<label for="PostAccessRole">@T("Access to post a new thread")</label>
 		@Html.DropDownList("PostAccessRole", ViewData.Get<SelectList>("UserRoles"))
 		<span class="note">@T("Notice that roles are hierarchical")</span>

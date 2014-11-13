@@ -38,7 +38,7 @@
 		@Html.TextArea("description")
 		@Html.Partial("EditorScripts", CreateViewData(new{Name="description"}))
 	</div>
-	@if (Role > UserRole.Member)
+	@*@if (Role > UserRole.Member)
 	{	 
 		<div class="formItem floatContainer">
 			<label for="ReadAccessRole">@T("Read access")</label>
@@ -49,15 +49,15 @@
 			@Html.DropDownList("PostAccessRole", ViewData.Get<SelectList>("UserRoles"))
 			<span class="note">@T("Notice that roles are hierarchical")</span>
 		</div>
-	}
+	}*@
 	@Html.Captcha(S("Type the text shown in the image"))
-	@if (this.User.HasModeratorPriviledges)
+	@*@if (this.User.HasModeratorPriviledges)
 	{
 	<div class="formItem checkbox">
 		@Html.CheckBox("isSticky")
 		<label for="isSticky">@T("Sticky thread?")</label>
 	</div>
-	}
+	}*@
 	@if (this.Config.Notifications.Subscription.IsDefined)
 	{
 	<div class="formItem floatContainer">
