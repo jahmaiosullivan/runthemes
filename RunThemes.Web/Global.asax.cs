@@ -80,7 +80,7 @@ namespace RunThemes.Web
                     EmailPolicy = EmailPolicy.None,
                     Guid = Guid.Parse(contextUser.Id),
                     Id = Guid.Parse(contextUser.Id),
-                    Role = UserRole.TrustedMember,
+                    Role = UserRole.Admin,
                     UserName = contextUser.UserName
                 }, AuthenticationProvider.CustomDb));
             }
