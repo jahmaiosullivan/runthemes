@@ -6,9 +6,6 @@
 	ViewBag.Title = string.Format("{0} profile", Model.UserName);
 }
 <div class="userDetail">
-	<ul class="path floatContainer">
-		<li class="first">@Html.ActionLinkLocalized("Forums", "List", "Forums")</li>
-	</ul>
 	<h1>@ViewBag.Title</h1>
 
 	@if (Model.Banned || Model.Warned || Model.Suspended)

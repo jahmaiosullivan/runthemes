@@ -4,7 +4,6 @@
 	ViewBag.Title = string.Format("Moderator message to {0}", Model.UserName);
 }
 <ul class="path floatContainer">
-	<li class="first">@Html.ActionLinkLocalized("Forums", "List", "Forums")</li>
 	<li>@Html.ActionLinkLocalized("Account", "Detail", "Users", new {id=Model.Id})</li>
 </ul>
 <div class="moderatorReasonDetail">

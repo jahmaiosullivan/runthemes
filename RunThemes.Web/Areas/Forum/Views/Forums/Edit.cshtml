@@ -3,7 +3,6 @@
 	ViewBag.Title = ViewData.WriteIf("IsEdit", S("Edit forum"), S("Create a forum"));
 }
 <ul class="path floatContainer">
-	<li class="first">@Html.ActionLinkLocalized("Forums", "List", "Forums")</li>
 	<li>@Html.ActionLinkLocalized("Admin", "Dashboard", "Admin")</li>
 	<li>@Html.ActionLinkLocalized("Manage forums", "Manage", "Forums")</li>
 </ul>
@@ -28,7 +27,7 @@
 		<label for="category_id">@T("Category")</label>
 		@Html.DropDownListDefault("category.id", ViewData.Get<SelectList>("Categories"), "", S("-Select a Category-"))
 	</div>
-	<div class="formItem textarea">
+	<div class="formItem floatContainer">
 		<label for="description">@T("Description")</label>
 		@Html.TextArea("description")
 	</div>

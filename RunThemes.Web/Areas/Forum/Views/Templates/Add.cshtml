@@ -3,7 +3,6 @@
 	ViewBag.Title = T("Add Template");
 }
 <ul class="path floatContainer">
-	<li class="first">@Html.ActionLinkLocalized("Forums", "List", "Forums")</li>
 	<li>@Html.ActionLinkLocalized("Admin", "Dashboard", "Admin")</li>
 	<li>@Html.ActionLinkLocalized("Templates", "List")</li>
 </ul>
@@ -28,9 +27,9 @@
 	<label for="txtPostedFile">@T("Template File (.zip)")</label>
 	<input type="file" name="postedFile" id="txtPostedFile" />
 </div>
-<div class="formItem textarea">
-	<label for="description">@T("Comments")</label>
-	@Html.TextAreaFor(p=>p.Description)
+<div class="formItem floatContainer">
+    <label for="description">@T("Comments")</label>
+    @Html.TextAreaFor(p => p.Description)
 </div>
 <div class="formItem checkbox floatContainer">
 	@Html.CheckBox("useDefaultName", true, new { onclick = "$(this).closest('div').hide();$('#keyContainer').slideToggle();" })

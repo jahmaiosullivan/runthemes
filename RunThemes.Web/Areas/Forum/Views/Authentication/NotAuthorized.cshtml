@@ -1,9 +1,6 @@
 ﻿@{
     ViewBag.Title = T("Access denied");
 }
-<ul class="path floatContainer">
-    <li class="first">@Html.ActionLinkLocalized("Forums", "List", "Forums")</li>
-</ul>
 <div id="login">
 	<h1>@ViewBag.Title</h1>
 	<p>@T("You must belong to the role {0} to perform this action.", "<strong>" + ViewBag.UserRoleName + "</strong>")</p> 

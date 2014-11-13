@@ -2,9 +2,6 @@
 @{
     ViewBag.Title = T("Unsubscribe");
 }
-<ul class="path floatContainer">
-	<li class="first">@Html.ActionLink("Forums", "List", "Forums")</li>
-</ul>
 <h1>@T("Unsubscribed from the thread")</h1>
 <p>@T("You have been unsubscribed from the thread {0}.", Html.ActionLinkLocalized(Model.Title, "ShortUrl", "Topics", new { id = Model.Id }, null))</p>
 @if (ViewData["User"] != null)

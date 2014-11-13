@@ -3,7 +3,6 @@
 	ViewBag.Title = ViewData.WriteIf("IsEdit", S("Edit thread"), S("Post new thread"));
 }
 <ul class="path floatContainer">
-	<li class="first">@Html.ActionLinkLocalized("Forums", "List", "Forums")</li>
 	<li>@Html.ActionLink(Model.Forum.Name, "Detail", "Forums", new{forum=Model.Forum.ShortName}, null)</li>
 </ul>
 <h1>@ViewBag.Title</h1>
@@ -34,7 +33,7 @@
 		@Html.TextBox("tags", null, new{@class="text"})
 		<span class="note">@T("Separated by spaces")</span>
 	</div>
-	<div class="formItem textarea floatContainer">
+	<div class="formItem floatContainer">
 		<label for="description">@T("Message")</label>
 		@Html.TextArea("description")
 		@Html.Partial("EditorScripts", CreateViewData(new{Name="description"}))

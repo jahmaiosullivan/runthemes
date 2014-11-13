@@ -1,9 +1,6 @@
 ﻿@{
 	ViewBag.Title = T("Register");
 }
-<ul class="path floatContainer">
-	<li class="first">@Html.ActionLinkLocalized("Forums", "List", "Forums")</li>
-</ul>
 <h1>@ViewBag.Title</h1>
 @Html.ValidationSummary("<h3>" + S("Please check the following errors:") + "</h3>", new Dictionary<string, object>()
 	{

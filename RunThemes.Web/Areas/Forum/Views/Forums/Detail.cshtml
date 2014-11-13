@@ -21,18 +21,15 @@
     <h1>@ViewBag.Title</h1>
     @if (Model.HasPostAccess(Role))
     {
-        <p class="action">@Html.ActionLinkLocalized("Post a thread >>", "Add", "Topics", new { forum = this.Model.ShortName }, null)</p>
+        <p class="action">
+            @Html.ActionLinkLocalized("Ask a question >>", "Add", "Topics", new { forum = this.Model.ShortName }, new { @class = "btn btn-orange" })
+        </p>
     }
     else if (User == null)
     {
         <h2>@T("New Topic in this Forum")</h2>
         <p>@T("You must <a href=\"{0}\">sign in</a> to post.", Url.Action("Login", "Authentication", new { returnUrl = Request.Url.PathAndQuery }))</p>
     }
-	@Html.Partial("ForumOptions")
-	@if (IsAction("Detail"))
-	{
-		<p class="description">@Model.Description</p>
-	}
 	@if (this.Model.Topics.Count > 0)
 	{
 		Html.RenderPartial("ForumTopicList", this.Model.Topics);
@@ -42,7 +39,6 @@
 		<p class="warning">@T("No threads for this forum.")</p>
 	}
 	@Html.Pager(Config.UI.TopicsPerPage, this.PageIndex, (int)ViewData["TotalTopics"], S("Previous"), S("Next"))
-	@Html.Partial("TagCloud", ViewData.Get<List<WeightTag>>("Tags"))
 	
 	
 	@if (Role >= UserRole.Moderator)

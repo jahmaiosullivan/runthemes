@@ -5,48 +5,67 @@
 }
 @section Head{
 	@Html.MetaDescription(Utils.Summarize(Utils.RemoveTags(Model.Description), 160, ""))
+    @Html.Script("~/Areas/Forum/scripts/pager.js")
 }
 <ul class="path">
-	<li class="first">@Html.ActionLinkLocalized("Forums", "List", "Forums")</li>
-	<li>@Html.ActionLink(Model.Forum.Name, "Detail", "Forums", new{forum=Model.Forum.ShortName}, null)</li>
+    <li>@Html.ActionLink(Model.Forum.Name, "Detail", "Forums", new{forum=Model.Forum.ShortName}, null)</li>
 </ul>
+<div id="comments">
+    <div class="text-heading pattern"> <h3>@ViewBag.Title</h3> </div>
+    <ol class="commentlist">
+        <li>
+            <div class="comment_container">
+                <div class="avatar"><img src="@Model.User.Photo" alt="user photo"></div>
+                <div class="comment-text">
+                    <p class="meta"> <strong>@Html.ActionLink(Model.User.UserName, "Detail", "Users", new { id = Model.User.Id }, new { rel = "nofollow" })</strong> – <time>@Html.Date(Model.Date)</time> </p>
+                    <div class="description"> <p>@Html.Raw(Model.Description)</p> </div>
+                </div> <!--end:comment-text-->
+            </div><!--end:comment_container-->
+        </li>
+        
+        @if (Model.Messages.Count > 0)
+        {
+                foreach (var m in Model.Messages)
+                {
+                    <li>
+                        <div class="comment_container">
+                            <div class="avatar">
+                                <a href="@Url.Action("Detail", "Users", new { id=m.User.Id})">
+                                    <img src="@m.User.Photo" alt="@m.User.UserName" />
+                                </a>
+                            </div>
+                            <div class="comment-text">
+                                <p class="meta"> <strong>@Html.ActionLink(m.User.UserName, "Detail", "Users", new { id = m.User.Id }, new { rel = "nofollow" })</strong> – <time>@Html.Date(m.Date)</time> </p>
+                                <div class="action-link">
+                                    <a href="#"><i class="fa fa-pencil"></i> <span>Edit</span></a>
+                                    <a href="#"><i class="fa fa-comments"></i> <span>Reply</span></a>
+                                </div>
+                                <div class="description">
+                                    @if (m.Active)
+                                    {
+                                        <p>@Html.Raw(m.Body)</p>
+                                    }
+                                    else
+                                    {
+                                        <p class="removed">@T("The message was removed by a forum moderator.")</p>
+                                    }
+                                </div>
+                            </div> <!--end:comment-text-->
+                        </div><!--end:comment_container-->
+                    </li>
+                }
+        }
+    </ol>
+    <div class="clear"></div>
+</div>
 <div class="topicDetail">
-	<h1>@ViewBag.Title</h1>
-	<p class="info">
-		@T("Posted by") <strong class="userName">@Html.ActionLink(Model.User.UserName, "Detail", "Users", new{id=Model.User.Id}, new{rel="nofollow"})</strong>
-		-
-		@Html.Date(Model.Date)
-	</p>
-	<div class="description">
-		@Html.Raw(Model.Description)
-	</div>
-	@if (Model.Messages.Count > 0)
-	{
-		<ul id="messages">
-		@foreach (Message m in Model.Messages)
-		{
-			Html.RenderPartial("MessageItem", m);
-		}
-		</ul>
-	}
-	@if (Model.Replies > 0)
-	{
-		<div class="pagerSummary">
-			@T("Displaying <span class=\"firstItem\">{0}</span> to <span class=\"lastItem\">{1}</span> of <span class=\"totalItems\">{2}</span> messages",
-				PageIndex * Config.UI.MessagesPerPage + 1,
-				PageIndex * Config.UI.MessagesPerPage + Model.Messages.Count,
-				Model.Replies)
-		</div>
-	}
 	<div id="pagerClient" style="display:none;"><a href="#" onclick="pager.more();return false;">@Html.Img("~/Areas/Forum/images/loadingMini.gif", "") @T("Show more messages")</a></div>
 	@Html.Pager(Config.UI.MessagesPerPage, PageIndex, Model.Replies, S("Previous"), S("Next"))
 	@Html.Partial("Toolbar")
-	@Html.Partial("Related")
 </div>
 
 @section scripts{
     @Html.Script("~/Areas/Forum/scripts/overtip.js")
-    @Html.Script("~/Areas/Forum/scripts/pager.js")
     @Html.Script("~/Areas/Forum/scripts/quoting.js")
 
     <script type="text/javascript">

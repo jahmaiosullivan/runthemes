@@ -2,9 +2,6 @@
 @{
     ViewBag.Title = S("Search results");
 }
-<ul class="path floatContainer">
-	<li class="first">@Html.ActionLinkLocalized("Forums", "List", "Forums")</li>
-</ul>
 <div class="searchResults"></div>
 <h1>@ViewBag.Title</h1>
 @if (Model.Count > 0)

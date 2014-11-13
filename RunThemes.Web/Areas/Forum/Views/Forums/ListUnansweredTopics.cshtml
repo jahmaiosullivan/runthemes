@@ -3,12 +3,17 @@
 	ViewBag.Title = T("{0} - Unanswered threads", Model.Name);
 }	
 <div class="forumDetail">
-	<ul class="path floatContainer">
-		<li class="first">@Html.ActionLinkLocalized("Forums", "List", "Forums")</li>
-	</ul>
 	<h1>@ViewBag.Title</h1>
-	@Html.Partial("ForumOptions")
-	@if (this.Model.Topics.Count > 0)
+    @if (Model.HasPostAccess(Role))
+    {
+        <p class="action">@Html.ActionLinkLocalized("Post a thread >>", "Add", "Topics", new { forum = this.Model.ShortName }, null)</p>
+    }
+    else if (User == null)
+    {
+        <h2>@T("New Topic in this Forum")</h2>
+        <p>@T("You must <a href=\"{0}\">sign in</a> to post.", Url.Action("Login", "Authentication", new { returnUrl = Request.Url.PathAndQuery }))</p>
+    }
+	@if (Model.Topics.Count > 0)
 	{
 		Html.RenderPartial("ForumTopicList", this.Model.Topics);
 	}

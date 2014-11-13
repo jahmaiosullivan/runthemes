@@ -3,7 +3,6 @@
 	ViewBag.Title = ViewData.WriteIf("IsEdit", S("Edit page"), S("Create a new content page"));
 }
 <ul class="path floatContainer">
-	<li class="first">@Html.ActionLinkLocalized("Forums", "List", "Forums")</li>
 	<li>@Html.ActionLinkLocalized("Admin", "Dashboard", "Admin")</li>
 	<li>@Html.ActionLinkLocalized("Pages", "List")</li>
 </ul>
@@ -20,7 +19,7 @@
 		@Html.LabelFor(p => p.Title, S("Page title"))
 		@Html.TextBoxFor(p => p.Title)
 	</div>
-	<div class="formItem textarea floatContainer">
+	<div class="formItem floatContainer">
 		@Html.LabelFor(p => p.Body, S("Content of the page"))
 		@Html.TextAreaFor(p => p.Body)
 		@Html.Partial("EditorScripts", CreateViewData(new{Name="Body"}))
