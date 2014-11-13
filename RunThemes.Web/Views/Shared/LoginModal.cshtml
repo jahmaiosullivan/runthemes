@@ -1,9 +1,10 @@
 ﻿<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                @using (Html.BeginForm("Login", "Account", new {ReturnUrl = ViewBag.ReturnUrl}, FormMethod.Post, new {@class = "form-horizontal", role = "form"}))
+                @using (Html.BeginForm(null, null, new {ReturnUrl = Url.RequestContext.HttpContext.Request.RawUrl}, FormMethod.Post, new {@class = "form-horizontal", role = "form", action="/account/login"}))
                 {
                     @Html.AntiForgeryToken()
+                    <input type="hidden" value="@Url.RequestContext.HttpContext.Request.RawUrl" id="returnUrl" name="returnUrl" />
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                         <h4 class="modal-title">Login</h4>

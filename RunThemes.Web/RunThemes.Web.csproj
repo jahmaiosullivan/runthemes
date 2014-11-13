@@ -199,7 +199,7 @@
     </Reference>
     <Reference Include="NearForums.Web.Controllers, Version=9.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Users\jaosulli\Downloads\solution\NearForums.Web.Output\bin\NearForums.Web.Controllers.dll</HintPath>
+      <HintPath>..\..\..\Users\jaosulli\Downloads\solution\NearForums.Web.Controllers\bin\Debug\NearForums.Web.Controllers.dll</HintPath>
     </Reference>
     <Reference Include="NearForums.Web.Output, Version=9.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
