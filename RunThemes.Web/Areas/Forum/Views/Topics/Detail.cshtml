@@ -38,39 +38,40 @@
 				Model.Replies)
 		</div>
 	}
-	<div id="pagerClient" style="display:none;"><a href="#" onclick="pager.more();return false;">@Html.Img("~/images/loadingMini.gif", "") @T("Show more messages")</a></div>
+	<div id="pagerClient" style="display:none;"><a href="#" onclick="pager.more();return false;">@Html.Img("~/Areas/Forum/images/loadingMini.gif", "") @T("Show more messages")</a></div>
 	@Html.Pager(Config.UI.MessagesPerPage, PageIndex, Model.Replies, S("Previous"), S("Next"))
 	@Html.Partial("Toolbar")
 	@Html.Partial("Related")
 </div>
-@Html.Script("~/scripts/overtip.js")
-@Html.Script("~/scripts/pager.js")
-@Html.Script("~/scripts/quoting.js")
-<script type="text/javascript">
-	$(document).ready(function ()
-	{
-		quoting.init();
-		pager.init('@Url.Action("PageMore", "Topics", new{id=Model.Id})', '@Url.Action("PageUntil", "Topics", new{id=Model.Id})', '@T("The browser has lost session, click ok to return to the login page")');
-	});
+
+@section scripts{
+    @Html.Script("~/Areas/Forum/scripts/overtip.js")
+    @Html.Script("~/Areas/Forum/scripts/pager.js")
+    @Html.Script("~/Areas/Forum/scripts/quoting.js")
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            quoting.init();
+            pager.init('@Url.Action("PageMore", "Topics", new{id=Model.Id})', '@Url.Action("PageUntil", "Topics", new{id=Model.Id})', '@T("The browser has lost session, click ok to return to the login page")');
+        });
 </script>
 <script type="text/javascript">
-	$(document).ready(function ()
-	{
-		$("#messages li")
-			.live("tap", function () { $(this).toggleClass("over"); })
-			.live("mouseenter", function () { $(this).css("background-color","").addClass("over"); })
-			.live("mouseleave", function () { $(this).removeClass("over"); });
-	});
-	function flagMessage(mid, url)
-	{
-		$.post(url, { mid: mid }, function (data)
-		{
-			alert('@T("Thanks you, a moderator will review the message.")');
-		});
-		return false;
-	}
-	function deleteMessage(mid, url)
-	{
-		return deleteMessageCommon(mid, url, '@T("Are you sure you want to hide the message #{0}?")', '@T("Message removed")', null);
-	}
+    $(document).ready(function () {
+        $("#messages li")
+            .on("body", "tap", function () { $(this).toggleClass("over"); })
+            .on("body", "mouseenter", function () { $(this).css("background-color", "").addClass("over"); })
+            .on("body", "mouseleave", function () { $(this).removeClass("over"); });
+    });
+    function flagMessage(mid, url) {
+        $.post(url, { mid: mid }, function (data) {
+            alert('@T("Thanks you, a moderator will review the message.")');
+        });
+        return false;
+    }
+    function deleteMessage(mid, url) {
+        return deleteMessageCommon(mid, url, '@T("Are you sure you want to hide the message #{0}?")', '@T("Message removed")', null);
+    }
 </script>
+    
+}
