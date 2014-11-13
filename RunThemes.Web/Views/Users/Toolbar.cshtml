@@ -1,20 +1,14 @@
-﻿@model User
+﻿@using NearForums.Web.Extensions
+@model RunThemes.Data.Models.User
 @{
 }
 @if (ViewData.GetDefault<bool>("CanModerate"))
 {
-	var moderatorReasonLabels = new Dictionary<ModeratorReason, string>() 
-	{ 
-		{ModeratorReason.Flaming, S(ModeratorReason.Flaming.ToString())},
-		{ModeratorReason.Harassing, S(ModeratorReason.Harassing.ToString())},
-		{ModeratorReason.Spamming, S(ModeratorReason.Spamming.ToString())},
-		{ModeratorReason.Other, S(ModeratorReason.Other.ToString())},
-	};
 	<div class="toolbar floatContainer">
 		<ul>
 			@if (!Model.Banned)
 			{
-				<li class="moderate"><a href="#" onclick="$('#userModerateForm').slideToggle();return false;">@T("Moderate")</a></li>
+				<li class="moderate"><a href="#" onclick="$('#userModerateForm').slideToggle();return false;">@string.Format("Moderate")</a></li>
 			}
 		</ul>
 	</div>
@@ -23,31 +17,27 @@
 			@Html.AntiForgeryToken()
 			@Html.Hidden("id", Model.Id)
 			<div class="formItem floatContainer">
-				<label for="moderationAction">@T("Moderation action")</label>
+				<label for="moderationAction">@string.Format("Moderation action")</label>
 				<select id="moderationAction">
 					@if ((!Model.Warned) && (!Model.Suspended) && (!Model.Banned))
 					{
-						<option value="warn">@T("Warn")</option>
+						<option value="warn">@string.Format("Warn")</option>
 					}
 					@if ((!Model.Suspended) && (!Model.Banned))
 					{
-						<option value="suspend">@T("Suspend")</option>
+						<option value="suspend">@string.Format("Suspend")</option>
 					}
 					@if (!Model.Banned)
 					{
-						<option value="ban">@T("Ban")</option>
+						<option value="ban">@string.Format("Ban")</option>
 					}
 				</select>
 			</div>
-			<div class="formItem floatContainer">
-				<label for="reason">@T("Reason")</label>
-				@Html.DropDownList("reason", new SelectList(moderatorReasonLabels, "Key", "Value"))
-			</div>
 			<div class="formItem textarea floatContainer">
-				<label for="reasonText">@T("Reason message")</label>
+				<label for="reasonText">@string.Format("Reason message")</label>
 				@Html.TextArea("reasonText")
 			</div>
-			<div><input type="button" class="button" value="@T("Submit")" onclick="submitModeration(this);" /></div>
+			<div><input type="button" class="button" value="@string.Format("Submit")" onclick="submitModeration(this);" /></div>
 		</form>
 	</div>
 	<script type="text/javascript">

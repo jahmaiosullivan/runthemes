@@ -12,9 +12,6 @@
 </ul>
 <div class="topicDetail">
 	<h1>@ViewBag.Title</h1>
-	<div class="options">
-		<a rel="nofollow" href="@Url.Action("LatestMessages")">@Html.Img("~/Areas/forum/images/iconrss.gif", "rss")</a>
-	</div>
 	<p class="info">
 		@T("Posted by") <strong class="userName">@Html.ActionLink(Model.User.UserName, "Detail", "Users", new{id=Model.User.Id}, new{rel="nofollow"})</strong>
 		-

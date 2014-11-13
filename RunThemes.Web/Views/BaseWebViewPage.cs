@@ -14,6 +14,8 @@ namespace RunThemes.Web.Views
         public bool IsAuthenticated { get; set; }
         
         public User CurrentUser { get; set; }
+
+        public int PageIndex { get; set; }
         
         public override void InitHelpers()
         {

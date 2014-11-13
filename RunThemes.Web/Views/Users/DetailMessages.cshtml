@@ -1,7 +1,8 @@
-﻿@model User
-<h2>@T("Messages posted by {0}", Model.UserName)</h2>
-<p class="messageButton"><a href="#" onclick="return getMessages()">@T("Get all messages posted by {0}", Model.UserName)</a></p>
-<p id="loadingMessages" style="display:none;font-style: italic;">@Html.Img("~/images/loadingMini.gif", "") @T("Loading...")</p>
+﻿@using NearForums.Web.Extensions
+@model RunThemes.Data.Models.User
+<h2>@string.Format("Messages posted by {0}", Model.UserName)</h2>
+<p class="messageButton"><a href="#" onclick="return getMessages()">@string.Format("Get all messages posted by {0}", Model.UserName)</a></p>
+<p id="loadingMessages" style="display:none;font-style: italic;">@Html.Img("~/images/loadingMini.gif", "") @string.Format("Loading...")</p>
 <div id="messagesResult" style="display:none;"></div>
 <script type="text/javascript">
 	function getMessages()
@@ -22,7 +23,7 @@
 				else
 				{
 					$("#loadingMessages").hide();
-					$("#loadingMessages").html('@T("No messages found.")').fadeIn();
+					$("#loadingMessages").html('@string.Format("No messages found.")').fadeIn();
 				}
 			}
 		});

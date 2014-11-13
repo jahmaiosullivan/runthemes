@@ -131,29 +131,7 @@ namespace RunThemes.Web.Areas.Forum
                namespaces: new[] { "NearForums.Web.Controllers" }
            );
 
-          context.MapRoute(
-                "UsersDetail",
-                "Forum/users/{id}/",
-                new { controller = "Users", action = "Detail" },
-                constraints: new { id = @"^\d+$" },
-                namespaces: new[] { "NearForums.Web.Controllers" }
-            );
-
-          context.MapRoute(
-                       "UsersEdit",
-                       "Forum/users/{id}/edit",
-                       new { controller = "Users", action = "Edit" },
-                       constraints: new { id = @"^\d+$" },
-                       namespaces: new[] { "NearForums.Web.Controllers" }
-                   );
-
-          context.MapRoute(
-                    "MessagesByUser",
-                    "Forum/users/{id}/messages",
-                    new { controller = "Users", action = "MessagesByUser" },
-                    constraints: new { id = @"^\d+$" },
-                    namespaces: new[] { "NearForums.Web.Controllers" }
-                );
+          
           context.MapRoute(
                   "unsubscribe",
                   "Forum/users/{uid}/unsubscribe",
@@ -218,65 +196,7 @@ namespace RunThemes.Web.Areas.Forum
             namespaces: new[] { "NearForums.Web.Controllers" }
         );
 
-        context.MapRoute(
-            "ListUsers",
-            "Forum/admin/users/{page}",
-            new { controller = "Users", action = "List", page = 0 },
-            constraints: new { page = @"\d+" },
-            namespaces: new[] { "NearForums.Web.Controllers" }
-        );
-
-        context.MapRoute(
-            "DeleteUsers",
-            "Forum/admin/users/delete",
-            new { controller = "Users", action = "Delete" },
-            namespaces: new[] { "NearForums.Web.Controllers" }
-        );
-
-        context.MapRoute(
-            "PromoteUsers",
-            "Forum/admin/users/promote",
-            new { controller = "Users", action = "Promote" },
-            namespaces: new[] { "NearForums.Web.Controllers" }
-        );
-
-        context.MapRoute(
-            "DemoteUsers",
-            "Forum/admin/users/demote",
-            new { controller = "Users", action = "Demote" },
-            namespaces: new[] { "NearForums.Web.Controllers" }
-        );
-
-        context.MapRoute(
-            "WarnDismiss",
-            "Forum/users/warn-dismiss",
-            new { controller = "Users", action = "WarnDismiss" },
-            namespaces: new[] { "NearForums.Web.Controllers" }
-        );
-        context.MapRoute(
-            "WarnUsers",
-            "Forum/users/warn",
-            new { controller = "Users", action = "Warn" },
-            namespaces: new[] { "NearForums.Web.Controllers" }
-        );
-        context.MapRoute(
-            "SuspendUsers",
-            "Forum/users/suspend",
-            new { controller = "Users", action = "Suspend" },
-            namespaces: new[] { "NearForums.Web.Controllers" }
-        );
-        context.MapRoute(
-                "BanUsers",
-                "Forum/users/ban",
-                new { controller = "Users", action = "Ban" },
-                namespaces: new[] { "NearForums.Web.Controllers" }
-            );
-        context.MapRoute(
-            "ModeratorReasonDetail",
-            "Forum/users/moderator-reason",
-            new { controller = "Users", action = "ModeratorReasonDetail" },
-            namespaces: new[] { "NearForums.Web.Controllers" }
-        );
+        
 
     context.MapRoute(
             "ManageForums",

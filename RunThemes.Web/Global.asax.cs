@@ -74,14 +74,21 @@ namespace RunThemes.Web
 
                 Context.Session.Add("User", new UserState(new User
                 {
-                    Banned = false,
+                    Banned = contextUser.Banned,
                     BirthDate = contextUser.BirthDate,
                     Email = contextUser.Email,
                     EmailPolicy = EmailPolicy.None,
                     Guid = Guid.Parse(contextUser.Id),
                     Id = Guid.Parse(contextUser.Id),
                     Role = UserRole.Admin,
-                    UserName = contextUser.UserName
+                    UserName = contextUser.UserName,
+                    Suspended = contextUser.Suspended,
+                    SuspendedEnd = contextUser.SuspendedEnd,
+                    Warned = contextUser.Warned,
+                    RegistrationDate = contextUser.UserRegistrationDate ?? DateTime.UtcNow,
+                    PasswordResetGuid = contextUser.PasswordResetGuid.ToString(),
+                    PasswordResetGuidExpireDate = contextUser.PasswordResetExpireDate ?? DateTime.MinValue,
+                    Photo = contextUser.Avatar
                 }, AuthenticationProvider.CustomDb));
             }
         }

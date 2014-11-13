@@ -11,6 +11,90 @@ namespace RunThemes.Web
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.MapRoute(
+                "UsersDetail",
+                "users/{id}/",
+                new { controller = "Users", action = "Detail" },
+                constraints: new { id = @"^\d+$" },
+                namespaces: new[] { "RunThemes.Web.Controllers" }
+            );
+
+            routes.MapRoute(
+                         "UsersEdit",
+                         "users/{id}/edit",
+                         new { controller = "Users", action = "Edit" },
+                         constraints: new { id = @"^\d+$" },
+                namespaces: new[] { "RunThemes.Web.Controllers" }
+                     );
+
+            routes.MapRoute(
+                      "MessagesByUser",
+                      "users/{id}/messages",
+                      new { controller = "Users", action = "MessagesByUser" },
+                      constraints: new { id = @"^\d+$" },
+                      namespaces: new[] { "RunThemes.Web.Controllers" }
+                  );
+
+            routes.MapRoute(
+            "ListUsers",
+            "admin/users/{page}",
+            new { controller = "Users", action = "List", page = 0 },
+            constraints: new { page = @"\d+" },
+            namespaces: new[] { "RunThemes.Web.Controllers" }
+        );
+
+            routes.MapRoute(
+                "DeleteUsers",
+                "admin/users/delete",
+                new { controller = "Users", action = "Delete" },
+                namespaces: new[] { "RunThemes.Web.Controllers" }
+            );
+
+            routes.MapRoute(
+                "PromoteUsers",
+                "admin/users/promote",
+                new { controller = "Users", action = "Promote" },
+                namespaces: new[] { "RunThemes.Web.Controllers" }
+            );
+
+            routes.MapRoute(
+                "DemoteUsers",
+                "admin/users/demote",
+                new { controller = "Users", action = "Demote" },
+                namespaces: new[] { "RunThemes.Web.Controllers" }
+            );
+
+            routes.MapRoute(
+                "WarnDismiss",
+                "users/warn-dismiss",
+                new { controller = "Users", action = "WarnDismiss" },
+                namespaces: new[] { "RunThemes.Web.Controllers" }
+            );
+            routes.MapRoute(
+                "WarnUsers",
+                "users/warn",
+                new { controller = "Users", action = "Warn" },
+                namespaces: new[] { "RunThemes.Web.Controllers" }
+            );
+            routes.MapRoute(
+                "SuspendUsers",
+                "users/suspend",
+                new { controller = "Users", action = "Suspend" },
+                namespaces: new[] { "RunThemes.Web.Controllers" }
+            );
+            routes.MapRoute(
+                    "BanUsers",
+                    "users/ban",
+                    new { controller = "Users", action = "Ban" },
+                namespaces: new[] { "RunThemes.Web.Controllers" }
+                );
+            routes.MapRoute(
+                "ModeratorReasonDetail",
+                "users/moderator-reason",
+                new { controller = "Users", action = "ModeratorReasonDetail" },
+                namespaces: new[] { "RunThemes.Web.Controllers" }
+            );
+
             routes.MapRoute("FileUpload", "media/{action}", new { controller = "Media", action = "Index" },
                 new[] { "RunThemes.Web.Controllers" });
             routes.MapRoute("Downloads", "downloads", new { controller = "Home", action = "Downloads" },
