@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Security.Principal;
-using NearForums;
 using RunThemes.Common.Attributes;
 
 namespace RunThemes.Data.Models
@@ -62,6 +61,5 @@ namespace RunThemes.Data.Models
 
         public bool AllowChangeEmail { get; set; }
 
-        public EmailPolicy EmailPolicy { get; set; }
     }
 }

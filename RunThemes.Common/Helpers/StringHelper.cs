@@ -2,7 +2,6 @@
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Web;
-using Microsoft.Security.Application;
 using RunThemes.Common.Models;
 
 namespace RunThemes.Common.Helpers
@@ -114,7 +113,7 @@ namespace RunThemes.Common.Helpers
                                                                   var templateName = m.Groups["template"].Value;
                                                                   return m.Value.Replace(templateTag, "class").Replace(templateName, String.Format("ctemplate_{0}", templateName));
                                                               });
-            safeHtml = Sanitizer.GetSafeHtml(safeHtml);
+            //safeHtml = Sanitizer.GetSafeHtml(safeHtml);
 
             var chameleonPatternMaskRegex =
                 new Regex(@"<div (?<template>class=[""']ctemplate_()).*?[""']+?.*((/>)|(></div>))",
@@ -176,7 +175,7 @@ namespace RunThemes.Common.Helpers
                 safeHtml = safeHtml.Replace("<pre langcode=", "<pre class=");
                 safeHtml = safeHtml.Replace("<span langcode=", "<span class=");
             }
-            safeHtml = Sanitizer.GetSafeHtmlFragment(safeHtml);
+            //safeHtml = Sanitizer.GetSafeHtmlFragment(safeHtml);
             safeHtml = GetSafeHtmlWithEscapedCharacters(safeHtml);
             safeHtml = SafePrettifyClassesRegex.Replace(safeHtml, m => m.Value.Replace("x_", string.Empty));
 

@@ -1,7 +1,5 @@
 ﻿using System.Web.Mvc;
 using System.Web.Routing;
-using NearForums.Validation;
-using RunThemes.Data.Models;
 
 namespace RunThemes.Web.Controllers
 {
@@ -28,21 +26,6 @@ namespace RunThemes.Web.Controllers
                 RedirectToAction("NotFound", "Error");
         }
 
-        public new User User
-        {
-            get
-            {
-                return ControllerContext.HttpContext.User as User;
-            }
-        }
-
-        protected void AddErrors(ModelStateDictionary modelState, ValidationException ex)
-        {
-            foreach (ValidationError error in ex.ValidationErrors)
-            {
-                modelState.AddModelError(error.FieldName, error);
-            }
-        }
 
 
     }
